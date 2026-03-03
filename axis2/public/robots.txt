@@ -1,0 +1,18 @@
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Zablokuj dostęp do plików systemowych i technicznych
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /private/
+Disallow: /.git/
+
+# Wskaż mapę strony (Sitemap), gdy już ją wygenerujesz
+Sitemap: https://tepee.events/sitemap.xml
+
+# Dodatkowa optymalizacja dla bota obrazów
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /public/

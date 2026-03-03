@@ -1,0 +1,117 @@
+{
+	"sound_light_packages": [
+		{
+			"id": 1,
+			"name": "Pakiet Basic",
+			"subtitle": "Małe imprezy do 50 osób",
+			"description": "Zestaw nagłośnienia + podstawowe oświetlenie LED.",
+			"includes": ["2x kolumny aktywne", "Mikser audio", "2x mikrofon bezprzewodowy", "4x reflektory LED"],
+			"rental_type": "noc / weekend",
+			"price": ""
+		},
+		{
+			"id": 2,
+			"name": "Pakiet Standard",
+			"subtitle": "Imprezy do 120 osób",
+			"description": "Mocniejsze nagłośnienie + ruchome oświetlenie sceniczne.",
+			"includes": ["4x kolumny", "2x subwoofer", "Sterownik DMX", "6x ruchome głowy LED"],
+			"rental_type": "noc / weekend",
+			"price": ""
+		},
+		{
+			"id": 3,
+			"name": "Pakiet Premium",
+			"subtitle": "Duże eventy i plener",
+			"description": "Profesjonalny system liniowy + pełna oprawa świetlna.",
+			"includes": ["System liniowy", "4x subwoofer", "Konsola realizatora", "12x ruchome głowy + wash + beam"],
+			"rental_type": "noc / weekend",
+			"price": ""
+		}
+	],
+
+	"tents": [
+		{
+			"id": 1,
+			"name": "Namiot Eventowy",
+			"description": "Profesjonalny namiot imprezowy.",
+			"rental_type": "noc",
+			"price": ""
+		},
+		{
+			"id": 2,
+			"name": "Namiot Eventowy",
+			"description": "Wynajem na cały weekend.",
+			"rental_type": "weekend",
+			"price": ""
+		}
+	],
+
+	"bar_packages": [
+		{
+			"id": 1,
+			"name": "Zestaw Barowy Basic",
+			"description": "Mobilny bar + podstawowe wyposażenie.",
+			"includes": ["Mobilny bar", "Oświetlenie LED", "Blat roboczy"],
+			"price": ""
+		},
+		{
+			"id": 2,
+			"name": "Zestaw Barowy Standard",
+			"description": "Większy bar + chłodziarka.",
+			"includes": ["Bar", "Chłodziarka", "Oświetlenie LED"],
+			"price": ""
+		},
+		{
+			"id": 3,
+			"name": "Zestaw Barowy Premium",
+			"description": "Profesjonalna strefa barowa.",
+			"includes": ["Bar premium", "Podświetlenie RGB", "Regały", "Lodówki"],
+			"price": ""
+		}
+	],
+
+	"addons": [
+		{
+			"id": 1,
+			"name": "Agregat prądotwórczy",
+			"description": "Zasilanie eventów plenerowych.",
+			"rental_type": "noc / weekend",
+			"price": "do uzgodnienia"
+		},
+		{
+			"id": 2,
+			"name": "Namiot VIP Entrance",
+			"description": "Ekskluzywne wejście VIP. Przedsionek 6x3m z podwieszanym oświetleniem.",
+			"rental_type": "noc / weekend",
+			"price": "300 zł"
+		},
+		{
+			"id": 3,
+			"name": "Świecące bransoletki LED",
+			"description": "Idealne na koncerty i eventy nocne. 200 sztuk.",
+			"rental_type": "za sztukę",
+			"price": "300zł"
+		},
+		{
+			"id": 4,
+			"name": "Koktajlówki",
+			"description": "Wysokie stoliki eventowe. Cena za 2 sztuki.",
+			"rental_type": "2 sztuki",
+			"price": "100 zł"
+		},
+		{
+			"id": 5,
+			"name": "Stoły",
+			"description": "Stoły eventowe. 6-osobowe. Cena za 1 sztukę.",
+			"rental_type": "za sztukę",
+			"price": "50 zł"
+		},
+		{
+			"id": 6,
+			"name": "Krzesła",
+			"description": "Krzesła eventowe. Cena za 6 sztuk.",
+			"rental_type": "za sztukę",
+			"price": "60 zł"
+		}
+	]
+}
