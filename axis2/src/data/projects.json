@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Koncert plenerowy – 800 osób",
+		"slug": "koncert-plenerowy-800-osob",
+		"type": "Event plenerowy",
+		"date": "Czerwiec 2025",
+		"image": "/img/realizacje/koncert-main.jpg",
+		"description": "Kompleksowa realizacja techniczna koncertu plenerowego, która wymagała precyzyjnego planowania akustycznego.",
+		"gallery": ["/img/realizacje/k1.jpg", "/img/realizacje/k2.jpg"],
+		"tags": ["Nagłośnienie liniowe", "Oświetlenie DMX", "Agregat prądotwórczy"],
+		"contentSections": [
+			{
+				"heading": "Wyzwania techniczne",
+				"text": "Głównym wyzwaniem było zapewnienie równomiernego pokrycia dźwiękiem na obszarze o długości 60 metrów. Wykorzystaliśmy system liniowy, który zniwelował martwe strefy."
+			},
+			{
+				"heading": "Oświetlenie i Atmosfera",
+				"text": "Zastosowaliśmy 12 ruchomych głów typu Beam oraz 8 Washy, co pozwoliło na stworzenie dynamicznego widowiska zsynchronizowanego z muzyką."
+			}
+		]
+	},
+	{
+		"title": "Wesele w Namiocie – Styl Boho",
+		"slug": "wesele-boho-namiot",
+		"type": "Obsługa weselna",
+		"date": "Sierpień 2025",
+		"image": "/img/realizacje/wesele-main.jpg",
+		"description": "Nastrojowe wesele w plenerze z wykorzystaniem namiotu gwiazda i mobilnego baru.",
+		"gallery": ["/img/realizacje/w1.jpg", "/img/realizacje/w2.jpg"],
+		"tags": ["Namiot Gwiazda", "Bar Mobilny", "Girlandy LED"],
+		"contentSections": [
+			{
+				"heading": "Strefa Chillout i Bar",
+				"text": "Nasz podświetlany bar mobilny stał się centrum integracji gości. Dzięki ergonomicznemu układowi, barmani serwowali drinki bez zbędnych kolejek."
+			}
+		]
+	}
+]

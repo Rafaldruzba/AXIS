@@ -1,8 +1,15 @@
 @import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body {
 	scroll-behavior: smooth;
+}
+body {
+	background-color: #fdfbf7; /* Delikatny kremowy kolor */
+	color: #1a1a1a; /* Bardzo ciemny szary, lepszy niż czysty czarny */
 }
 button {
 	cursor: pointer;

@@ -1,20 +1,44 @@
 [
 	{
-		"title": "Jak nagłośnić event plenerowy",
+		"title": "Jak nagłośnić event plenerowy? Kompletny poradnik",
 		"slug": "jak-naglosnic-event-plenerowy",
-		"subtitle": "Sprzęt, moc, ustawienie kolumn",
-		"description": "Dowiedz się jak poprawnie dobrać nagłośnienie do wydarzenia plenerowego. #event #naglosnienie #plener"
+		"subtitle": "Technika i Logistyka",
+		"date": "04 Marca 2026",
+		"author": "Redakcja Axis Events",
+		"image": "/img/blog/naglosnienie-plener.jpg",
+		"description": "Nagłośnienie w plenerze to wyzwanie dla każdego organizatora. Dowiedz się, jak dobrać moc systemu i uniknąć problemów z akustyką.",
+		"sections": [
+			{
+				"heading": "Akustyka otwartej przestrzeni",
+				"text": "Plener rządzi się własnymi prawami – brak ścian oznacza brak odbić dźwięku, co wymaga zupełnie innego podejścia niż w zamkniętej sali. Kluczem jest odpowiednie rozmieszczenie kolumn frontowych oraz precyzyjne ustawienie linii opóźniających przy większych dystansach."
+			},
+			{
+				"heading": "Moc i zasilanie",
+				"text": "W Axis Events stawiamy na systemy liniowe, które zapewniają równomierne pokrycie dźwiękiem. Ważnym aspektem jest też zasilanie – stabilny prąd to podstawa bezawaryjnej pracy końcówek mocy."
+			},
+			{
+				"heading": "Bezpieczeństwo i pogoda",
+				"text": "Nie zapominajmy o zabezpieczeniach pogodowych; wiatr i deszcz to najwięksi wrogowie elektroniki estradowej. Zawsze stosujemy atestowane pokrowce i systemy ochrony przed wilgocią."
+			}
+		]
 	},
 	{
-		"title": "Oświetlenie sceniczne - co warto wiedzieć",
-		"slug": "oswietlenie-sceniczne-co-warto-wiedziec",
-		"subtitle": "Nowoczesne technologie LED",
-		"description": "Jak światło buduje klimat imprezy? Sprawdź nasze porady. #oswietlenie #led #event"
-	},
-	{
-		"title": "Organizacja wesela od strony technicznej",
+		"title": "Techniczna strona wesela - o czym musisz pamiętać?",
 		"slug": "organizacja-wesela-technicznie",
-		"subtitle": "Nagłośnienie, światło, scena",
-		"description": "Techniczne zaplecze wesela krok po kroku. #wesele #technika #axis"
+		"subtitle": "Poradnik Weselny",
+		"date": "20 Lutego 2026",
+		"author": "Ekspert Axis",
+		"image": "/img/blog/wesele-technika.jpg",
+		"description": "Planujesz wesele w ogrodzie? Sprawdź, jakie zaplecze techniczne jest niezbędne, by wszystko przebiegło bez zakłóceń.",
+		"sections": [
+			{
+				"heading": "Audyt mocy przyłączeniowej",
+				"text": "Catering, bar i zespół muzyczny potrafią przeciążyć domową instalację. Zawsze sprawdzamy zaplecze energetyczne przed montażem sprzętu."
+			},
+			{
+				"heading": "Mobilny bar jako centrum atrakcji",
+				"text": "Warto pomyśleć o naszym modułowym barze, który posiada własne, niezależne podświetlenie i ergonomiczne strefy pracy, co przyspiesza wydawanie drinków."
+			}
+		]
 	}
 ]

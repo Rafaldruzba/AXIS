@@ -3,7 +3,7 @@ import BlogSection from '../components/BlogSection'
 import InfoSection from '../components/InfoSection'
 import EventTypesSection from '../components/EventTypesSection'
 import GallerySection from '../components/GalleryCarousel'
-
+import Contact from '../pages/Contact'
 export default function Home() {
 	return (
 		<>
@@ -12,6 +12,7 @@ export default function Home() {
 			<BlogSection />
 			<GallerySection />
 			<InfoSection />
+			<Contact />
 		</>
 	)
 }

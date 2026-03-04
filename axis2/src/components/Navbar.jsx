@@ -58,7 +58,9 @@ export default function Navbar() {
 						O nas
 					</Link>
 
-					<Link to='/oferta' className='bg-orange-500 px-5 py-2 rounded-lg hover:bg-orange-600 transition'>
+					<Link
+						to='/oferta'
+						className='bg-amber-600 text-white px-5 py-2 rounded-lg hover:bg-amber-700 transition font-bold'>
 						Wyceń event
 					</Link>
 				</div>

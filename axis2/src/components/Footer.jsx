@@ -15,19 +15,32 @@ export default function Footer() {
 					{/* Brand Section */}
 					<div className='space-y-6'>
 						<div>
-							<h3 className='text-2xl font-black tracking-tighter text-white uppercase italic'>
-								AXIS<span className='text-blue-500'>EVENTS</span>
-							</h3>
+							<Link to='/' className='flex items-center gap-2'>
+								{/* Zmieniliśmy h3 na span - wizualnie identycznie, technicznie poprawnie */}
+								<span className='text-2xl font-black tracking-tighter text-white uppercase italic'>
+									AXIS<span className='text-blue-500'>EVENTS</span>
+								</span>
+							</Link>
 							<div className='h-1 w-12 bg-blue-600 mt-1' />
 						</div>
 						<p className='text-zinc-400 leading-relaxed max-w-xs'>
 							Definiujemy nową jakość w technice eventowej. Od dźwięku po światło – tworzymy niezapomniane wrażenia.
 						</p>
 						<div className='flex gap-4'>
-							{[Instagram, Facebook].map((Icon, i) => (
+							{[
+								{
+									Icon: Instagram,
+									label: 'Obserwuj nas na Instagramie',
+									url: 'https://www.instagram.com/axis.events/',
+								},
+								{ Icon: Facebook, label: 'Dołącz do nas na Facebooku', url: 'https://www.facebook.com/axis.events' },
+							].map(({ Icon, label, url }, i) => (
 								<a
 									key={i}
-									href='#'
+									href={url}
+									target='_blank'
+									rel='noopener noreferrer'
+									aria-label={label} // TO NAPRAWIA BŁĄD Z SCREENSHOTA
 									className='p-2 rounded-lg bg-white/5 border border-white/10 text-zinc-400 hover:text-white hover:border-blue-500/50 transition-all'>
 									<Icon size={20} />
 								</a>
@@ -59,37 +72,34 @@ export default function Footer() {
 					<div>
 						<h4 className='text-sm font-bold uppercase tracking-widest text-white mb-6'>Usługi</h4>
 						<ul className='space-y-4 text-zinc-400'>
-							<Link
-								to='/naglosnienie-i-oswietlenie'
-								className='hover:text-blue-400 cursor-pointer transition-colors block'>
-								<li className='hover:text-blue-400 cursor-pointer transition-colors'>Nagłośnienie i oświetlenie</li>
-							</Link>
-							<Link to='/strefa-barowa' className='hover:text-blue-400 cursor-pointer transition-colors block'>
-								<li className='hover:text-blue-400 cursor-pointer transition-colors'>Strefa Barowa</li>
-							</Link>
-							<Link to='/realizacje' className='hover:text-blue-400 cursor-pointer transition-colors block'>
-								<li className='hover:text-blue-400 cursor-pointer transition-colors'>Realizacje</li>
-							</Link>
-							<Link to='/oferta' className='hover:text-blue-400 cursor-pointer transition-colors block'>
-								<li className='hover:text-blue-400 cursor-pointer transition-colors'>Konfigurator</li>
-							</Link>
+							{[
+								{ to: '/naglosnienie-i-oswietlenie', label: 'Nagłośnienie i oświetlenie' },
+								{ to: '/strefa-barowa', label: 'Strefa Barowa' },
+								{ to: '/realizacje', label: 'Realizacje' },
+								{ to: '/oferta', label: 'Konfigurator' },
+							].map((item, index) => (
+								<li key={index}>
+									<Link to={item.to} className='hover:text-blue-400 cursor-pointer transition-colors block w-fit'>
+										{item.label}
+									</Link>
+								</li>
+							))}
 						</ul>
 					</div>
-
 					{/* Contact Info */}
 					<div className='space-y-6'>
 						<h4 className='text-sm font-bold uppercase tracking-widest text-white mb-6'>Bądźmy w kontakcie</h4>
 						<div className='space-y-4'>
 							<a
-								href='mailto:kontakt@axis-events.pl'
+								href='mailto:hello.axis.events@gmail.com'
 								className='flex items-center gap-3 text-zinc-400 hover:text-white transition-colors group'>
 								<div className='p-2 rounded-lg bg-blue-500/10 text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all'>
 									<Mail size={18} />
 								</div>
-								kontakt@axis-events.pl
+								hello.axis.events@gmail.com
 							</a>
 							<a
-								href='tel:+48000000000'
+								href='tel:+48791445104'
 								className='flex items-center gap-3 text-zinc-400 hover:text-white transition-colors group'>
 								<div className='p-2 rounded-lg bg-emerald-500/10 text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-all'>
 									<Phone size={18} />
@@ -97,7 +107,7 @@ export default function Footer() {
 								+48 791 445 104
 							</a>
 							<a
-								href='tel:+48000000000'
+								href='tel:+48502190862'
 								className='flex items-center gap-3 text-zinc-400 hover:text-white transition-colors group'>
 								<div className='p-2 rounded-lg bg-emerald-500/10 text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-all'>
 									<Phone size={18} />

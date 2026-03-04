@@ -10,15 +10,18 @@ import AboutUs from './pages/AboutUs.jsx'
 import Weddings from './pages/Weddings.jsx'
 import OutdoorEvents from './pages/OutdoorEvents.jsx'
 import Realizations from './pages/Realizacje.jsx'
-import CompanyEvents from './pages/company-events.jsx'
+import RealizationPost from './pages/RealizacjePost.jsx'
+import CompanyEvents from './pages/CompanyEvents.jsx'
 import BdayEvents from './pages/BdayEvents.jsx'
 import SoundAndLighting from './pages/SoundAndLighting.jsx'
 import Bar from './pages/Bar.jsx'
+import ScrollToTop from './components/ScrollToTop'
 import './index.css'
 
 function App() {
 	return (
 		<Router>
+			<ScrollToTop />
 			<Navbar />
 			<Routes>
 				<Route path='/' element={<Home />} />
@@ -32,6 +35,7 @@ function App() {
 				<Route path='/strefa-barowa' element={<Bar />} />
 				<Route path='/eventy-firmowe' element={<CompanyEvents />} />
 				<Route path='/eventy-plenerowe' element={<OutdoorEvents />} />
+				<Route path='/realizacje/:slug' element={<RealizationPost />} />
 				<Route path='/imprezy-urodzinowe' element={<BdayEvents />} />
 				<Route path='/naglosnienie-i-oswietlenie' element={<SoundAndLighting />} />
 			</Routes>

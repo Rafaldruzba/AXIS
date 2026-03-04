@@ -8,113 +8,138 @@ export default function InfoSection() {
 	}
 
 	return (
-		<section className='py-24 bg-white'>
-			<div className='max-w-6xl mx-auto px-6 space-y-16'>
-				{/* ===== INTRO ===== */}
-				<div className='text-center max-w-4xl mx-auto'>
-					<h2 className='text-4xl md:text-5xl font-bold mb-6'>Profesjonalna obsługa techniczna eventów</h2>
-					<p className='text-gray-600 text-lg leading-relaxed'>
-						Axis Events to nowoczesna wypożyczalnia eventowa specjalizująca się w nagłośnieniu, oświetleniu scenicznym
-						oraz kompleksowej realizacji technicznej wydarzeń. Obsługujemy koncerty, wesela, imprezy firmowe,
-						konferencje i eventy plenerowe na najwyższym poziomie.
-					</p>
-				</div>
-
-				{/* ===== SEKCJA 1 ===== */}
-				<div className='grid md:grid-cols-2 gap-16 items-center'>
-					<img
-						src='https://images.unsplash.com/photo-1506157786151-b8491531f063'
-						alt='Profesjonalne nagłośnienie eventowe - scena koncertowa'
-						className='rounded-2xl shadow-xl object-cover h-[300px] w-full'
-					/>
-
-					<div>
-						<h3 className='text-3xl font-semibold mb-6'>Kompleksowa wypożyczalnia sprzętu eventowego</h3>
-						<p className='text-gray-700 leading-relaxed mb-6'>
-							Zapewniamy profesjonalne systemy nagłośnienia dopasowane do skali wydarzenia. Od kameralnych konferencji
-							po duże eventy plenerowe – dobieramy sprzęt tak, aby zapewnić perfekcyjną jakość dźwięku.
-						</p>
-						<p className='text-gray-700 leading-relaxed'>
-							Nasza oferta obejmuje kolumny liniowe, subwoofery, miksery, mikrofony bezprzewodowe oraz pełną obsługę
-							techniczną podczas wydarzenia.
+		<section className='pt-32 bg-[#fdfbf7] text-gray-900 overflow-hidden'>
+			<div className='max-w-7xl mx-auto px-6 space-y-32'>
+				{/* ===== INTRO - POWERFUL HEADER ===== */}
+				<div className='relative'>
+					<div className='absolute -left-20 -top-20 w-64 h-64 bg-amber-200/30 rounded-full blur-3xl -z-10'></div>
+					<div className='text-center max-w-4xl mx-auto'>
+						<h2 className='text-sm uppercase tracking-[0.4em] text-amber-600 font-black mb-6'>O Naszym Sprzęcie</h2>
+						<h3 className='text-5xl md:text-7xl font-black mb-8 tracking-tighter'>
+							Technologia, która <span className='text-amber-500'>definiuje eventy</span>.
+						</h3>
+						<p className='text-gray-600 text-xl leading-relaxed'>
+							Axis Events to nie tylko wypożyczalnia. To zespół inżynierów i pasjonatów, którzy dbają o to, by każda
+							decybela i każdy lumen pracowały na Twój sukces.
 						</p>
 					</div>
 				</div>
 
-				{/* ===== SEKCJA 2 ===== */}
-				<div className='grid md:grid-cols-2 gap-16 items-center'>
-					<div className='order-2 md:order-1'>
-						<h3 className='text-3xl font-semibold mb-6'>Oświetlenie sceniczne budujące klimat</h3>
-						<p className='text-gray-700 leading-relaxed mb-6'>
-							Nowoczesne oświetlenie LED, ruchome głowy typu beam i wash oraz systemy sterowania DMX pozwalają stworzyć
-							wyjątkową oprawę wizualną.
-						</p>
-						<p className='text-gray-700 leading-relaxed'>
-							Projektujemy scenografie świetlne dopasowane do charakteru wydarzenia, budując emocje i podkreślając
-							najważniejsze momenty.
-						</p>
+				{/* ===== SEKCJA 1 - AUDIO (L-Shape Design) ===== */}
+				<div className='grid lg:grid-cols-12 gap-12 items-center'>
+					<div className='lg:col-span-7 relative'>
+						<div className='aspect-video overflow-hidden rounded-[3rem] shadow-2xl'>
+							<img
+								src='https://images.unsplash.com/photo-1506157786151-b8491531f063'
+								alt='Nagłośnienie koncertowe'
+								className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-700'
+							/>
+						</div>
+						{/* Pływający element dekoracyjny */}
+						<div className='absolute -bottom-10 -right-10 bg-white p-8 rounded-3xl shadow-xl hidden md:block max-w-[200px]'>
+							<p className='text-4xl font-black text-amber-500'>115dB</p>
+							<p className='text-xs font-bold text-gray-400 uppercase tracking-widest'>Czystego brzmienia</p>
+						</div>
 					</div>
 
-					<img
-						src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745'
-						alt='Oświetlenie sceniczne LED podczas koncertu'
-						className='rounded-2xl shadow-xl object-cover h-[300px] w-full order-1 md:order-2'
-					/>
+					<div className='lg:col-span-5 space-y-6'>
+						<h3 className='text-4xl font-black leading-tight'>
+							Precyzyjne <br /> systemy audio
+						</h3>
+						<p className='text-gray-600 text-lg'>
+							Od kameralnych przemówień po potężne koncerty plenerowe. Dobieramy systemy liniowe i nagłośnienie punktowe
+							tak, aby każdy gość słyszał krystalicznie czysty dźwięk, niezależnie od miejsca.
+						</p>
+						<div className='pt-4 grid grid-cols-2 gap-4'>
+							<div className='p-4 bg-white rounded-2xl border border-gray-100'>
+								<p className='font-bold'>Systemy liniowe</p>
+								<p className='text-sm text-gray-500'>Równomierne pokrycie</p>
+							</div>
+							<div className='p-4 bg-white rounded-2xl border border-gray-100'>
+								<p className='font-bold'>Mikrofony</p>
+								<p className='text-sm text-gray-500'>Zasięg bez zakłóceń</p>
+							</div>
+						</div>
+					</div>
 				</div>
 
-				{/* ===== SEKCJA 3 ===== */}
-				<div className='grid md:grid-cols-2 gap-16 items-center'>
-					<img
-						src='https://images.unsplash.com/photo-1515169067865-5387ec356754'
-						alt='Realizacja techniczna wesela - scena i światło'
-						className='rounded-2xl shadow-xl object-cover h-[300px] w-full'
-					/>
-
-					<div>
-						<h3 className='text-3xl font-semibold mb-6'>Dlaczego warto wybrać Axis Events?</h3>
-						<p className='text-gray-700 leading-relaxed mb-6'>
-							Łączymy doświadczenie z nowoczesnym zapleczem technicznym. Dbamy o każdy etap realizacji – od projektu
-							technicznego, przez montaż, po obsługę podczas trwania wydarzenia.
+				{/* ===== SEKCJA 2 - LIGHTING (Inverted) ===== */}
+				<div className='grid lg:grid-cols-12 gap-12 items-center'>
+					<div className='lg:col-span-5 lg:order-1 order-2 space-y-6'>
+						<h3 className='text-4xl font-black leading-tight'>
+							Światło, które <br /> opowiada historię
+						</h3>
+						<p className='text-gray-600 text-lg'>
+							Projektujemy atmosferę. Wykorzystujemy inteligentne głowy LED i systemy DMX, aby synchronizować oprawę
+							wizualną z każdym kluczowym momentem Twojego wydarzenia.
 						</p>
-						<ul className='space-y-3 text-gray-700'>
-							<li>✔ Profesjonalny sprzęt eventowy</li>
-							<li>✔ Terminowość i niezawodność</li>
-							<li>✔ Indywidualne podejście do klienta</li>
-							<li>✔ Kompleksowa obsługa techniczna</li>
+						<ul className='space-y-4'>
+							<li className='flex items-center gap-3 font-bold'>
+								<span className='w-12 h-[2px] bg-amber-500'></span> Ruchome głowy Beam/Wash
+							</li>
+							<li className='flex items-center gap-3 font-bold text-gray-400'>
+								<span className='w-12 h-[2px] bg-gray-200'></span> Dekoracja architektoniczna LED
+							</li>
 						</ul>
 					</div>
+
+					<div className='lg:col-span-7 lg:order-2 order-1'>
+						<div className='aspect-video overflow-hidden rounded-[3rem] shadow-2xl rotate-1'>
+							<img
+								src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745'
+								alt='Oświetlenie eventowe'
+								className='w-full h-full object-cover'
+							/>
+						</div>
+					</div>
 				</div>
 
-				{/* ===== FAQ ACCORDION ===== */}
-				<div className='max-w-3xl mx-auto'>
-					<h3 className='text-3xl font-bold text-center mb-12'>Najczęściej zadawane pytania</h3>
+				{/* ===== FAQ SECTION - MODERN ACCORDION ===== */}
+				<div className='max-w-4xl mx-auto py-20'>
+					<div className='text-center mb-16'>
+						<h3 className='text-4xl font-black mb-4'>Masz pytania?</h3>
+						<p className='text-gray-500 uppercase tracking-widest text-sm font-bold'>
+							Wszystko, co musisz wiedzieć o współpracy
+						</p>
+					</div>
 
-					{[
-						{
-							question: 'Czy obsługujecie eventy plenerowe?',
-							answer:
-								'Tak, realizujemy zarówno małe wydarzenia prywatne, jak i duże eventy plenerowe z pełnym zapleczem technicznym.',
-						},
-						{
-							question: 'Czy zapewniacie montaż i demontaż sprzętu?',
-							answer:
-								'Oczywiście. Zapewniamy transport, montaż, konfigurację oraz obsługę techniczną podczas całego wydarzenia.',
-						},
-						{
-							question: 'Jak wyceniany jest event?',
-							answer:
-								'Cena zależy od skali wydarzenia, ilości sprzętu oraz zakresu obsługi. Każdą wycenę przygotowujemy indywidualnie.',
-						},
-					].map((item, index) => (
-						<div key={index} className='border-b py-6 cursor-pointer' onClick={() => toggle(index)}>
-							<div className='flex justify-between items-center'>
-								<h4 className='text-lg font-semibold'>{item.question}</h4>
-								<span className='text-2xl'>{open === index ? '−' : '+'}</span>
+					<div className='space-y-4'>
+						{[
+							{
+								question: 'Czy obsługujecie eventy plenerowe?',
+								answer:
+									'Tak, dysponujemy atestowanymi zadaszeniami i systemami odpornymi na warunki atmosferyczne. Obsługujemy wydarzenia do 2000 osób.',
+							},
+							{
+								question: 'Czy zapewniacie montaż i demontaż sprzętu?',
+								answer:
+									'Zawsze. Nasza ekipa techniczna pojawia się na miejscu odpowiednio wcześniej, aby przeprowadzić testy i próby dźwięku przed przybyciem gości.',
+							},
+							{
+								question: 'Jak wyceniany jest event?',
+								answer:
+									'Każda wycena jest szyta na miarę. Bierzemy pod uwagę czas trwania, lokalizację i ilość potrzebnego personelu technicznego.',
+							},
+						].map((item, index) => (
+							<div
+								key={index}
+								className={`rounded-3xl transition-all duration-300 ${open === index ? 'bg-white shadow-xl p-8' : 'bg-transparent border border-gray-200 p-6'}`}
+								onClick={() => toggle(index)}>
+								<div className='flex justify-between items-center cursor-pointer'>
+									<h4 className='text-xl font-bold tracking-tight'>{item.question}</h4>
+									<div
+										className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${open === index ? 'bg-amber-500 text-white rotate-45' : 'bg-gray-100 text-gray-900'}`}>
+										<span className='text-2xl'>+</span>
+									</div>
+								</div>
+
+								<div
+									className={`overflow-hidden transition-all duration-300 ${open === index ? 'max-h-40 opacity-100 mt-6' : 'max-h-0 opacity-0'}`}>
+									<p className='text-gray-600 leading-relaxed text-lg'>{item.answer}</p>
+								</div>
 							</div>
-
-							{open === index && <p className='mt-4 text-gray-600 leading-relaxed'>{item.answer}</p>}
-						</div>
-					))}
+						))}
+					</div>
 				</div>
 			</div>
 		</section>
