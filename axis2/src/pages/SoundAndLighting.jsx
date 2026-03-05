@@ -50,29 +50,30 @@ export default function SoundAndLighting() {
 				<div className='max-w-7xl mx-auto px-6'>
 					<div className='flex flex-col md:flex-row justify-between items-center mb-20 gap-8 text-center md:text-left'>
 						<h2 className='text-4xl md:text-5xl font-black tracking-tighter text-gray-900 max-w-xl'>
-							Zajebista robota <br /> tkwi w detalach.
+							Perfekcja nie bierze sie <br /> z przypadku.
 						</h2>
 						<div className='h-[2px] flex-1 bg-gray-100 hidden md:block mx-10'></div>
 						<p className='text-gray-500 font-medium max-w-xs'>
-							Nie robimy „po prostu” nagłośnienia. Projektujemy systemy pod konkretną kubaturę i akustykę.
+							Zapomnij o przypadkowym sprzęcie. Wykorzystujemy pełen potencjał systemu 2.2, by zapewnić brzmienie, które
+							napędza impreze, nie męcząc gości.
 						</p>
 					</div>
 
 					<div className='grid md:grid-cols-3 gap-8'>
 						<ServiceCard
 							icon={<Music />}
-							title='Systemy Line-Array'
-							desc='Czysty, selektywny dźwięk, który dociera do każdego rzędu. Nagłaśniamy od kameralnych bankietów po masowe koncerty.'
+							title='Nagłośnienie 2.2'
+							desc='Mocny zestaw z głębokim basem, idealnie wypełniający namiot. Zapewniamy czysty dźwięk, który rozkręci każdy parkiet – od panieńskich po eventy firmowe.'
 						/>
 						<ServiceCard
 							icon={<Zap />}
-							title='Inteligentne Światło'
-							desc='Głowy ruchome, lasery, wash i efekty specjalne. Tworzymy scenariusze świetlne, które budują dramaturgię wydarzenia.'
+							title='Dynamiczne Światło'
+							desc='Oświetlenie LED synchronizowane z rytmem muzyki. Tworzymy klubowy klimat wewnątrz namiotu, który zachwyca gości i świetnie wygląda na zdjęciach.'
 						/>
 						<ServiceCard
 							icon={<Radio />}
-							title='Niezależność Prądowa'
-							desc='Własne agregaty i rozdzielnie. Twoja impreza nie zgaśnie, nawet jeśli padnie sieć miejska.'
+							title='Pełne Zasilanie'
+							desc='Posiadamy własny agregat prądotwórczy. Twoja impreza może odbyć się w dowolnym miejscu, bez obaw o brak prądu czy przeciążenie sieci.'
 						/>
 					</div>
 				</div>
@@ -98,7 +99,7 @@ export default function SoundAndLighting() {
 									<Settings size={18} /> Opcjonalne wsparcie technika
 								</li>
 								<li className='flex items-center gap-3'>
-									<Mic2 size={18} /> Tylko renomowane marki (L-Acoustics, Shure)
+									<Mic2 size={18} /> Tylko renomowane marki (Behringer, Light4Me)
 								</li>
 							</ul>
 							<Link

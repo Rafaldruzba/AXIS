@@ -34,8 +34,9 @@ export default function Hero() {
 					</h1>
 
 					<p className='text-gray-300 text-lg md:text-xl max-w-xl mb-12 leading-relaxed animate-fade-in-up delay-100'>
-						Axis Events to nie tylko sprzęt. To precyzyjne nagłośnienie, inteligentne oświetlenie i mobilne bary, które
-						budują prestiż Twojego eventu.
+						Axis Events to nie tylko sprzęt – to Twoja pewność udanego wydarzenia. Łączymy sprzęt premium z
+						profesjonalnym wsparciem. Przeprowadzimy Cię przez każdy etap organizacji, dbając o nagłośnienie,
+						oświetlenie i bar, byś Ty mógł cieszyć się imprezą.
 					</p>
 
 					<div className='flex flex-col sm:flex-row gap-6 animate-fade-in-up delay-200'>

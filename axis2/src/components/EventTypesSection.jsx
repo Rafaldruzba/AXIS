@@ -14,7 +14,9 @@ export default function EventTypesSection() {
 						</h3>
 					</div>
 					<p className='text-gray-500 max-w-sm text-lg font-medium leading-relaxed'>
-						Od kameralnych spotkań biznesowych po masowe eventy plenerowe. Dopasowujemy technologię do Twojej wizji.
+						Od prestiżowych spotkań biznesowych, przez szalone wieczory panieńskie i kawalerskie, aż po eventy
+						plenerowe. Dopasowujemy technologię i klimat namiotu do Twojej wizji, przeprowadzając Cię przez całą
+						organizację.
 					</p>
 				</div>
 

@@ -3,29 +3,37 @@
 		{
 			"id": 1,
 			"name": "Pakiet Basic",
-			"subtitle": "Małe imprezy do 50 osób",
+			"subtitle": "Małe imprezy do 25 osób",
 			"description": "Zestaw nagłośnienia + podstawowe oświetlenie LED.",
-			"includes": ["2x kolumny aktywne", "Mikser audio", "2x mikrofon bezprzewodowy", "4x reflektory LED"],
+			"includes": ["2x kolumny aktywne", "Mikser audio", "2x mikrofon bezprzewodowy", "2x Airship + stroboskop"],
 			"rental_type": "noc / weekend",
-			"price": ""
+			"price": "1200 zł"
 		},
 		{
 			"id": 2,
 			"name": "Pakiet Standard",
-			"subtitle": "Imprezy do 120 osób",
+			"subtitle": "Imprezy do 35 osób",
 			"description": "Mocniejsze nagłośnienie + ruchome oświetlenie sceniczne.",
-			"includes": ["4x kolumny", "2x subwoofer", "Sterownik DMX", "6x ruchome głowy LED"],
+			"includes": ["2x kolumny", "2x subwoofer", "projektor laserowy", "Mikser audio", "2x Airship + stroboskop"],
 			"rental_type": "noc / weekend",
-			"price": ""
+			"price": "1600 zł"
 		},
 		{
 			"id": 3,
 			"name": "Pakiet Premium",
-			"subtitle": "Duże eventy i plener",
-			"description": "Profesjonalny system liniowy + pełna oprawa świetlna.",
-			"includes": ["System liniowy", "4x subwoofer", "Konsola realizatora", "12x ruchome głowy + wash + beam"],
+			"subtitle": "50 osób, pełna moc",
+			"description": "Profesjonalny system 2.2 + pełna oprawa świetlna.",
+			"includes": [
+				"2x kolumny aktywne",
+				"2x subwoofer",
+				"projektor laserowy",
+				"Mikser audio",
+				"2x Airship + stroboskop",
+				"Opaski fluorescencyjne 200szt.",
+				"Wytwornica dymu!"
+			],
 			"rental_type": "noc / weekend",
-			"price": ""
+			"price": "2200 zł"
 		}
 	],
 
@@ -52,7 +60,7 @@
 			"name": "Zestaw Barowy Basic",
 			"description": "Mobilny bar + podstawowe wyposażenie.",
 			"includes": ["Mobilny bar", "Oświetlenie LED", "Blat roboczy"],
-			"price": ""
+			"price": "2500 zł"
 		},
 		{
 			"id": 2,

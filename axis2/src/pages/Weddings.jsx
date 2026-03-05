@@ -81,9 +81,8 @@ export default function Weddings() {
 								<p className='text-gray-500 text-sm leading-relaxed'>
 									Szukasz unikalnej <strong>atrakcji na wesele</strong>? Nasz{' '}
 									<strong>mobilny bar z podświetleniem LED</strong> to idealne rozwiązanie. Zapewniamy profesjonalną
-									infrastrukturę barową, która doskonale komponuje się z aranżacjami typu glamour, nowoczesnymi czy
-									industrialnymi. Wynajem baru to gwarancja, że strefa drinków stanie się sercem Twojego przyjęcia
-									plenerowego.
+									infrastrukturę barową, która doskonale komponuje się z nowoczesnymi aranżacjami. Wynajem baru to
+									gwarancja, że strefa drinków stanie się sercem Twojego przyjęcia plenerowego.
 								</p>
 							</div>
 
@@ -92,10 +91,10 @@ export default function Weddings() {
 									Namioty i Strefy Chillout
 								</h4>
 								<p className='text-gray-500 text-sm leading-relaxed'>
-									<strong>Namiot eventowy na weselu</strong> to nie tylko ochrona przed deszczem, to przede wszystkim
-									komfortowa <strong>strefa chillout</strong> dla Twoich gości. Realizujemy dodatkowe przestrzenie
-									wypoczynkowe, które pozwalają na chwilę oddechu od głośnej zabawy na sali weselnej. Nasze namioty są
-									regularnie serwisowane i zawsze prezentują nienaganny standard wizualny.
+									Od relaksu po szaleństwo na parkiecie. Nasze namioty to nie tylko ochrona przed deszczem, to serce
+									Twojej imprezy. Realizujemy zarówno klimatyczne strefy wypoczynku, jak i profesjonalne przestrzenie
+									klubowe z potężnym basem i dynamicznym światłem. My to stawiamy, my to konfigurujemy – Ty decydujesz,
+									jaki klimat ma panować w środku.
 								</p>
 							</div>
 
@@ -146,8 +145,8 @@ export default function Weddings() {
 					<div className='mt-16 text-center'>
 						<h3 className='text-2xl font-black text-gray-900 mb-4'>Ważna informacja</h3>
 						<p className='text-gray-500 max-w-2xl mx-auto font-medium'>
-							Pamiętaj: nie zapewniamy pełnej organizacji wesel (sala, catering, muzyka). Dostarczamy **wyłącznie
-							infrastrukturę barową i namiotową**, stanowiącą dodatkową atrakcję Twojego wydarzenia.
+							Pamiętaj: nie zapewniamy pełnej organizacji wesel (sala, catering). Dostarczamy **wyłącznie infrastrukturę
+							barową i namiotową**, stanowiącą dodatkową atrakcję Twojego wydarzenia.
 						</p>
 					</div>
 				</div>

@@ -17,8 +17,8 @@ export default function Bar() {
 								<span className='text-amber-500'>Strefa Baru.</span>
 							</h1>
 							<p className='text-gray-500 text-xl leading-relaxed mb-10 font-medium'>
-								Elegancja, która smakuje najlepiej. Oferujemy wynajem ekskluzywnych barów mobilnych, które stają się
-								centralnym punktem wesel, bankietów i prestiżowych eventów firmowych.
+								Elegancja, która smakuje najlepiej. Oferujemy wynajem eksluzywnego baru mobilnego, który staje się
+								centralnym punktem twojego wydarzenia.
 							</p>
 							<div className='flex flex-wrap gap-4'>
 								<Link
@@ -46,7 +46,7 @@ export default function Bar() {
 							{/* Pływający badge */}
 							<div className='absolute -bottom-10 -left-10 bg-white p-8 rounded-[2.5rem] shadow-xl max-w-[240px] hidden md:block'>
 								<p className='text-amber-500 font-black text-3xl mb-1'>100%</p>
-								<p className='text-gray-900 font-bold text-sm tracking-tight'>Zadowolenia gości na Twoim weselu.</p>
+								<p className='text-gray-900 font-bold text-sm tracking-tight'>Zadowolenia gości na Twoim evencie.</p>
 							</div>
 						</div>
 					</div>
@@ -65,12 +65,12 @@ export default function Bar() {
 						<FeatureCard
 							icon={<GlassWater className='w-8 h-8' />}
 							title='Samodzielny Wynajem'
-							desc='Idealne rozwiązanie na wesela. Wynajmujesz profesjonalną infrastrukturę barową, a my zajmujemy się transportem i montażem.'
+							desc='Idealne rozwiązanie na wesela. Wynajmujesz profesjonalną infrastrukturę barową, a my zajmujemy się montażem i obsługą gości.'
 						/>
 						<FeatureCard
 							icon={<Sparkles className='w-8 h-8' />}
 							title='Design Premium'
-							desc='Nasze bary posiadają zintegrowane podświetlenie LED, które dopasujemy do kolorystyki Twojego przyjęcia.'
+							desc='Nasz bar posiada zintegrowane podświetlenie LED, które dopasujemy do kolorystyki Twojego przyjęcia.'
 						/>
 						<FeatureCard
 							icon={<ShieldCheck className='w-8 h-8' />}
@@ -111,8 +111,8 @@ export default function Bar() {
 									<div>
 										<h4 className='font-bold text-gray-900 text-lg mb-2'>Personalizacja Oświetlenia</h4>
 										<p className='text-gray-500 text-sm leading-relaxed font-medium'>
-											Każdy nasz mobilny bar posiada system oświetlenia RGBW. Możemy ustawić ciepłe, eleganckie światło
-											dopasowane do klimatu boho lub dynamiczne kolory na imprezę firmową.
+											Nasz mobilny bar posiada system oświetlenia RGBW. Możemy ustawić ciepłe, eleganckie światło
+											dopasowane do klimatu lub dynamiczne kolory na Twoją imprezę.
 										</p>
 									</div>
 								</div>
@@ -120,10 +120,11 @@ export default function Bar() {
 								<div className='flex gap-6'>
 									<span className='text-amber-500 font-black text-2xl opacity-30'>03</span>
 									<div>
-										<h4 className='font-bold text-gray-900 text-lg mb-2'>Niezależność Techniczna</h4>
+										<h4 className='font-bold text-gray-900 text-lg mb-2'>Menu Skrojone na Miarę</h4>
 										<p className='text-gray-500 text-sm leading-relaxed font-medium'>
-											Posiadamy własne zaplecze zasilające i systemy odpływowe. Bar może stać w dowolnym miejscu – na
-											środku ogrodu, w namiocie czy w industrialnej hali.
+											Od klasycznego Gin & Tonic po autorskie koktajle na wieczory panieńskie. Dopasowujemy kartę
+											drinków do charakteru Twojej imprezy, zapewniając profesjonalne szkło i dodatki, które zachwycą
+											Twoich gości.
 										</p>
 									</div>
 								</div>
@@ -159,8 +160,7 @@ export default function Bar() {
 								Planujesz wesele lub event?
 							</h2>
 							<p className='text-gray-400 text-lg mb-10 max-w-2xl mx-auto font-light leading-relaxed'>
-								Nasze mobilne bary to nie tylko sprzęt, to gwarancja porządku, szybkości wydawania drinków i
-								niesamowitego efektu wizualnego na zdjęciach.
+								Nasze mobilne bary to coś więcej niż sprzęt. To Twoja gwarancja porządku, błyskawicznej obsługi i efektu "wow", który Twoi goście zapamiętają na długo. Jesteśmy z Tobą od projektu menu po ostatni wydany drink, dbając o każdy wizualny detal na Twoich zdjęciach.
 							</p>
 							<Link
 								to='/oferta'

@@ -67,22 +67,22 @@ export default function Realizacje() {
 				</div>
 
 				{/* Statystyki / Zaufanie */}
-				<section className='mt-32 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-t border-gray-200 pt-20'>
+				<section className='mt-32 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-t border-gray-200 pt-20 '>
 					<div>
-						<p className='text-4xl font-black text-gray-900'>500+</p>
-						<p className='text-sm uppercase tracking-widest text-gray-400 font-bold'>Eventów</p>
+						<p className='text-4xl font-black text-gray-900'>Ready</p>
+						<p className='text-sm uppercase tracking-widest text-amber-500 font-bold'>Zestaw 2.2</p>
 					</div>
 					<div>
-						<p className='text-4xl font-black text-gray-900'>100%</p>
-						<p className='text-sm uppercase tracking-widest text-gray-400 font-bold'>Zadowolenia</p>
+						<p className='text-4xl font-black text-gray-900'>Pro</p>
+						<p className='text-sm uppercase tracking-widest text-amber-500 font-bold'>Bar Mobilny</p>
 					</div>
 					<div>
-						<p className='text-4xl font-black text-gray-900'>24/7</p>
-						<p className='text-sm uppercase tracking-widest text-gray-400 font-bold'>Wsparcia</p>
+						<p className='text-4xl font-black text-gray-900'>Safe</p>
+						<p className='text-sm uppercase tracking-widest text-amber-500 font-bold'>Własny Prąd</p>
 					</div>
 					<div>
-						<p className='text-4xl font-black text-gray-900'>15kW</p>
-						<p className='text-sm uppercase tracking-widest text-gray-400 font-bold'>Mocy Audio</p>
+						<p className='text-4xl font-black text-gray-900'>Fast</p>
+						<p className='text-sm uppercase tracking-widest text-amber-500 font-bold'>Montaż & Start</p>
 					</div>
 				</section>
 

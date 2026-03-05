@@ -19,8 +19,8 @@ export default function InfoSection() {
 							Technologia, która <span className='text-amber-500'>definiuje eventy</span>.
 						</h3>
 						<p className='text-gray-600 text-xl leading-relaxed'>
-							Axis Events to nie tylko wypożyczalnia. To zespół inżynierów i pasjonatów, którzy dbają o to, by każda
-							decybela i każdy lumen pracowały na Twój sukces.
+							W Axis Events nie wynajmujesz tylko namiotu, dostajesz ekipę, która dopilnuje wszystkiego. Od kameralnych
+							urodzin po duże eventy firmowe – dbamy o każdy detal oprawy, by Twój event po prostu zachwycał.
 						</p>
 					</div>
 				</div>
@@ -47,13 +47,14 @@ export default function InfoSection() {
 							Precyzyjne <br /> systemy audio
 						</h3>
 						<p className='text-gray-600 text-lg'>
-							Od kameralnych przemówień po potężne koncerty plenerowe. Dobieramy systemy liniowe i nagłośnienie punktowe
-							tak, aby każdy gość słyszał krystalicznie czysty dźwięk, niezależnie od miejsca.
+							Nagłośnienie, które robi klimat, a nie tylko gra w tle. Nasz zestaw 2.2 wypełnia namiot mocnym basem i
+							czystym, wyraźnym dźwiękiem – idealnym pod DJ-a lub energetyczną playlistę. My zajmujemy się rozstawieniem
+							i strojeniem sprzętu, a Ty podłączasz muzykę i zaczynasz imprezę.
 						</p>
 						<div className='pt-4 grid grid-cols-2 gap-4'>
 							<div className='p-4 bg-white rounded-2xl border border-gray-100'>
-								<p className='font-bold'>Systemy liniowe</p>
-								<p className='text-sm text-gray-500'>Równomierne pokrycie</p>
+								<p className='font-bold'>System 2.2</p>
+								<p className='text-sm text-gray-500'>Moc konfiguracji 3000W</p>
 							</div>
 							<div className='p-4 bg-white rounded-2xl border border-gray-100'>
 								<p className='font-bold'>Mikrofony</p>
@@ -70,17 +71,20 @@ export default function InfoSection() {
 							Światło, które <br /> opowiada historię
 						</h3>
 						<p className='text-gray-600 text-lg'>
-							Projektujemy atmosferę. Wykorzystujemy inteligentne głowy LED i systemy DMX, aby synchronizować oprawę
-							wizualną z każdym kluczowym momentem Twojego wydarzenia.
+							Projektujemy atmosferę, która żyje razem z Twoją imprezą. Nasze oświetlenie LED automatycznie
+							synchronizuje się z rytmem muzyki, zmieniając namiot w tętniący życiem parkiet. My wszystko rozstawiamy i
+							konfigurujemy, by oprawa wizualna idealnie pasowała do każdego momentu Twojego wydarzenia.
 						</p>
-						<ul className='space-y-4'>
-							<li className='flex items-center gap-3 font-bold'>
-								<span className='w-12 h-[2px] bg-amber-500'></span> Ruchome głowy Beam/Wash
-							</li>
-							<li className='flex items-center gap-3 font-bold text-gray-400'>
-								<span className='w-12 h-[2px] bg-gray-200'></span> Dekoracja architektoniczna LED
-							</li>
-						</ul>
+						<div className='pt-4 grid grid-cols-2 gap-4'>
+							<div className='p-4 bg-white rounded-2xl border border-gray-100'>
+								<p className='font-bold'>Projektor laserowy</p>
+								<p className='text-sm text-gray-500'>Reakcja na dźwięk</p>
+							</div>
+							<div className='p-4 bg-white rounded-2xl border border-gray-100'>
+								<p className='font-bold'>Strobo & kolor</p>
+								<p className='text-sm text-gray-500'>Dynamiczna zmiana tempa twojej imprezy</p>
+							</div>
+						</div>
 					</div>
 
 					<div className='lg:col-span-7 lg:order-2 order-1'>
@@ -106,9 +110,9 @@ export default function InfoSection() {
 					<div className='space-y-4'>
 						{[
 							{
-								question: 'Czy obsługujecie eventy plenerowe?',
+								question: 'Czy potrzebujecie dostępu do prądu?',
 								answer:
-									'Tak, dysponujemy atestowanymi zadaszeniami i systemami odpornymi na warunki atmosferyczne. Obsługujemy wydarzenia do 2000 osób.',
+									'Tak. Nasz namiot wymaga stałego zasilania, ponieważ działa dzięki dmuchawie, która utrzymuje jego kształt. Do działania potrzebne jest standardowe gniazdko 230V.Jeśli w miejscu wydarzenia nie ma dostępu do prądu, możemy zapewnić agregat prądotwórczy, który zasili namiot oraz dodatkowe oświetlenie lub nagłośnienie.',
 							},
 							{
 								question: 'Czy zapewniacie montaż i demontaż sprzętu?',
@@ -119,6 +123,26 @@ export default function InfoSection() {
 								question: 'Jak wyceniany jest event?',
 								answer:
 									'Każda wycena jest szyta na miarę. Bierzemy pod uwagę czas trwania, lokalizację i ilość potrzebnego personelu technicznego.',
+							},
+							{
+								question: 'Ile kosztuje transport namiotu na imprezę?',
+								answer:
+									'Koszt transportu namiotu zależy od lokalizacji wydarzenia oraz terminu. Na terenie Mazowsza transport jest zawarty w cenie. Poza obszarem Mazowsza, koszt transportu ustalamy indywidualnie.',
+							},
+							{
+								question: 'Ile miejsca potrzeba na namiot imprezowy 9×6 m?',
+								answer:
+									'Namiot o wymiarach 9×6 m zajmuje powierzchnię około 54 m². Zalecamy jednak zapewnienie dodatkowej przestrzeni wokół namiotu, aby umożliwić swobodne poruszanie się gości i personelu oraz ewentualne ustawienie dodatkowych elementów, takich jak strefa barowa czy miejsce do tańca. W praktyce, dla komfortu i funkcjonalności, warto zarezerwować obszar o wymiarach około 12×9 m (108 m²) lub więcej, w zależności od planowanej liczby gości i układu imprezy.',
+							},
+							{
+								question: 'Co w przypadku złej pogody w dniu imprezy – czy rezerwację namiotu można odwołać?',
+								answer:
+									'Nasz namiot jest przystosowany do użytkowania w różnych warunkach pogodowych – chroni przed deszczem i wiatrem, dlatego w większości przypadków wydarzenie może odbyć się zgodnie z planem. Jeśli jednak prognozy przewidują ekstremalne warunki, takie jak burze z gradem, silne wiatry lub inne zagrożenia, które mogą wpłynąć na bezpieczeństwo gości i sprzętu, oferujemy możliwość bezpłatnej zmiany terminu rezerwacji w bieżącym sezonie. Zapoznaj sie z regulaminem',
+							},
+							{
+								question: 'Ile kosztuje wynajem namiotu imprezowego?',
+								answer:
+									'Cena wynajmu namiotu zależy od kilku czynników, takich jak lokalizacja wydarzenia, czas wynajmu oraz dodatkowe wyposażenie (np. oświetlenie, nagłośnienie czy agregat prądotwórczy). Oferujemy namiot imprezowy o wymiarach 6×9 m, który świetnie sprawdza się na imprezach prywatnych, urodzinach czy wydarzeniach w ogrodzie. Aby otrzymać dokładną wycenę, skontaktuj się z nami i podaj datę wydarzenia oraz lokalizację.',
 							},
 						].map((item, index) => (
 							<div

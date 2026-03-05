@@ -1,19 +1,19 @@
 [
 	{
 		"title": "Wesela",
-		"description": "Profesjonalne nagłośnienie i oświetlenie sal weselnych oraz strefa barowa.",
+		"description": "Stworzymy wyjątkową strefę na twoim weselu - namiot eventowy i mobilny bar dla gości.",
 		"link": "/wesele",
 		"image": "https://images.unsplash.com/photo-1519741497674-611481863552"
 	},
 	{
 		"title": "Eventy firmowe",
-		"description": "Konferencje, gale, integracje – kompleksowa obsługa techniczna.",
+		"description": "Kompleksowa obsługa techniczna wydarzeń firmowych.",
 		"link": "/eventy-firmowe",
 		"image": "https://images.unsplash.com/photo-1503428593586-e225b39bddfe"
 	},
 	{
 		"title": "Eventy plenerowe",
-		"description": "Nagłośnienie koncertów, agregaty, namioty i pełna infrastruktura.",
+		"description": "Profesjonalne nagłośnienie i oświetlenie wraz z agregatem prądotwórczym dla wydarzeń na świeżym powietrzu.",
 		"link": "/eventy-plenerowe",
 		"image": "https://images.unsplash.com/photo-1506157786151-b8491531f063"
 	},
@@ -31,7 +31,7 @@
 	},
 	{
 		"title": "Nagłośnienie i oświetlenie",
-		"description": "Profesjonalne nagłośnienie i oświetlenie dla każdego rodzaju wydarzenia.",
+		"description": "Profesjonalne systemy nagłośnienia i oświetlenia, które podkreślą klimat Twojego wydarzenia.",
 		"link": "/naglosnienie-i-oswietlenie",
 		"image": "https://images.unsplash.com/photo-1503428593586-e225b39bddfe"
 	}

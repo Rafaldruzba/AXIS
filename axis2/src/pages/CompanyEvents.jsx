@@ -44,7 +44,9 @@ export default function CompanyEvents() {
 				<div className='max-w-7xl mx-auto px-6'>
 					<div className='text-center mb-20'>
 						<h2 className='text-4xl font-black tracking-tighter text-gray-900'>Rozwiązania dla Twojego zespołu</h2>
-						<p className='text-gray-500 mt-4'>Skrojone na miarę potrzeb nowoczesnego biznesu.</p>
+						<p className='text-gray-500 mt-4'>
+							Zamieniamy nudne spotkania firmowe w widowiskowe wydarzenia z pełnym zapleczem technicznym.
+						</p>
 					</div>
 
 					<div className='grid md:grid-cols-2 gap-12'>
@@ -53,12 +55,13 @@ export default function CompanyEvents() {
 							<div className='w-14 h-14 rounded-2xl bg-amber-500 text-gray-900 flex items-center justify-center mb-8'>
 								<GlassWater size={28} />
 							</div>
-							<h3 className='text-2xl font-black mb-4'>Mobilny Bar Integracyjny</h3>
+							<h3 className='text-2xl font-black mb-4'>Mobilny Bar Premium</h3>
 							<p className='text-gray-500 leading-relaxed font-medium mb-6'>
-								Nic tak nie buduje relacji jak wspólna kawa lub koktajl w profesjonalnej oprawie. Nasz bar to idealne
-								uzupełnienie <strong>firmowych grilli, jubileuszy i spotkań networkingowych</strong>.
+								Zapomnij o nudnych integracjach. Nasz bar to centrum dowodzenia każdą imprezą – od
+								<strong> firmowych grilli po jubileusze</strong>. Serwujemy profesjonalne koktajle w oprawie, która
+								buduje prestiż Twojego wydarzenia i rozkręca każdą rozmowę.
 							</p>
-							<p className='text-sm text-amber-600 font-black uppercase tracking-widest'>Prestiż i Styl</p>
+							<p className='text-sm text-amber-600 font-black uppercase tracking-widest'>Pełny Serwis Barmański</p>
 						</div>
 
 						{/* Namiot Integracyjny */}
@@ -66,13 +69,13 @@ export default function CompanyEvents() {
 							<div className='w-14 h-14 rounded-2xl bg-gray-900 text-amber-500 flex items-center justify-center mb-8'>
 								<Layout size={28} />
 							</div>
-							<h3 className='text-2xl font-black mb-4'>Strefa "Pop-up" w Plenerze</h3>
+							<h3 className='text-2xl font-black mb-4'>Twoja Baza w Plenerze</h3>
 							<p className='text-gray-500 leading-relaxed font-medium mb-6'>
-								Posiadamy namiot o wymiarach <strong>9x6m</strong>, który jest idealną przestrzenią dla grup{' '}
-								<strong>do 50 osób</strong>. Doskonale sprawdza się jako zadaszona strefa cateringowa lub miejsce
-								warsztatów kreatywnych na świeżym powietrzu.
+								Namiot o wymiarach <strong>9x6m</strong> to idealne miejsce dla ekipy
+								<strong> do 50 osób</strong>. W dzień komfortowa strefa chillout, w nocy – dzięki naszemu audio 2.2 –
+								prywatny klub, gdziekolwiek go postawimy. Czysto, stylowo i bez kompromisów.
 							</p>
-							<p className='text-sm text-gray-900 font-black uppercase tracking-widest'>Kameralność i Komfort</p>
+							<p className='text-sm text-amber-600 font-black uppercase tracking-widest'>Namiot + Audio + Światło</p>
 						</div>
 					</div>
 				</div>
@@ -83,12 +86,11 @@ export default function CompanyEvents() {
 				<div className='max-w-4xl mx-auto px-6'>
 					<div className='space-y-12 text-center md:text-left'>
 						<div>
-							<h4 className='text-2xl font-black mb-4 tracking-tight'>Budowanie relacji w profesjonalnej oprawie</h4>
+							<h4 className='text-2xl font-black mb-4 tracking-tight'>Impreza, która nie jest tylko kolejnym mailem</h4>
 							<p className='text-gray-500 leading-relaxed'>
-								Organizacja <strong>eventów firmowych</strong> na mniejszą skalę pozwala na lepszą integrację i dbałość
-								o każdego uczestnika. Axis Events dostarcza infrastrukturę, która podnosi rangę wydarzenia. Nasz{' '}
-								<strong>wynajem barów mobilnych</strong> oraz <strong>namiotów eventowych</strong> to odpowiedź na
-								potrzeby firm szukających elastyczności i wysokiego standardu wykonania.
+								Najlepsze pomysły rodzą się w swobodnej atmosferze. Zamiast siedzenia przy stołach, oferujemy dynamiczną
+								przestrzeń z profesjonalnym barem, która naturalnie zachęca do rozmów. Nasze rozwiązania techniczne to
+								nie tylko sprzęt – to narzędzie do budowania zgranego zespołu w nowoczesnym, luźnym stylu.
 							</p>
 						</div>
 						<div>

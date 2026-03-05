@@ -40,8 +40,8 @@ export default function BdayEvents() {
 						<Disc className='text-amber-500 mb-6' size={40} />
 						<h2 className='text-3xl font-black mb-4 tracking-tighter'>Wymarzona 18-stka</h2>
 						<p className='text-gray-500 leading-relaxed text-sm font-medium'>
-							Mocne uderzenie basu i klubowe oświetlenie. Zmieniamy Twój ogród lub wynajętą salę w prawdziwy klub.
-							Solidne nagłośnienie i efekty świetlne, które rozkręcą każdy parkiet.
+							Robimy robotę, której nie musisz pilnować. Tworzymy oprawę, która żyje rytmem Twojej imprezy, zapewniając
+							klubową energię i wizualny efekt "wow" na każdym zdjęciu gości.
 						</p>
 					</motion.div>
 
@@ -92,11 +92,11 @@ export default function BdayEvents() {
 									},
 									{
 										t: 'Namiot 9x6 - idealna baza',
-										d: 'Nasza przestrzeń to idealny rozmiar na domowe podwórko. Pomieści strefę barową, DJ-a i miejsce do tańca dla najbliższej ekipy.',
+										d: 'Nasza przestrzeń to idealny rozmiar na domowe podwórko. Pomieści strefę barową i miejsce do tańca dla najbliższej ekipy. To 54 m² czystej energii, które zamienią Twój ogród w profesjonalną strefę eventową bez zagracania całej działki.',
 									},
 									{
 										t: 'Oświetlenie, które robi klimat',
-										d: 'Używamy profesjonalnych listew LED i głów ruchomych, które potrafią zmienić zwykły ogród w magiczną scenerię.',
+										d: 'Używamy mocnego oświetlenia LED i efektów Airship, które reagują na rytm muzyki. Nie bawimy się w półśrodki – tworzymy konkretną, imprezową atmosferę, która ożywia namiot i genialnie wygląda na zdjęciach.',
 									},
 								].map((item, i) => (
 									<motion.div

@@ -40,18 +40,22 @@ export default function AboutUs() {
 							whileInView={{ opacity: 1, x: 0 }}
 							viewport={{ once: true }}
 							className='space-y-6'>
-							<h2 className='text-4xl font-black tracking-tighter'>Więcej niż wypożyczalnia sprzętu</h2>
+							<h2 className='text-4xl font-black tracking-tighter'>Z baru na scenę – nasza historia</h2>
 							<p className='text-gray-600 leading-relaxed text-lg'>
-								W <strong>Axis Events</strong> wierzymy, że udany event to suma detali, które działają niezawodnie.
-								Nasza historia zaczęła się od pasji do technologii estradowej i chęci dostarczenia na rynek rozwiązań,
-								które łączą estetykę z bezkompromisową jakością. Nie jesteśmy tylko dostawcą – jesteśmy Twoim partnerem
-								technicznym.
+								Axis Events to nie korporacja, to dwóch kumpli, którzy spędzili setki godzin za barem, serwując koktajle
+								w rytm najlepszej muzyki. Znamy klimat dobrych imprez od środka i wiemy, że{' '}
+								<strong>profesjonalny bar i potężny bas</strong> to fundamenty, których nie da się podrobić.
 							</p>
 							<p className='text-gray-600 leading-relaxed text-lg'>
-								Specjalizujemy się w obsłudze wydarzeń o różnym charakterze: od kameralnych wesel w ogrodzie, przez
-								eventy firmowe, aż po huczne imprezy plenerowe. Naszą siłą jest <strong>elastyczność</strong>.
-								Potrzebujesz tylko profesjonalnego baru z obsługą? A może szukasz kompletnego namiotu z nagłośnieniem i
-								oświetleniem, który stanie się centrum Twojego eventu? Jesteśmy gotowi na każde wyzwanie.
+								Postanowiliśmy połączyć nasze doświadczenie barmańskie z miłością do głośnego brzmienia. Stworzyliśmy
+								Axis, żeby dostarczać coś więcej niż sprzęt – przywozimy
+								<strong> eventowy show</strong>, który sami chcielibyśmy przeżyć. Nie boimy się wyzwań, bo wiemy, jak
+								sprawić, by Twoi goście nie chcieli schodzić z parkietu.
+							</p>
+							<p className='text-gray-600 leading-relaxed text-lg'>
+								Niezależnie czy robisz kameralną domówkę w ogrodzie, czy firmowy event, wchodzimy w to na 100%.
+								Dostajesz od nas nie tylko namiot i nagłośnienie, ale przede wszystkim naszą energię i gwarancję, że
+								<strong> technika i bar będą najmocniejszym punktem Twojej imprezy.</strong>
 							</p>
 						</motion.div>
 
@@ -81,9 +85,9 @@ export default function AboutUs() {
 						<motion.div
 							whileHover={{ y: -10 }}
 							className='space-y-4 p-8 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-md'>
-							<h3 className='text-xl font-black text-amber-500 uppercase tracking-wider'>01. Mobilne Bary</h3>
+							<h3 className='text-xl font-black text-amber-500 uppercase tracking-wider'>01. Mobilny Bar</h3>
 							<p className='text-gray-400 text-sm leading-relaxed'>
-								Nasze jednostki barowe to połączenie designu i ergonomii. Możesz wypożyczyć je jako samodzielny element
+								Nasza jednostka barowa to połączenie designu i ergonomii. Możesz wypożyczyć ją jako samodzielny element
 								na wesele lub targi. Wykonane z wysokiej jakości materiałów, z możliwością personalizacji podświetlenia
 								LED.
 							</p>
@@ -94,8 +98,8 @@ export default function AboutUs() {
 							className='space-y-4 p-8 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-md'>
 							<h3 className='text-xl font-black text-amber-500 uppercase tracking-wider'>02. Namioty i Zadaszenia</h3>
 							<p className='text-gray-400 text-sm leading-relaxed'>
-								Niezależnie od pogody, Twoi goście będą czuć się komfortowo. Oferujemy namioty ekspresowe i sferyczne,
-								które chronią przed słońcem i deszczem, tworząc unikalną strefę chillout na Twoim wydarzeniu.
+								Niezależnie od pogody, Twoi goście będą czuć się komfortowo. Oferujemy namioty ekspresowe, które chronią
+								przed słońcem i deszczem, tworząc unikalną strefę chillout na Twoim wydarzeniu.
 							</p>
 						</motion.div>
 
@@ -123,18 +127,23 @@ export default function AboutUs() {
 						{[
 							{
 								step: '01',
-								title: 'Darmowa Konsultacja i Audyt Potrzeb',
-								desc: 'Analizujemy lokalizację (czy to ogród, sala bankietowa czy teren festiwalowy), liczbę gości oraz charakter wydarzenia. Dobieramy optymalną konfigurację sprzętu, abyś nie płacił za to, czego nie potrzebujesz.',
+								title: 'Analiza terenu i potrzeb',
+								desc: 'Spotykamy się na miejscu lub zdalnie, aby ocenić specyfikę lokalizacji – od ukształtowania ogrodu po akustykę namiotu. Dobieramy konfigurację nagłośnienia i baru tak, aby optymalnie wykorzystać przestrzeń, nie generując zbędnych kosztów.',
 							},
 							{
 								step: '02',
-								title: 'Projekt Techniczny i Logistyka',
-								desc: 'Przygotowujemy plan rozmieszczenia: gdzie staną kolumny, jak poprowadzimy okablowanie, aby było bezpieczne i niewidoczne, oraz jak ustawić bar, by zapewnić płynną obsługę gości. Posiadamy własny transport, więc logistyka jest po naszej stronie.',
+								title: 'Ochrona podłoża i logistyka',
+								desc: 'Dbamy o Twoją infrastrukturę. Przed montażem sprawdzamy stabilność gruntu i rozkładamy profesjonalne maty ochronne, zabezpieczając trawnik lub posadzkę. Całość transportu i rozładunku leży po naszej stronie.',
 							},
 							{
 								step: '03',
-								title: 'Montaż, Realizacja i Demontaż',
-								desc: 'Nasz zespół pojawia się na miejscu z odpowiednim wyprzedzeniem. Wykonujemy testy dźwięku, ustawiamy sceny świetlne i upewniamy się, że wszystko jest dopięte na ostatni guzik. Po evencie sprawnie demontujemy sprzęt.',
+								title: 'Montaż i konfiguracja Audio-Visual',
+								desc: 'Instalujemy systemy z dbałością o estetykę – okablowanie prowadzimy w sposób bezpieczny i dyskretny. Wykonujemy pełny soundcheck zestawu oraz programujemy oświetlenie tak, aby dynamicznie współgrało z rytmem muzyki i budowało klimat na parkiecie.',
+							},
+							{
+								step: '04',
+								title: 'Obsługa eventu i sprawny demontaż',
+								desc: 'Czuwamy nad techniczną stroną wydarzenia do ostatniego utworu. Po zakończeniu imprezy przeprowadzamy sprawny demontaż i sprzątamy stanowisko pracy, pozostawiając teren w takim samym stanie, w jakim go zastaliśmy.',
 							},
 						].map((item, i) => (
 							<motion.div
@@ -157,28 +166,28 @@ export default function AboutUs() {
 				{/* Sekcja 4: Dlaczego my - Pełny tekst z ikonami */}
 				<section className='mb-32 py-20 border-y border-gray-100'>
 					<h2 className='text-3xl font-black mb-16 tracking-tighter text-center uppercase'>
-						Dlaczego branża eventowa wybiera Axis?
+						Co nas wyróżnia na tle konkurencji?
 					</h2>
 					<div className='grid md:grid-cols-2 gap-x-16 gap-y-12'>
 						<Feature
 							icon={<Award />}
-							title='Sprzęt klasy Premium'
-							desc='Nie uznajemy półśrodków. Nasze nagłośnienie i oświetlenie to standardy światowych riderów technicznych.'
+							title='Brzmienie bez kompromisów'
+							desc='Nasz zestaw 2.2 to nie są zwykłe kolumny. To potężny bas i krystaliczny dźwięk, który wypełnia przestrzeń, a nie tylko hałasuje.'
 						/>
 						<Feature
 							icon={<Zap />}
-							title='Pełna Skalowalność'
-							desc="Obsługujemy zarówno prywatne 'garden party', jak i eventy korporacyjne na kilkuset gości."
+							title='Pełna niezależność'
+							desc='Mamy własne zasilanie, więc zrobimy imprezę tam, gdzie inni wymiękają. Namiot chroni przed słońcem i deszczem, a my dbamy o to, by muzyka grała niezależnie od dostępności gniazdka.'
 						/>
 						<Feature
 							icon={<ShieldCheck />}
-							title='Bezpieczeństwo (PPOŻ/BHP)'
-							desc='Wszystkie nasze konstrukcje i instalacje elektryczne posiadają niezbędne atesty i certyfikaty bezpieczeństwa.'
+							title='Czystość i estetyka'
+							desc='Dbamy o to, by sprzęt był zadbany, kable schowane, a bar wyglądał jak z najlepszego lokalu w mieście. U nas nie ma miejsca na prowizorkę.'
 						/>
 						<Feature
 							icon={<Clock />}
-							title='Wsparcie 24/7'
-							desc='Podczas trwania eventu nasz technik jest zawsze w zasięgu ręki, dbając o niezakłócony przebieg imprezy.'
+							title='Jesteśmy do końca'
+							desc='Nie tylko dowozimy sprzęt. Jesteśmy na miejscu od pierwszego toastu do ostatniego utworu, dbając o to, byś Ty mógł się po prostu bawić.'
 						/>
 					</div>
 				</section>
