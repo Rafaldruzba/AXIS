@@ -17,6 +17,7 @@ import SoundAndLighting from './pages/SoundAndLighting.jsx'
 import Bar from './pages/Bar.jsx'
 import ScrollToTop from './components/ScrollToTop'
 import './index.css'
+import NotFound from './pages/NotFound.jsx'
 
 function App() {
 	return (
@@ -38,6 +39,7 @@ function App() {
 				<Route path='/realizacje/:slug' element={<RealizationPost />} />
 				<Route path='/imprezy-urodzinowe' element={<BdayEvents />} />
 				<Route path='/naglosnienie-i-oswietlenie' element={<SoundAndLighting />} />
+				<Route path='*' element={<NotFound />} />
 			</Routes>
 			<Footer />
 		</Router>

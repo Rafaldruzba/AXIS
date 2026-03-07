@@ -1,19 +1,13 @@
 import { useParams, Link } from 'react-router-dom'
 import blogs from '../data/blogs.json'
+import NotFoundPost from '../components/NotFoundPost'
 
 export default function BlogPost() {
 	const { slug } = useParams()
 	const post = blogs.find(blog => blog.slug === slug)
 
 	if (!post) {
-		return (
-			<div className='pt-40 pb-40 text-center bg-[#fdfbf7] min-h-screen'>
-				<h2 className='text-3xl font-bold'>Wpis nie istnieje</h2>
-				<Link to='/blog' className='text-amber-600 mt-6 inline-block underline'>
-					Wróć do bloga
-				</Link>
-			</div>
-		)
+		return <NotFoundPost post={post} />
 	}
 
 	return (

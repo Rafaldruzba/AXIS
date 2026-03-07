@@ -39,14 +39,14 @@
 
 	"tents": [
 		{
-			"id": 1,
+			"id": 4,
 			"name": "Namiot Eventowy",
 			"description": "Profesjonalny namiot imprezowy.",
 			"rental_type": "noc",
 			"price": ""
 		},
 		{
-			"id": 2,
+			"id": 5,
 			"name": "Namiot Eventowy",
 			"description": "Wynajem na cały weekend.",
 			"rental_type": "weekend",
@@ -56,21 +56,21 @@
 
 	"bar_packages": [
 		{
-			"id": 1,
+			"id": 6,
 			"name": "Zestaw Barowy Basic",
 			"description": "Mobilny bar + podstawowe wyposażenie.",
 			"includes": ["Mobilny bar", "Oświetlenie LED", "Blat roboczy"],
 			"price": "2500 zł"
 		},
 		{
-			"id": 2,
+			"id": 7,
 			"name": "Zestaw Barowy Standard",
 			"description": "Większy bar + chłodziarka.",
 			"includes": ["Bar", "Chłodziarka", "Oświetlenie LED"],
 			"price": ""
 		},
 		{
-			"id": 3,
+			"id": 8,
 			"name": "Zestaw Barowy Premium",
 			"description": "Profesjonalna strefa barowa.",
 			"includes": ["Bar premium", "Podświetlenie RGB", "Regały", "Lodówki"],
@@ -80,42 +80,42 @@
 
 	"addons": [
 		{
-			"id": 1,
+			"id": 9,
 			"name": "Agregat prądotwórczy",
 			"description": "Zasilanie eventów plenerowych.",
 			"rental_type": "noc / weekend",
 			"price": "do uzgodnienia"
 		},
 		{
-			"id": 2,
+			"id": 10,
 			"name": "Namiot VIP Entrance",
 			"description": "Ekskluzywne wejście VIP. Przedsionek 6x3m z podwieszanym oświetleniem.",
 			"rental_type": "noc / weekend",
 			"price": "300 zł"
 		},
 		{
-			"id": 3,
+			"id": 11,
 			"name": "Świecące bransoletki LED",
 			"description": "Idealne na koncerty i eventy nocne. 200 sztuk.",
 			"rental_type": "za sztukę",
 			"price": "300zł"
 		},
 		{
-			"id": 4,
+			"id": 12,
 			"name": "Koktajlówki",
 			"description": "Wysokie stoliki eventowe. Cena za 2 sztuki.",
 			"rental_type": "2 sztuki",
 			"price": "100 zł"
 		},
 		{
-			"id": 5,
+			"id": 13,
 			"name": "Stoły",
 			"description": "Stoły eventowe. 6-osobowe. Cena za 1 sztukę.",
 			"rental_type": "za sztukę",
 			"price": "50 zł"
 		},
 		{
-			"id": 6,
+			"id": 14,
 			"name": "Krzesła",
 			"description": "Krzesła eventowe. Cena za 6 sztuk.",
 			"rental_type": "za sztukę",

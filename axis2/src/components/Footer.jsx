@@ -135,10 +135,18 @@ export default function Footer() {
 						</span>
 					</p>
 					<div className='flex gap-8 text-sm text-zinc-500'>
-						<a href='#' className='hover:text-white transition-colors'>
+						<a
+							href='/polityka-prywatnosci-i-ciasteczka-cookies.pdf'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='hover:text-white transition-colors'>
 							Polityka prywatności
 						</a>
-						<a href='#' className='hover:text-white transition-colors'>
+						<a
+							href='/regulamin.pdf'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='hover:text-white transition-colors'>
 							Regulamin
 						</a>
 					</div>
