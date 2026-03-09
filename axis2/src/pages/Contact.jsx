@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Send, Loader2, CheckCircle2, AlertCircle, Info, X, Mail, Phone, Calendar } from 'lucide-react'
 
 import DatePicker, { registerLocale } from 'react-datepicker'
+import { format } from 'date-fns'
 import pl from 'date-fns/locale/pl'
 import 'react-datepicker/dist/react-datepicker.css'
 import './datepicker-custom.css'
@@ -43,14 +44,14 @@ const Contact = () => {
 		e.preventDefault()
 		setStatus('loading')
 
-		const webhookUrl = 'https://n8n-production-8616.up.railway.app/webhook-test/58b7327f-b8ec-4bc9-9686-e4bbe003bfbe'
+		const webhookUrl = 'https://n8n-production-8616.up.railway.app/webhook/58b7327f-b8ec-4bc9-9686-e4bbe003bfbe'
 
 		const payload = {
 			source: cart.length > 0 ? 'konfigurator' : 'kontakt_ogolny',
 			data: {
 				...formData,
 				// Formatujemy datę do ISO, żeby n8n łatwiej ją czytało w Google Calendar
-				date: formData.date ? formData.date.toISOString() : null,
+				date: formData.date ? format(formData.date, 'yyyy-MM-dd') : null,
 			},
 			cart: cart,
 			total: cart.reduce((sum, item) => {
@@ -76,7 +77,6 @@ const Contact = () => {
 				setFormData({ name: '', date: null, email: '', phone: '', message: '' })
 			} else if (result.status === 'zajete') {
 				setStatus('zajete')
-				// NIE czyścimy formularza, żeby klient mógł zmienić datę
 			} else if (response.ok) {
 				setStatus('sent')
 				localStorage.removeItem('axis_cart')
@@ -104,7 +104,7 @@ const Contact = () => {
 				text: 'text-amber-900', // Poprawiony kontrast
 				icon: <AlertCircle className='text-amber-600' />,
 				title: 'Ten termin jest już zajęty',
-				desc: 'Przykro nam, ale ten dzień jest zarezerwowany. Wybierz inną datę lub wyślij zapytanie – sprawdzimy, co da się zrobić!',
+				desc: 'Przykro nam, ale ten dzień jest zarezerwowany. Wybierz inną datę lub poczekaj na naszą odpowiedź z propozycją bliskiej daty – sprawdzimy, co da się zrobić!',
 			},
 			individual: {
 				bg: 'bg-blue-50',
@@ -298,15 +298,15 @@ const Contact = () => {
 					initial={{ opacity: 0, y: 40 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
-					className='mt-20 w-full h-[350px] rounded-[3rem] overflow-hidden shadow-2xl shadow-gray-200/50 border border-white'>
+					className='mt-20 w-full h-[350px] overflow-hidden shadow-2xl shadow-gray-200/50 border border-white'>
 					<iframe
 						title='Lokalizacja Axis Events'
-						src='https://www.google.com/maps/embed?pb=YOUR_EMBED_LINK'
+						src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.494823764561!2d21.685773477025474!3d52.52448083589734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471f1dcf99d1d1a3%3A0xd7cc2511ab71b8b7!2zU2Fkb3dhIDksIDA3LTEzMCDFgW9jaMOzdw!5e0!3m2!1sen!2spl!4v1773068329520!5m2!1sen!2spl'
 						width='100%'
 						height='100%'
-						style={{ border: 0, filter: 'grayscale(0.2) contrast(1.1)' }}
-						allowFullScreen=''
-						loading='lazy'></iframe>
+						style={{ border: '2px solid gray', filter: 'grayscale(0.2) contrast(1.1)' }}
+						loading='lazy'
+						referrerPolicy='no-referrer-when-downgrade'></iframe>
 				</motion.div>
 
 				{/* Przycisk powrotu z poprawionym kontrastem hover */}

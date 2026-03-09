@@ -50,9 +50,9 @@ export default function Footer() {
 
 					{/* Navigation */}
 					<div>
-						<h4 className='text-sm font-bold uppercase tracking-widest text-white mb-6'>Eksploruj</h4>
+						<p className='text-sm font-bold uppercase tracking-widest text-white mb-6'>Eksploruj</p>
 						<ul className='space-y-4'>
-							{['Home', 'O nas', 'Blog', 'Kontakt'].map(item => (
+							{['Home', 'O nas', 'Blog', 'Kontakt', 'Realizacje'].map(item => (
 								<li key={item}>
 									<Link
 										to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
@@ -70,25 +70,42 @@ export default function Footer() {
 
 					{/* Services/Categories - opcjonalnie */}
 					<div>
-						<h4 className='text-sm font-bold uppercase tracking-widest text-white mb-6'>Usługi</h4>
+						<p className='text-sm font-bold uppercase tracking-widest text-white mb-6'>Usługi</p>
 						<ul className='space-y-4 text-zinc-400'>
 							{[
 								{ to: '/naglosnienie-i-oswietlenie', label: 'Nagłośnienie i oświetlenie' },
 								{ to: '/strefa-barowa', label: 'Strefa Barowa' },
 								{ to: '/realizacje', label: 'Realizacje' },
 								{ to: '/oferta', label: 'Konfigurator' },
-							].map((item, index) => (
-								<li key={index}>
-									<Link to={item.to} className='hover:text-blue-400 cursor-pointer transition-colors block w-fit'>
-										{item.label}
-									</Link>
-								</li>
-							))}
+								{ to: '/namiot-eventowy', label: 'Namiot Eventowy' }, // To chcemy wyróżnić
+							].map((item, index) => {
+								// Sprawdzamy, czy to nasz namiot
+								const isTent = item.to === '/namiot-eventowy'
+
+								return (
+									<li key={index}>
+										<Link
+											to={item.to}
+											className={`
+                        transition-colors block w-fit cursor-pointer font-medium
+                        ${
+													isTent
+														? 'text-amber-500 hover:text-amber-400' // Kolor dla namiotu
+														: 'hover:text-white' // Standardowy hover dla reszty
+												}
+                    `}>
+											{item.label}
+											{/* Opcjonalnie: mała kropka przy wyróżnionym linku */}
+											{isTent && <span className='ml-2 inline-block w-1 h-1 bg-amber-500 rounded-full animate-pulse' />}
+										</Link>
+									</li>
+								)
+							})}
 						</ul>
 					</div>
 					{/* Contact Info */}
 					<div className='space-y-6'>
-						<h4 className='text-sm font-bold uppercase tracking-widest text-white mb-6'>Bądźmy w kontakcie</h4>
+						<p className='text-sm font-bold uppercase tracking-widest text-white mb-6'>Bądźmy w kontakcie</p>
 						<div className='space-y-4'>
 							<a
 								href='mailto:hello.axis.events@gmail.com'

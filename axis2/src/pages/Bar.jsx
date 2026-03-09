@@ -151,8 +151,116 @@ export default function Bar() {
 				</div>
 			</section>
 
-			{/* SEKCJA KONTEKSTOWA */}
+			{/* WARIANTY WSPÓŁPRACY */}
 			<section className='py-24 bg-[#fdfbf7]'>
+				<div className='max-w-7xl mx-auto px-6'>
+					<div className='text-center max-w-3xl mx-auto mb-16'>
+						<span className='text-amber-600 font-black uppercase tracking-[0.4em] text-xs mb-6 block'>
+							Elastyczna Oferta
+						</span>
+						<h2 className='text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-6'>
+							Jak możesz <span className='text-amber-500'>wynająć nasz bar?</span>
+						</h2>
+						<p className='text-gray-500 text-lg leading-relaxed font-medium'>
+							Dopasowujemy zakres realizacji do typu wydarzenia. Możesz wynająć samą infrastrukturę albo zlecić nam
+							szerszą obsługę strefy baru.
+						</p>
+					</div>
+
+					<div className='grid md:grid-cols-2 gap-8'>
+						<div className='bg-white rounded-[3rem] p-10 border border-gray-100 shadow-sm'>
+							<h3 className='text-3xl font-black text-gray-900 mb-4 tracking-tight'>Wynajem infrastruktury</h3>
+							<p className='text-gray-500 leading-relaxed font-medium mb-6'>
+								Dostarczamy mobilny bar, rozstawiamy go na miejscu i przygotowujemy do pracy. To dobre rozwiązanie, gdy
+								masz własną obsługę lub potrzebujesz po prostu estetycznej, funkcjonalnej strefy barowej.
+							</p>
+							<ul className='space-y-3 text-gray-700 font-medium leading-relaxed'>
+								<li>• transport i montaż</li>
+								<li>• podświetlenie LED / RGBW</li>
+								<li>• przygotowanie stanowiska do pracy</li>
+								<li>• odbiór po wydarzeniu</li>
+							</ul>
+						</div>
+
+						<div className='bg-white rounded-[3rem] p-10 border border-gray-100 shadow-sm'>
+							<h3 className='text-3xl font-black text-gray-900 mb-4 tracking-tight'>Bar jako część realizacji</h3>
+							<p className='text-gray-500 leading-relaxed font-medium mb-6'>
+								Jeśli zakres wydarzenia tego wymaga, bar może być elementem większej realizacji eventowej razem z
+								namiotem, nagłośnieniem, oświetleniem i pozostałą oprawą techniczną.
+							</p>
+							<ul className='space-y-3 text-gray-700 font-medium leading-relaxed'>
+								<li>• spójny setup wizualny</li>
+								<li>• dopasowanie do charakteru eventu</li>
+								<li>• integracja z resztą strefy</li>
+								<li>• jedna, uporządkowana realizacja</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* CO ZAWIERA STREFA BARU */}
+			<section className='py-24 bg-white'>
+				<div className='max-w-7xl mx-auto px-6'>
+					<div className='grid lg:grid-cols-2 gap-16 items-start'>
+						<div>
+							<span className='text-amber-600 font-black uppercase tracking-[0.4em] text-xs mb-6 block'>
+								Szczegóły Techniczne
+							</span>
+							<h2 className='text-4xl md:text-6xl font-black text-gray-900 tracking-tighter leading-[0.95] mb-8'>
+								Co obejmuje <br />
+								<span className='text-amber-500'>nasza strefa baru?</span>
+							</h2>
+
+							<p className='text-gray-500 text-lg leading-relaxed font-medium mb-10 max-w-xl'>
+								Nie jest to zwykły składany stolik pod alkohol. Tworzymy estetyczne, gotowe do pracy stanowisko, które
+								dobrze wygląda, porządkuje przestrzeń i realnie podnosi poziom wydarzenia.
+							</p>
+
+							<div className='space-y-5'>
+								<SpecRow label='Konstrukcja' value='Mobilny bar eventowy gotowy do szybkiego montażu' />
+								<SpecRow label='Oświetlenie' value='Zintegrowane podświetlenie LED / RGBW' />
+								<SpecRow label='Wyposażenie' value='Stacje barmańskie, speed-racki i zaplecze robocze' />
+								<SpecRow label='Logistyka' value='Transport, rozstawienie i odbiór po wydarzeniu' />
+								<SpecRow label='Zastosowanie' value='Wesele, urodziny, event firmowy, garden party' />
+								<SpecRow label='Czas montażu' value='Sprawny setup, zwykle około 40 minut' />
+							</div>
+						</div>
+
+						<div className='grid gap-6'>
+							<div className='bg-[#fdfbf7] rounded-[2.5rem] p-8 border border-gray-100 shadow-sm'>
+								<h3 className='text-2xl font-black text-gray-900 mb-4 tracking-tight'>Po co klientowi mobilny bar?</h3>
+								<p className='text-gray-500 leading-relaxed font-medium'>
+									Bo porządkuje obsługę napojów, skraca chaos organizacyjny i tworzy naturalny punkt spotkań dla gości.
+									Dobrze zaprojektowany bar pracuje nie tylko użytkowo, ale też wizualnie.
+								</p>
+							</div>
+
+							<div className='bg-[#fdfbf7] rounded-[2.5rem] p-8 border border-gray-100 shadow-sm'>
+								<h3 className='text-2xl font-black text-gray-900 mb-4 tracking-tight'>Na jakie wydarzenia?</h3>
+								<p className='text-gray-500 leading-relaxed font-medium'>
+									Najlepiej sprawdza się na weselach, osiemnastkach, urodzinach, eventach firmowych i mniejszych
+									imprezach plenerowych, gdzie liczy się estetyka, wygoda i klimat.
+								</p>
+							</div>
+
+							<div className='bg-amber-50 rounded-[2.5rem] p-8 border border-amber-200 shadow-sm'>
+								<h3 className='text-2xl font-black text-gray-900 mb-4 tracking-tight'>Co daje taki setup?</h3>
+								<ul className='space-y-3 text-gray-700 font-medium leading-relaxed'>
+									<li>• lepszą organizację strefy napojów</li>
+									<li>• bardziej estetyczny wygląd wydarzenia</li>
+									<li>• naturalne centrum spotkań dla gości</li>
+									<li>• spójną oprawę z namiotem i oświetleniem</li>
+									<li>• efekt bardziej profesjonalnego eventu</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* SEKCJA KONTEKSTOWA */}
+			<section className='pt-10 pb-20 bg-[#fdfbf7]'>
 				<div className='max-w-5xl mx-auto px-6'>
 					<div className='bg-gray-900 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl'>
 						<div className='relative z-10'>
@@ -160,7 +268,9 @@ export default function Bar() {
 								Planujesz wesele lub event?
 							</h2>
 							<p className='text-gray-400 text-lg mb-10 max-w-2xl mx-auto font-light leading-relaxed'>
-								Nasze mobilne bary to coś więcej niż sprzęt. To Twoja gwarancja porządku, błyskawicznej obsługi i efektu "wow", który Twoi goście zapamiętają na długo. Jesteśmy z Tobą od projektu menu po ostatni wydany drink, dbając o każdy wizualny detal na Twoich zdjęciach.
+								Nasze mobilne bary to coś więcej niż sprzęt. To Twoja gwarancja porządku, błyskawicznej obsługi i efektu
+								"wow", który Twoi goście zapamiętają na długo. Jesteśmy z Tobą od projektu menu po ostatni wydany drink,
+								dbając o każdy wizualny detal na Twoich zdjęciach.
 							</p>
 							<Link
 								to='/oferta'
@@ -170,6 +280,37 @@ export default function Bar() {
 						</div>
 						{/* Dekoracyjne koło w tle */}
 						<div className='absolute -right-20 -top-20 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl'></div>
+					</div>
+				</div>
+			</section>
+
+			{/* FAQ */}
+			<section className='pt-10 pb-20 bg-[#fdfbf7]'>
+				<div className='max-w-5xl mx-auto px-6'>
+					<div className='text-center mb-16'>
+						<span className='text-amber-600 font-black uppercase tracking-[0.4em] text-xs mb-6 block'>FAQ</span>
+						<h2 className='text-4xl md:text-5xl font-black text-gray-900 tracking-tighter'>
+							Najczęstsze pytania o mobilny bar
+						</h2>
+					</div>
+
+					<div className='space-y-6'>
+						<FaqItem
+							question='Czy można wynająć sam bar bez pełnej obsługi eventu?'
+							answer='Tak. Bar może działać jako samodzielny element wydarzenia — z transportem, montażem i przygotowaniem stanowiska do pracy.'
+						/>
+						<FaqItem
+							question='Czy bar nadaje się na wesele i imprezy prywatne?'
+							answer='Tak. To jedno z jego najczęstszych zastosowań. Dobrze sprawdza się na weselach, urodzinach, osiemnastkach oraz wydarzeniach firmowych.'
+						/>
+						<FaqItem
+							question='Czy oświetlenie baru można dopasować do klimatu wydarzenia?'
+							answer='Tak. Zintegrowane podświetlenie pozwala dopasować charakter strefy do eleganckiego przyjęcia albo bardziej dynamicznej imprezy.'
+						/>
+						<FaqItem
+							question='Czy bar może być częścią większego pakietu?'
+							answer='Tak. Mobilny bar może być połączony z namiotem, nagłośnieniem, oświetleniem i innymi elementami realizacji eventowej.'
+						/>
 					</div>
 				</div>
 			</section>
@@ -185,6 +326,24 @@ function FeatureCard({ icon, title, desc }) {
 			</div>
 			<h3 className='text-2xl font-black mb-4 text-gray-900 tracking-tight'>{title}</h3>
 			<p className='text-gray-500 leading-relaxed text-sm font-medium'>{desc}</p>
+		</div>
+	)
+}
+
+function SpecRow({ label, value }) {
+	return (
+		<div className='flex flex-col md:flex-row md:items-center md:justify-between gap-2 py-4 border-b border-gray-200'>
+			<span className='text-[11px] font-black uppercase tracking-widest text-gray-400'>{label}</span>
+			<span className='text-gray-900 font-bold text-base md:text-right'>{value}</span>
+		</div>
+	)
+}
+
+function FaqItem({ question, answer }) {
+	return (
+		<div className='rounded-[2rem] border border-gray-200 p-8 bg-white'>
+			<h3 className='text-xl font-black text-gray-900 mb-3 tracking-tight'>{question}</h3>
+			<p className='text-gray-500 leading-relaxed font-medium'>{answer}</p>
 		</div>
 	)
 }

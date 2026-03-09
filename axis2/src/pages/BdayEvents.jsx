@@ -22,8 +22,8 @@ export default function BdayEvents() {
 						<span className='text-amber-500'>Nasza Technika.</span>
 					</motion.h1>
 					<p className='max-w-2xl mx-auto text-gray-500 text-xl font-medium'>
-						Od szalonej 18-nastki, przez eleganckie 30-ste urodziny, aż po bezpieczne party dla młodszych. Tworzymy
-						oprawę, o której będzie się mówić latami.
+						Od osiemnastek i domówek premium, przez 30/40/50 urodziny, aż po rodzinne imprezy z bezalkoholowym barem dla
+						młodszych gości. Tworzymy oprawę techniczną, która porządkuje przestrzeń i realnie buduje klimat wydarzenia.
 					</p>
 				</div>
 			</section>
@@ -74,6 +74,80 @@ export default function BdayEvents() {
 							bezalkoholowe). Kolorowe, owocowe i widowiskowe – bezpieczna frajda dla najmłodszych.
 						</p>
 					</motion.div>
+				</div>
+			</section>
+
+			{/* CO MOŻEMY ZAPEWNIĆ */}
+			<section className='py-10 bg-[#fdfbf7] px-6'>
+				<div className='max-w-7xl mx-auto'>
+					<div className='text-center max-w-3xl mx-auto mb-16'>
+						<span className='text-amber-600 font-black uppercase tracking-[0.4em] text-[10px] mb-6 block'>
+							Zakres Realizacji
+						</span>
+						<h2 className='text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-6'>
+							Co możemy przygotować <span className='text-amber-500'>na Twoje urodziny?</span>
+						</h2>
+						<p className='text-gray-500 text-lg font-medium leading-relaxed'>
+							Od pojedynczych elementów po kompletną oprawę imprezy. Dopasowujemy zakres realizacji do miejsca, liczby
+							gości i charakteru wydarzenia.
+						</p>
+					</div>
+
+					<div className='grid md:grid-cols-2 xl:grid-cols-4 gap-8'>
+						<OfferCard
+							title='Namiot eventowy'
+							desc='Strefa imprezy w ogrodzie lub plenerze. Daje osłonę, porządkuje przestrzeń i buduje klimat całego wydarzenia.'
+						/>
+						<OfferCard
+							title='Nagłośnienie 2.2'
+							desc='Dwie aktywne kolumny, dwa subwoofery i mikser. Setup pod imprezy prywatne, namioty, osiemnastki i garden party.'
+						/>
+						<OfferCard
+							title='Oświetlenie i efekty'
+							desc='Stroboskop RGB, Airshipy, laser, głowica i dym. Dynamiczne światło, które realnie ożywia parkiet.'
+						/>
+						<OfferCard
+							title='Mobilny bar'
+							desc='Bar dopasowany do rodzaju imprezy – od klasycznych drinków po bezalkoholowe mocktaile dla młodszych gości.'
+						/>
+					</div>
+				</div>
+			</section>
+
+			{/* JAK TO DZIAŁA */}
+			<section className='py-10 bg-white px-6'>
+				<div className='max-w-6xl mx-auto'>
+					<div className='text-center max-w-3xl mx-auto mb-16'>
+						<span className='text-amber-600 font-black uppercase tracking-[0.4em] text-[10px] mb-6 block'>
+							Jak działamy
+						</span>
+						<h2 className='text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-6'>
+							Od zapytania do <span className='text-amber-500'>gotowej imprezy</span>
+						</h2>
+					</div>
+
+					<div className='grid md:grid-cols-4 gap-8'>
+						<StepCard
+							number='01'
+							title='Wysyłasz zapytanie'
+							desc='Podajesz datę, lokalizację i zakres imprezy. Sprawdzamy dostępność terminu i możliwości realizacji.'
+						/>
+						<StepCard
+							number='02'
+							title='Dobieramy setup'
+							desc='Dopasowujemy namiot, nagłośnienie, oświetlenie i bar do liczby gości oraz charakteru wydarzenia.'
+						/>
+						<StepCard
+							number='03'
+							title='Rozstawiamy wszystko'
+							desc='Dowozimy sprzęt, montujemy go na miejscu, uruchamiamy i konfigurujemy podstawowe ustawienia.'
+						/>
+						<StepCard
+							number='04'
+							title='Ty robisz imprezę'
+							desc='Goście wchodzą w gotową przestrzeń, a Ty nie tracisz czasu na techniczne kombinowanie.'
+						/>
+					</div>
 				</div>
 			</section>
 
@@ -137,6 +211,25 @@ export default function BdayEvents() {
 					</Link>
 				</div>
 			</section>
+		</div>
+	)
+}
+
+function OfferCard({ title, desc }) {
+	return (
+		<div className='bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all'>
+			<h3 className='text-2xl font-black text-gray-900 mb-4 tracking-tight'>{title}</h3>
+			<p className='text-gray-500 text-sm leading-relaxed font-medium'>{desc}</p>
+		</div>
+	)
+}
+
+function StepCard({ number, title, desc }) {
+	return (
+		<div className='rounded-[2.5rem] p-8 bg-[#fdfbf7] border border-gray-100'>
+			<div className='text-amber-500 font-black text-3xl tracking-tighter mb-4'>{number}</div>
+			<h3 className='text-2xl font-black text-gray-900 mb-4 tracking-tight'>{title}</h3>
+			<p className='text-gray-500 text-sm leading-relaxed font-medium'>{desc}</p>
 		</div>
 	)
 }

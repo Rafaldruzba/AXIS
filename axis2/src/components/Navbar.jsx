@@ -24,6 +24,9 @@ export default function Navbar() {
 								<Link to='/oferta' className='block px-6 py-2 hover:bg-gray-100'>
 									Konfigurator
 								</Link>
+								<Link to='/namiot-eventowy' className='block px-6 py-2 hover:bg-gray-100'>
+									Namiot eventowy
+								</Link>
 								<Link to='/strefa-barowa' className='block px-6 py-2 hover:bg-gray-100'>
 									Strefa barowa
 								</Link>
@@ -73,28 +76,33 @@ export default function Navbar() {
 
 			{/* MOBILE MENU */}
 			{isOpen && (
-				<div className='md:hidden bg-black px-6 pb-6 space-y-4'>
-					<Link to='/oferta' className='block' onClick={() => setIsOpen(false)}>
-						Konfigurator
-					</Link>
-					<Link to='/strefa-barowa' className='block' onClick={() => setIsOpen(false)}>
-						Strefa barowa
-					</Link>
-					<Link to='/naglosnienie-i-oswietlenie' className='block' onClick={() => setIsOpen(false)}>
-						Nagłośnienie i oświetlenie
-					</Link>
-					<Link to='/wesele' className='block' onClick={() => setIsOpen(false)}>
-						Wesela
-					</Link>
-					<Link to='/imprezy-firmowe' className='block' onClick={() => setIsOpen(false)}>
-						Eventy firmowe
-					</Link>
-					<Link to='/eventy-plenerowe' className='block' onClick={() => setIsOpen(false)}>
-						Eventy plenerowe
-					</Link>
-					<Link to='/imprezy-urodzinowe' className='block' onClick={() => setIsOpen(false)}>
-						Imprezy urodzinowe
-					</Link>
+				<div className='md:hidden bg-black px-6 pb-6 pt-4 space-y-4'>
+					<div className='space-y-4 px-4'>
+						<Link to='/oferta' className='block' onClick={() => setIsOpen(false)}>
+							Konfigurator
+						</Link>
+						<Link to='/namiot-eventowy' className='block text-amber-600' onClick={() => setIsOpen(false)}>
+							Namiot eventowy
+						</Link>
+						<Link to='/strefa-barowa' className='block' onClick={() => setIsOpen(false)}>
+							Strefa barowa
+						</Link>
+						<Link to='/naglosnienie-i-oswietlenie' className='block' onClick={() => setIsOpen(false)}>
+							Nagłośnienie i oświetlenie
+						</Link>
+						<Link to='/wesele' className='block' onClick={() => setIsOpen(false)}>
+							Wesela
+						</Link>
+						<Link to='/imprezy-firmowe' className='block' onClick={() => setIsOpen(false)}>
+							Eventy firmowe
+						</Link>
+						<Link to='/eventy-plenerowe' className='block' onClick={() => setIsOpen(false)}>
+							Eventy plenerowe
+						</Link>
+						<Link to='/imprezy-urodzinowe' className='block' onClick={() => setIsOpen(false)}>
+							Imprezy urodzinowe
+						</Link>
+					</div>
 					<Link to='/realizacje' className='block' onClick={() => setIsOpen(false)}>
 						Realizacje
 					</Link>

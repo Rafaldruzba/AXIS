@@ -17,8 +17,8 @@ export default function CompanyEvents() {
 								<span className='text-amber-500'>Eventy Firmowe.</span>
 							</h1>
 							<p className='text-gray-500 text-xl leading-relaxed mb-10 font-medium'>
-								Specjalizujemy się w obsłudze mniejszych, prestiżowych integracji do 50 osób. Tworzymy ekskluzywne
-								strefy barowe i namiotowe, gdzie biznes spotyka się z relaksem.
+								Skupiamy się na kameralnych i średnich eventach firmowych do około 50 osób, gdzie liczy się estetyka,
+								wygodna przestrzeń i dopracowana oprawa techniczna.
 							</p>
 							<Link
 								to='/kontakt'
@@ -35,6 +35,47 @@ export default function CompanyEvents() {
 								/>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* DLA JAKICH EVENTÓW */}
+			<section className='py-10 bg-[#fdfbf7]'>
+				<div className='max-w-7xl mx-auto px-6'>
+					<div className='text-center max-w-3xl mx-auto mb-16'>
+						<span className='text-amber-600 font-black uppercase tracking-[0.4em] text-[10px] mb-6 block'>
+							Zastosowanie
+						</span>
+						<h2 className='text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-6'>
+							Jakie wydarzenia <span className='text-amber-500'>obsługujemy?</span>
+						</h2>
+						<p className='text-gray-500 text-lg font-medium leading-relaxed'>
+							Nasza oferta jest skrojona pod mniejsze i średnie realizacje firmowe, gdzie liczy się klimat, sprawna
+							logistyka i estetyczna oprawa bez budowania dużej sceny.
+						</p>
+					</div>
+
+					<div className='grid md:grid-cols-2 xl:grid-cols-4 gap-8'>
+						<BusinessCard
+							icon={<Users size={26} />}
+							title='Integracje zespołowe'
+							desc='Luźne spotkania dla pracowników, które łączą strefę chill, bar i przestrzeń do rozmów.'
+						/>
+						<BusinessCard
+							icon={<Briefcase size={26} />}
+							title='Spotkania biznesowe'
+							desc='Kameralne wydarzenia z estetycznym zapleczem, które robi dobre wrażenie na klientach i partnerach.'
+						/>
+						<BusinessCard
+							icon={<Layout size={26} />}
+							title='Eventy plenerowe'
+							desc='Namiot, nagłośnienie i oświetlenie w miejscach, gdzie klasyczna infrastruktura jest ograniczona.'
+						/>
+						<BusinessCard
+							icon={<GlassWater size={26} />}
+							title='Jubileusze i podziękowania'
+							desc='Wydarzenia dla zespołu, klientów lub kontrahentów w bardziej swobodnym, ale nadal dopracowanym formacie.'
+						/>
 					</div>
 				</div>
 			</section>
@@ -81,6 +122,67 @@ export default function CompanyEvents() {
 				</div>
 			</section>
 
+			{/* ZAKRES REALIZACJI */}
+			<section className='pt-10 pb-20 bg-white'>
+				<div className='max-w-7xl mx-auto px-6'>
+					<div className='grid lg:grid-cols-2 gap-16 items-start'>
+						<div>
+							<span className='text-amber-600 font-black uppercase tracking-[0.4em] text-[10px] mb-6 block'>
+								Zakres Realizacji
+							</span>
+							<h2 className='text-4xl md:text-6xl font-black text-gray-900 tracking-tighter leading-[0.95] mb-8'>
+								Co dokładnie <br />
+								<span className='text-amber-500'>możemy zapewnić?</span>
+							</h2>
+
+							<p className='text-gray-500 text-lg leading-relaxed font-medium mb-10 max-w-xl'>
+								Realizujemy wydarzenia w formule elastycznej: od pojedynczych elementów po spójną oprawę
+								techniczno-eventową dopasowaną do miejsca, liczby uczestników i charakteru spotkania.
+							</p>
+
+							<div className='space-y-5'>
+								<SpecRow label='Namiot eventowy' value='Przestrzeń 9x6 m jako strefa spotkania, baru lub chilloutu' />
+								<SpecRow label='Nagłośnienie' value='Zestaw 2.2 z aktywnymi kolumnami, subwooferami i mikserem' />
+								<SpecRow label='Oświetlenie' value='Dynamiczne światło, efekty parkietowe, laser, głowica i dym' />
+								<SpecRow label='Bar mobilny' value='Obsługa w formule premium lub bezalkoholowej, zależnie od eventu' />
+								<SpecRow label='Zasilanie' value='Możliwość pracy z własnym agregatem w trudniejszych lokalizacjach' />
+								<SpecRow label='Logistyka' value='Transport, montaż, uruchomienie i odbiór po wydarzeniu' />
+							</div>
+						</div>
+
+						<div className='grid gap-6'>
+							<div className='bg-[#fdfbf7] rounded-[2.5rem] p-8 border border-gray-100 shadow-sm'>
+								<h3 className='text-2xl font-black text-gray-900 mb-4 tracking-tight'>Dlaczego to działa w firmach?</h3>
+								<p className='text-gray-500 leading-relaxed font-medium'>
+									Bo nie budujemy przesadnie dużej produkcji, tylko estetyczną i funkcjonalną przestrzeń, w której
+									ludzie chcą zostać dłużej. To dobre rozwiązanie dla firm, które chcą zrobić coś jakościowego bez
+									ciężkiej, scenicznej formy.
+								</p>
+							</div>
+
+							<div className='bg-[#fdfbf7] rounded-[2.5rem] p-8 border border-gray-100 shadow-sm'>
+								<h3 className='text-2xl font-black text-gray-900 mb-4 tracking-tight'>Dla jakiej skali wydarzeń?</h3>
+								<p className='text-gray-500 leading-relaxed font-medium'>
+									Najlepiej odnajdujemy się w realizacjach kameralnych i średnich — tam, gdzie ważna jest jakość
+									kontaktu, estetyka przestrzeni i dopracowany klimat. To naturalny wybór dla spotkań do około 50 osób.
+								</p>
+							</div>
+
+							<div className='bg-amber-50 rounded-[2.5rem] p-8 border border-amber-200 shadow-sm'>
+								<h3 className='text-2xl font-black text-gray-900 mb-4 tracking-tight'>Korzyści dla organizatora</h3>
+								<ul className='space-y-3 text-gray-700 font-medium leading-relaxed'>
+									<li>• jedna spójna realizacja zamiast kilku podwykonawców</li>
+									<li>• estetyczna przestrzeń gotowa na integrację i networking</li>
+									<li>• techniczne zaplecze bez improwizacji na miejscu</li>
+									<li>• łatwiejsza organizacja i mniej rzeczy do koordynowania</li>
+									<li>• nowoczesna forma zamiast „kolejnego spotkania przy stołach”</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/* SEO & CONTENT SECTION */}
 			<section className='pb-32 pt-10 bg-[#fdfbf7]'>
 				<div className='max-w-4xl mx-auto px-6'>
@@ -105,6 +207,65 @@ export default function CompanyEvents() {
 					</div>
 				</div>
 			</section>
+
+			{/* FAQ */}
+			<section className='pb-32 bg-[#fdfbf7]'>
+				<div className='max-w-5xl mx-auto px-6'>
+					<div className='text-center mb-16'>
+						<span className='text-amber-600 font-black uppercase tracking-[0.4em] text-[10px] mb-6 block'>FAQ</span>
+						<h2 className='text-4xl md:text-5xl font-black text-gray-900 tracking-tighter'>Najczęstsze pytania firm</h2>
+					</div>
+
+					<div className='space-y-6'>
+						<FaqItem
+							question='Czy obsługujecie wydarzenia firmowe poza miastem?'
+							answer='Tak. Realizujemy eventy także w plenerze i lokalizacjach oddalonych od większej infrastruktury, o ile warunki do montażu są odpowiednie.'
+						/>
+						<FaqItem
+							question='Czy można zamówić tylko namiot albo tylko bar?'
+							answer='Tak. Zakres realizacji może obejmować pojedynczy element albo pełny pakiet — wszystko zależy od potrzeb wydarzenia.'
+						/>
+						<FaqItem
+							question='Czy zapewniacie zasilanie?'
+							answer='Tak. W razie potrzeby możemy pracować również z własnym zapleczem zasilania, co ułatwia realizacje w mniej oczywistych lokalizacjach.'
+						/>
+						<FaqItem
+							question='Czy to oferta dla dużych eventów korporacyjnych?'
+							answer='Nie celujemy w wielkie produkcje sceniczne. Najmocniej działamy przy kameralnych i średnich wydarzeniach firmowych, gdzie liczy się atmosfera, estetyka i sprawna organizacja.'
+						/>
+					</div>
+				</div>
+			</section>
+		</div>
+	)
+}
+
+function BusinessCard({ icon, title, desc }) {
+	return (
+		<div className='bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all'>
+			<div className='w-12 h-12 rounded-2xl bg-amber-500 text-gray-900 flex items-center justify-center mb-6'>
+				{icon}
+			</div>
+			<h3 className='text-2xl font-black text-gray-900 mb-4 tracking-tight'>{title}</h3>
+			<p className='text-gray-500 text-sm leading-relaxed font-medium'>{desc}</p>
+		</div>
+	)
+}
+
+function SpecRow({ label, value }) {
+	return (
+		<div className='flex flex-col md:flex-row md:items-center md:justify-between gap-2 py-4 border-b border-gray-200'>
+			<span className='text-[11px] font-black uppercase tracking-widest text-gray-400'>{label}</span>
+			<span className='text-gray-900 font-bold text-base md:text-right'>{value}</span>
+		</div>
+	)
+}
+
+function FaqItem({ question, answer }) {
+	return (
+		<div className='rounded-[2rem] border border-gray-200 p-8 bg-white'>
+			<h3 className='text-xl font-black text-gray-900 mb-3 tracking-tight'>{question}</h3>
+			<p className='text-gray-500 leading-relaxed font-medium'>{answer}</p>
 		</div>
 	)
 }

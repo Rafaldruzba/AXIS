@@ -19,6 +19,7 @@ export default defineConfig({
 				'/realizacje',
 				'/strefa-barowa',
 				'/eventy-firmowe',
+				'/namiot-eventowy',
 				'/eventy-plenerowe',
 				'/imprezy-urodzinowe',
 				'/naglosnienie-i-oswietlenie',

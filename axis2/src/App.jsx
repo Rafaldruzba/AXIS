@@ -15,6 +15,7 @@ import CompanyEvents from './pages/CompanyEvents.jsx'
 import BdayEvents from './pages/BdayEvents.jsx'
 import SoundAndLighting from './pages/SoundAndLighting.jsx'
 import Bar from './pages/Bar.jsx'
+import Tent from './pages/Tent.jsx'
 import ScrollToTop from './components/ScrollToTop'
 import './index.css'
 import NotFound from './pages/NotFound.jsx'
@@ -27,13 +28,14 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/blog' element={<Blog />} />
-				<Route path='/blog/:slug' element={<BlogPost />} />
 				<Route path='/o-nas' element={<AboutUs />} />
 				<Route path='/oferta' element={<Offer />} />
 				<Route path='/wesele' element={<Weddings />} />
 				<Route path='/kontakt' element={<Contact />} />
-				<Route path='/realizacje' element={<Realizations />} />
 				<Route path='/strefa-barowa' element={<Bar />} />
+				<Route path='/blog/:slug' element={<BlogPost />} />
+				<Route path='/namiot-eventowy' element={<Tent />} />
+				<Route path='/realizacje' element={<Realizations />} />
 				<Route path='/eventy-firmowe' element={<CompanyEvents />} />
 				<Route path='/eventy-plenerowe' element={<OutdoorEvents />} />
 				<Route path='/realizacje/:slug' element={<RealizationPost />} />

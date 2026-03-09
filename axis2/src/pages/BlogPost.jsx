@@ -35,16 +35,16 @@ export default function BlogPost() {
 				{/* Renderowanie sekcji z JSONa */}
 				<div className='space-y-12 text-gray-800 text-lg leading-relaxed'>
 					{/* Intro */}
-					<p className='text-xl font-medium text-gray-700 italic border-l-4 border-amber-500 pl-6'>
-						{post.description}
-					</p>
+					<p
+						dangerouslySetInnerHTML={{ __html: post.description }}
+						className='text-xl font-medium text-gray-700 italic border-l-4 border-amber-500 pl-6'></p>
 
 					{/* Pętla po sekcjach */}
 					{post.sections &&
 						post.sections.map((section, index) => (
 							<div key={index} className='space-y-4'>
 								<h2 className='text-3xl font-bold text-gray-900'>{section.heading}</h2>
-								<p className='text-gray-700'>{section.text}</p>
+								<p dangerouslySetInnerHTML={{ __html: section.text }} className='text-gray-700'></p>
 							</div>
 						))}
 				</div>
