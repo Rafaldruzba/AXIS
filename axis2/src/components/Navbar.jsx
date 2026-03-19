@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import logo from '../assets/logo.png'
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false)
 	const [dropdown, setDropdown] = useState(false)
@@ -9,8 +9,8 @@ export default function Navbar() {
 		<nav className='fixed w-full bg-black/70 backdrop-blur-md text-white z-50'>
 			<div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
 				{/* LOGO */}
-				<Link to='/' className='text-2xl font-bold tracking-widest' onClick={() => setIsOpen(false)}>
-					AXIS EVENTS
+				<Link to='/' className='text-2xl font-bold tracking-widest md:ml-10' onClick={() => setIsOpen(false)}>
+					<img src={logo} alt='AXIS Events logo' className='h-12 object-contain' />
 				</Link>
 
 				{/* DESKTOP MENU */}

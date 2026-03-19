@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------------
 # 1. OBSŁUGA REACT ROUTER (SPA)
-# Zapobiega błędom 404 przy odświeżaniu strony na podstronach
 # ----------------------------------------------------------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -11,7 +10,7 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /index.html [L]
+  RewriteRule ^ index.html [L]
 </IfModule>
 
 # ----------------------------------------------------------------------
@@ -41,7 +40,6 @@
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
 
-  # Obrazy i ikony
   ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
@@ -49,12 +47,10 @@
   ExpiresByType image/x-icon "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
 
-  # Skrypty i style
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType application/x-javascript "access plus 1 month"
 
-  # Czcionki
   ExpiresByType application/font-woff "access plus 1 year"
   ExpiresByType application/font-woff2 "access plus 1 year"
 </IfModule>
@@ -63,16 +59,12 @@
 # 5. BEZPIECZEŃSTWO (SECURITY HEADERS)
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
-  # Blokowanie otwierania strony w ramkach (zabezpieczenie przed Clickjackingiem)
   Header set X-Frame-Options "SAMEORIGIN"
   
-  # Ochrona przed XSS
   Header set X-XSS-Protection "1; mode=block"
   
-  # Blokowanie zgadywania typów plików (MIME sniffing)
   Header set X-Content-Type-Options "nosniff"
   
-  # Usuwanie informacji o serwerze (dla bezpieczeństwa)
   Header unset X-Powered-By
 </IfModule>
 

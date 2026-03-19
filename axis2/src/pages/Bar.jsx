@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom'
-import { GlassWater, Sparkles, UserCheck, ShieldCheck } from 'lucide-react'
+import { GlassWater, Sparkles, ShieldCheck } from 'lucide-react'
+
+import { getOptimizedImage, IMAGES } from '../assets/img'
+import { AdvancedImage } from '@cloudinary/react'
+import { fill } from '@cloudinary/url-gen/actions/resize'
 
 export default function Bar() {
 	return (
@@ -37,8 +41,8 @@ export default function Bar() {
 						{/* Dekoracyjne zdjęcie / Grafika */}
 						<div className='relative'>
 							<div className='aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white'>
-								<img
-									src='https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80'
+								<AdvancedImage
+									cldImg={getOptimizedImage(IMAGES.BAR_HERO).resize(fill().width(1000).aspectRatio('4:5'))}
 									alt='Luksusowy Bar Mobilny'
 									className='w-full h-full object-cover'
 								/>
@@ -134,14 +138,19 @@ export default function Bar() {
 						{/* Drugie zdjęcie uzupełniające */}
 						<div className='order-1 lg:order-2 relative'>
 							<div className='aspect-square rounded-[3rem] overflow-hidden shadow-inner bg-gray-100'>
-								<img
-									src='https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&q=80'
+								<AdvancedImage
+									cldImg={getOptimizedImage(IMAGES.BAR_SECOND)
+										.resize(
+											fill()
+												.width(600)
+												.height(600),
+										)}
 									alt='Szczegóły baru'
 									className='w-full h-full object-cover mix-blend-multiply opacity-90'
 								/>
 							</div>
 							{/* Element dekoracyjny: Kółko z tekstem */}
-							<div className='absolute -top-6 -right-6 w-32 h-32 bg-amber-500 rounded-full flex items-center justify-center p-4 text-center rotate-12 shadow-xl'>
+							<div className='absolute -top-6 -right-2 md:-right-6 w-32 h-32 bg-amber-500 rounded-full flex items-center justify-center p-4 text-center rotate-12 shadow-xl'>
 								<p className='text-gray-900 font-black text-[10px] uppercase tracking-tighter leading-tight'>
 									Gotowy do pracy w 40 min
 								</p>

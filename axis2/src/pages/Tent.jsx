@@ -85,27 +85,23 @@ export default function Tent() {
 	const faqs = [
 		{
 			q: 'Jakie są wymagania techniczne do rozstawienia mobilnego klubu?',
-			a: 'Potrzebujemy jedynie płaskiego terenu o wymiarach min. 11x11m oraz dostępu do standardowego gniazdka 230V. Namiot możemy rozstawić na trawie (kotwienie śledziami) lub betonie/kostce (obciążniki wodne/betonowe).',
+			a: 'Potrzebujemy jedynie płaskiego terenu o wymiarach min. 11x11m oraz dostępu do gniazda siłowego 400V. Namiot możemy rozstawić na trawie (kotwienie śledziami) lub betonie/kostce (obciążniki piaskowe/betonowe).',
 		},
 		{
 			q: 'Czy dmuchany namiot jest bezpieczny przy silnym wietrze?',
-			a: 'Absolutnie. Konstrukcja wykonana jest z wzmocnionego PVC Premium i posiada system wielopunktowych odciągów. Gwarantujemy pełną stabilność przy wietrze do 15 m/s (ok. 55 km/h). Przy ekstremalnych warunkach pogodowych monitorujemy sytuację na bieżąco.',
+			a: 'Absolutnie. Konstrukcja wykonana jest z wzmocnionego PVC Premium i posiada system wielopunktowych odciągów. Gwarantujemy pełną stabilność przy wietrze do 12 m/s (ok. 45 km/h). Przy ekstremalnych warunkach pogodowych monitorujemy sytuację na bieżąco.',
 		},
 		{
 			q: 'Co z hałasem dmuchawy? Czy będzie słychać muzykę?',
-			a: "Używamy nowoczesnych dmuchaw typu 'Silent-Mode'. Po zamknięciu namiotu i włączeniu nagłośnienia, praca silników jest praktycznie niesłyszalna dla gości wewnątrz, co pozwala na komfortową zabawę i rozmowy.",
+			a: 'Po zamknięciu namiotu i włączeniu nagłośnienia, praca silników jest niesłyszalna dla gości wewnątrz, co pozwala na komfortową zabawę!',
 		},
 		{
 			q: 'Ile czasu trwa montaż i kiedy przyjeżdżacie?',
-			a: 'Sam montaż konstrukcji trwa ok. 45 minut. Z pełnym uzbrojeniem w światło i dźwięk potrzebujemy ok. 2 godzin. Zazwyczaj pojawiamy się na miejscu 3-4 godziny przed startem Twojego eventu.',
+			a: 'Sam montaż konstrukcji trwa około godziny. Z pełnym uzbrojeniem w światło i dźwięk potrzebujemy ok. 2 godzin. Zazwyczaj pojawiamy się na miejscu 3-4 godziny przed startem Twojego eventu.',
 		},
 		{
 			q: 'Czy w namiocie można palić lub używać wytwornic dymu?',
 			a: 'Wewnątrz obowiązuje całkowity zakaz palenia tytoniu ze względu na bezpieczeństwo poszycia. Natomiast profesjonalne wytwornice dymu (haze/fog) są jak najbardziej wskazane – genialnie podkreślają nasze oświetlenie laserowe i LED.',
-		},
-		{
-			q: 'Czy namiot chroni przed zimnem w nocy?',
-			a: 'Grube poszycie PVC świetnie izoluje termicznie. W chłodniejsze dni oferujemy wynajem profesjonalnych nagrzewnic olejowych lub elektrycznych, które w kilka minut nagrzewają wnętrze do temperatury pokojowej.',
 		},
 	]
 
@@ -119,7 +115,7 @@ export default function Tent() {
 	return (
 		<div className='bg-[#0a0a0a] text-white min-h-screen font-sans selection:bg-amber-500 selection:text-black'>
 			{/* HERO SECTION - Zoptymalizowany pod SEO (H1) */}
-			<section className='relative h-[90vh] flex items-center justify-center overflow-hidden'>
+			<section className='relative h-[100vh] flex items-center justify-center overflow-hidden'>
 				{/* Background Image z lepszym przyciemnieniem i głębią */}
 				<motion.div
 					initial={{ scale: 1.15 }}
@@ -347,7 +343,7 @@ export default function Tent() {
 				</div>
 
 				{/* Wizualny smaczek: Cyfry / Statystyki */}
-				<div className='mt-32 grid grid-cols-2 md:grid-cols-4 gap-8 py-16 border-y border-white/5'>
+				<div className='mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 border-y border-white/5'>
 					{[
 						{ val: '100%', label: 'Wodoodporność' },
 						{ val: '45min', label: 'Czas rozstawienia' },
@@ -363,7 +359,7 @@ export default function Tent() {
 			</section>
 
 			{/* FAQ SECTION - Bardzo ważne dla SEO */}
-			<section className='max-w-4xl mx-auto px-6 py-32'>
+			<section className='max-w-4xl mx-auto px-6'>
 				<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className='text-center mb-20'>
 					<h2 className='text-5xl md:text-7xl font-black tracking-tighter uppercase mb-4'>
 						Masz <span className='text-amber-500 font-black italic'>Pytania?</span>
@@ -420,7 +416,7 @@ export default function Tent() {
 			</section>
 
 			{/* CTA SECTION */}
-			<section className='py-40 px-6 relative overflow-hidden text-center'>
+			<section className='pt-20 pb-20 px-6 relative overflow-hidden text-center'>
 				{/* Tło z efektem poświaty - dodaje głębi */}
 				<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 blur-[120px] rounded-full -z-10'></div>
 
@@ -430,14 +426,14 @@ export default function Tent() {
 							<Sparkles size={12} /> Rezerwacje na sezon 2026 otwarte
 						</span>
 
-						<h2 className='text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-12 uppercase leading-[0.85]'>
+						<h2 className='text-5xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-12 uppercase leading-[0.85]'>
 							STWÓRZMY <br />
 							<span className=' text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-600 underline decoration-amber-500 decoration-4 underline-offset-[15px]'>
 								HISTORIĘ
 							</span>
 						</h2>
 
-						<div className='relative inline-block group'>
+						<div className='relative inline-block group mt-4'>
 							{/* Pulsujący efekt pod przyciskiem */}
 							<div className='absolute inset-0 bg-amber-500 blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 rounded-full'></div>
 

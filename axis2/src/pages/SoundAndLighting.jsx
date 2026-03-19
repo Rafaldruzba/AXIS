@@ -38,7 +38,7 @@ export default function SoundAndLighting() {
 									className='w-full h-full object-cover'
 								/>
 							</div>
-							<div className='absolute -top-10 -right-5 bg-amber-500 p-6 rounded-3xl shadow-xl rotate-12'>
+							<div className='absolute -top-10 -right-2 md:-right-5 bg-amber-500 p-6 rounded-3xl shadow-xl rotate-12'>
 								<Zap className='text-gray-900 w-10 h-10' />
 							</div>
 						</div>
@@ -47,7 +47,7 @@ export default function SoundAndLighting() {
 			</section>
 
 			{/* NASZA FILOZOFIA ROBOTY */}
-			<section className='py-32 bg-white'>
+			<section className='py-20 md:py-32 bg-white'>
 				<div className='max-w-7xl mx-auto px-6'>
 					<div className='flex flex-col md:flex-row justify-between items-center mb-20 gap-8 text-center md:text-left'>
 						<h2 className='text-4xl md:text-5xl font-black tracking-tighter text-gray-900 max-w-xl'>
@@ -242,7 +242,7 @@ export default function SoundAndLighting() {
 			</section>
 
 			{/* SEKCJA: WYNAJEM SAMEGO SPRZĘTU */}
-			<section className='py-32 bg-[#fdfbf7] overflow-hidden'>
+			<section className='py-20 md:py-32 bg-[#fdfbf7] overflow-hidden'>
 				<div className='max-w-7xl mx-auto px-6'>
 					<div className='bg-amber-500 rounded-[4rem] p-10 md:p-20 grid lg:grid-cols-2 gap-12 items-center relative'>
 						<div>
@@ -270,7 +270,7 @@ export default function SoundAndLighting() {
 								Pobierz cennik sprzętu
 							</Link>
 						</div>
-						<div className='relative flex justify-center'>
+						<div className='hidden md:block relative flex justify-center'>
 							<div className='w-full h-[400px] bg-gray-900/10 rounded-[3rem] border-2 border-dashed border-gray-900/20 flex items-center justify-center'>
 								<p className='text-gray-900 font-black uppercase tracking-widest opacity-20 rotate-12 text-4xl'>
 									RENTAL GEAR

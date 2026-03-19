@@ -60,9 +60,9 @@ export default function Weddings() {
 								wypoczynku, dając gościom chwilę wytchnienia w eleganckich warunkach.
 							</p>
 							<Link
-								to='/oferta'
+								to='/namiot-eventowy'
 								className='text-amber-600 font-black uppercase text-xs tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all'>
-								Sprawdź nasze namioty <span>→</span>
+								Sprawdź nasz namiot <span>→</span>
 							</Link>
 						</div>
 					</div>

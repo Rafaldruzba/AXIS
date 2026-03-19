@@ -116,7 +116,7 @@ export default function InfoSection() {
 								question: 'Czy potrzebujecie dostępu do prądu?',
 
 								answer:
-									'Tak. Nasz namiot wymaga stałego zasilania, ponieważ działa dzięki dmuchawie, która utrzymuje jego kształt. Do działania potrzebne jest standardowe gniazdko 230V.Jeśli w miejscu wydarzenia nie ma dostępu do prądu, możemy zapewnić agregat prądotwórczy, który zasili namiot oraz dodatkowe oświetlenie lub nagłośnienie.',
+									'Tak. Nasz namiot wymaga stałego zasilania, ponieważ działa dzięki dmuchawie, która utrzymuje jego kształt. Do działania potrzebne jest standardowe gniazdo siłowe 400V. Jeśli w miejscu wydarzenia nie ma dostępu do prądu, możemy zapewnić agregat prądotwórczy, który zasili namiot oraz dodatkowe oświetlenie lub nagłośnienie.',
 							},
 
 							{

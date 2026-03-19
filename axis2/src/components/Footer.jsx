@@ -1,9 +1,16 @@
 import React from 'react'
 import { Mail, Phone, Instagram, Facebook, MapPin, ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom' // Jeśli używasz react-router
+import logo from '../assets/logoname.png'
 
 export default function Footer() {
 	const currentYear = new Date().getFullYear()
+
+	const TikTokIcon = ({ size = 20 }) => (
+		<svg xmlns='http://www.w3.org/2000/svg' width={size} height={size} viewBox='0 0 24 24' fill='currentColor'>
+			<path d='M12.5 2h3c.2 2.1 1.6 3.9 3.6 4.7v3.1c-1.5 0-3-.5-4.3-1.4v6.7c0 3.3-2.7 6-6 6S3 18.4 3 15.1s2.7-6 6-6c.3 0 .6 0 .9.1v3.2c-.3-.1-.6-.2-.9-.2-1.6 0-2.9 1.3-2.9 2.9S7.4 18 9 18s2.9-1.3 2.9-2.9V2z' />
+		</svg>
+	)
 
 	return (
 		<footer className='relative bg-zinc-950 border-t border-white/5 pt-20 pb-10 overflow-hidden'>
@@ -14,16 +21,12 @@ export default function Footer() {
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16'>
 					{/* Brand Section */}
 					<div className='space-y-6'>
-						<div>
+						<div className='flex justify-center'>
 							<Link to='/' className='flex items-center gap-2'>
-								{/* Zmieniliśmy h3 na span - wizualnie identycznie, technicznie poprawnie */}
-								<span className='text-2xl font-black tracking-tighter text-white uppercase italic'>
-									AXIS<span className='text-blue-500'>EVENTS</span>
-								</span>
+								<img src={logo} alt='AXIS Events logo' className='h-12 object-contain' />
 							</Link>
-							<div className='h-1 w-12 bg-blue-600 mt-1' />
 						</div>
-						<p className='text-zinc-400 leading-relaxed max-w-xs'>
+						<p className='text-zinc-400 leading-relaxed max-w-xs text-center mx-auto'>
 							Definiujemy nową jakość w technice eventowej. Od dźwięku po światło – tworzymy niezapomniane wrażenia.
 						</p>
 						<div className='flex gap-4'>
@@ -31,9 +34,18 @@ export default function Footer() {
 								{
 									Icon: Instagram,
 									label: 'Obserwuj nas na Instagramie',
-									url: 'https://www.instagram.com/axis.events/',
+									url: 'https://www.instagram.com/axis_events_polska/',
 								},
-								{ Icon: Facebook, label: 'Dołącz do nas na Facebooku', url: 'https://www.facebook.com/axis.events' },
+								{
+									Icon: Facebook,
+									label: 'Dołącz do nas na Facebooku',
+									url: 'https://www.facebook.com/people/Axis-Events/61582195023972/',
+								},
+								{
+									Icon: TikTokIcon,
+									label: 'Dołącz do nas na TikToku',
+									url: 'https://www.tiktok.com/@axis_events',
+								},
 							].map(({ Icon, label, url }, i) => (
 								<a
 									key={i}

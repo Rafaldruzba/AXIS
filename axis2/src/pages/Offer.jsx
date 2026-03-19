@@ -56,8 +56,15 @@ export default function Offer() {
 					<span className='text-amber-600 text-[10px] font-black uppercase tracking-[0.2em] mb-2 block'>
 						Opcja Premium
 					</span>
-					<h3 className='text-2xl font-black mb-2 text-gray-900'>{item.name}</h3>
-					<p className='text-gray-500 mb-8 leading-relaxed text-sm'>{item.description}</p>
+					<h3 className='text-2xl font-black text-gray-900'>{item.name}</h3>
+					<p className='text-gray-400 mb-4 leading-relaxed text-sm'>{item.subtitle}</p>
+					<p className='text-gray-600 mb-8 leading-relaxed text-sm'>{item.description}</p>
+
+					<ul className='text-gray-500 mb-8 leading-relaxed text-sm list-disc list-inside space-y-1'>
+						{item.includes?.map((el, index) => (
+							<li key={index}>{el}</li>
+						))}
+					</ul>
 				</div>
 
 				<button
@@ -106,16 +113,17 @@ export default function Offer() {
 					/>
 					<Section title='Namioty Eventowe' icon='⛺' items={offers.tents} renderCard={renderCard} />
 					<Section title='Zestawy Barowe' icon='🍸' items={offers.bar_packages} renderCard={renderCard} />
+					<Section title='Fotograf' icon='📸' items={offers.fotography_packages} renderCard={renderCard} />
 					<Section title='Dodatki' icon='✨' items={offers.addons} renderCard={renderCard} />
 				</div>
 			</div>
 
 			{/* STICKY QUOTE PANEL - Zmieniony na pływający widget */}
 			<div
-				className={`fixed bottom-10 right-10 z-50 transition-all duration-500 ${selected.length === 0 ? 'translate-y-40 opacity-0' : 'translate-y-0 opacity-100'}`}>
+				className={`fixed bottom-4 ml-4 right-4 md:bottom-10 md:right-10 z-50 transition-all duration-500 ${selected.length === 0 ? 'translate-y-40 opacity-0' : 'translate-y-0 opacity-100'}`}>
 				{isOpen ? (
 					/* WIDOK OTWARTY */
-					<div className='bg-white w-[380px] rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-gray-100 overflow-hidden'>
+					<div className='bg-white w-full md:w-[380px] rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-gray-100 overflow-hidden'>
 						<div className='bg-gray-900 p-6 text-white flex justify-between items-center'>
 							<div>
 								<h3 className='font-black uppercase tracking-widest text-[10px] opacity-60'>Twoja Konfiguracja</h3>
@@ -126,7 +134,7 @@ export default function Offer() {
 							</button>
 						</div>
 
-						<div className='p-6 max-h-[250px] overflow-y-auto space-y-3'>
+						<div className='p-6 max-h-[40vh] md:max-h-[250px] overflow-y-auto space-y-3'>
 							{selected.map(item => (
 								<div
 									key={item.id}
@@ -162,7 +170,7 @@ export default function Offer() {
 					/* WIDOK ZMINIMALIZOWANY (PŁYWAJĄCY PRZYCISK) */
 					<button
 						onClick={() => setIsOpen(true)}
-						className='bg-gray-900 text-white w-20 h-20 rounded-full shadow-2xl flex items-center justify-center relative hover:scale-110 transition-transform group'>
+						className='bg-gray-900 text-white w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl flex items-center justify-center relative hover:scale-110 transition-transform group'>
 						<ShoppingBag size={28} className='group-hover:text-amber-500 transition-colors' />
 						<span className='absolute -top-1 -right-1 bg-amber-500 text-gray-900 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black border-4 border-[#fdfbf7]'>
 							{selected.length}

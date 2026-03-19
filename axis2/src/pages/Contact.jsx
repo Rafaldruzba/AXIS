@@ -167,7 +167,7 @@ const Contact = () => {
 					<div className='lg:col-span-5 space-y-12'>
 						<header>
 							<span className='text-amber-600 font-black uppercase tracking-[0.4em] text-xs mb-6 block'>Kontakt</span>
-							<h1 className='text-5xl md:text-7xl font-black text-gray-900 tracking-tighter leading-none mb-8'>
+							<h1 className='text-4xl md:text-7xl font-black text-gray-900 tracking-tighter leading-none mb-8'>
 								Zaplanujmy Twój <br />
 								<span className='text-amber-500'>Następny Event.</span>
 							</h1>
@@ -185,6 +185,7 @@ const Contact = () => {
 								<div>
 									<p className='text-xs font-black text-gray-400 uppercase tracking-widest'>Zadzwoń do nas</p>
 									<p className='text-xl font-bold text-gray-900'>+48 791 445 104</p>
+									<p className='text-xl font-bold text-gray-900'>+48 502 190 862</p>
 								</div>
 							</div>
 							<div className='flex items-center gap-6 group'>
@@ -193,7 +194,7 @@ const Contact = () => {
 								</div>
 								<div>
 									<p className='text-xs font-black text-gray-400 uppercase tracking-widest'>Napisz e-mail</p>
-									<p className='text-xl font-bold text-gray-900'>hello.axis.events@gmail.com</p>
+									<p className='text-m md:text-xl font-bold text-gray-900'>hello.axis.events@gmail.com</p>
 								</div>
 							</div>
 						</section>
@@ -201,7 +202,7 @@ const Contact = () => {
 
 					{/* PRAWA STRONA - FORMULARZ */}
 					<div className='lg:col-span-7 bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl shadow-gray-200/50 border border-gray-100'>
-						<form onSubmit={handleSubmit} className='space-y-6'>
+						<form id='axis-contact-form' onSubmit={handleSubmit} className='space-y-auto'>
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 								<div className='space-y-2'>
 									<label className='text-[10px] font-black uppercase tracking-widest text-gray-400 ml-4'>

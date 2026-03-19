@@ -3,18 +3,25 @@
 		{
 			"id": 1,
 			"name": "Pakiet Basic",
-			"subtitle": "Małe imprezy do 25 osób",
+			"subtitle": "Małe imprezki do 20 osób",
 			"description": "Zestaw nagłośnienia + podstawowe oświetlenie LED.",
-			"includes": ["2x kolumny aktywne", "Mikser audio", "2x mikrofon bezprzewodowy", "2x Airship + stroboskop"],
+			"includes": ["1x kolumna aktywna", "1x subwoofer", "Mikser audio", "2x Airship"],
 			"rental_type": "noc / weekend",
-			"price": "1200 zł"
+			"price": "700 zł"
 		},
 		{
 			"id": 2,
 			"name": "Pakiet Standard",
 			"subtitle": "Imprezy do 35 osób",
-			"description": "Mocniejsze nagłośnienie + ruchome oświetlenie sceniczne.",
-			"includes": ["2x kolumny", "2x subwoofer", "projektor laserowy", "Mikser audio", "2x Airship + stroboskop"],
+			"description": "Mocniejsze nagłośnienie 2.1 + ruchome oświetlenie sceniczne.",
+			"includes": [
+				"2x kolumny",
+				"1x subwoofer",
+				"Mikser audio",
+				"projektor laserowy",
+				"2x Airship + stroboskop + ruchoma głowica",
+				"Wytwornica dymu z limitem (1L)"
+			],
 			"rental_type": "noc / weekend",
 			"price": "1600 zł"
 		},
@@ -26,11 +33,11 @@
 			"includes": [
 				"2x kolumny aktywne",
 				"2x subwoofer",
-				"projektor laserowy",
 				"Mikser audio",
-				"2x Airship + stroboskop",
+				"projektor laserowy",
+				"2x Airship + stroboskop + ruchoma głowica",
 				"Opaski fluorescencyjne 200szt.",
-				"Wytwornica dymu!"
+				"Wytwornica dymu bez limitu (5L)!"
 			],
 			"rental_type": "noc / weekend",
 			"price": "2200 zł"
@@ -41,36 +48,43 @@
 		{
 			"id": 4,
 			"name": "Namiot Eventowy",
-			"description": "Profesjonalny namiot imprezowy.",
+			"description": "Profesjonalny namiot imprezowy. 9x6m",
 			"rental_type": "noc",
-			"price": ""
+			"price": "1500 zł"
 		},
 		{
 			"id": 5,
 			"name": "Namiot Eventowy",
-			"description": "Wynajem na cały weekend.",
+			"description": "Wynajem na cały weekend. 9x6m",
 			"rental_type": "weekend",
-			"price": ""
+			"price": "Indywidualna wycena"
+		},
+		{
+			"id": 6,
+			"name": "Namiot ogrodowy",
+			"description": "Idealny na grila czy małe przyjęcie. 6x3m, oświetlenie (ciepłe lampki)",
+			"rental_type": "noc",
+			"price": "400 zł"
 		}
 	],
 
 	"bar_packages": [
 		{
-			"id": 6,
+			"id": 7,
 			"name": "Zestaw Barowy Basic",
 			"description": "Mobilny bar + podstawowe wyposażenie.",
 			"includes": ["Mobilny bar", "Oświetlenie LED", "Blat roboczy"],
 			"price": "2500 zł"
 		},
 		{
-			"id": 7,
+			"id": 8,
 			"name": "Zestaw Barowy Standard",
 			"description": "Większy bar + chłodziarka.",
 			"includes": ["Bar", "Chłodziarka", "Oświetlenie LED"],
 			"price": ""
 		},
 		{
-			"id": 8,
+			"id": 9,
 			"name": "Zestaw Barowy Premium",
 			"description": "Profesjonalna strefa barowa.",
 			"includes": ["Bar premium", "Podświetlenie RGB", "Regały", "Lodówki"],
@@ -78,44 +92,55 @@
 		}
 	],
 
+	"fotography_packages": [
+		{
+			"id": 16,
+			"name": "Fotograf eventowy",
+			"subtitle": "Reportaż z Twojego wydarzenia",
+			"description": "Profesjonalny kamerzysta z doświadczeniem w fotografii eventowej",
+			"rental_type": "",
+			"price": "wycena ind."
+		}
+	],
+
 	"addons": [
 		{
-			"id": 9,
+			"id": 10,
 			"name": "Agregat prądotwórczy",
 			"description": "Zasilanie eventów plenerowych.",
 			"rental_type": "noc / weekend",
 			"price": "do uzgodnienia"
 		},
 		{
-			"id": 10,
+			"id": 11,
 			"name": "Namiot VIP Entrance",
 			"description": "Ekskluzywne wejście VIP. Przedsionek 6x3m z podwieszanym oświetleniem.",
 			"rental_type": "noc / weekend",
 			"price": "300 zł"
 		},
 		{
-			"id": 11,
+			"id": 12,
 			"name": "Świecące bransoletki LED",
 			"description": "Idealne na koncerty i eventy nocne. 200 sztuk.",
 			"rental_type": "za sztukę",
 			"price": "300zł"
 		},
 		{
-			"id": 12,
+			"id": 13,
 			"name": "Koktajlówki",
 			"description": "Wysokie stoliki eventowe. Cena za 2 sztuki.",
 			"rental_type": "2 sztuki",
 			"price": "100 zł"
 		},
 		{
-			"id": 13,
+			"id": 14,
 			"name": "Stoły",
 			"description": "Stoły eventowe. 6-osobowe. Cena za 1 sztukę.",
 			"rental_type": "za sztukę",
 			"price": "50 zł"
 		},
 		{
-			"id": 14,
+			"id": 15,
 			"name": "Krzesła",
 			"description": "Krzesła eventowe. Cena za 6 sztuk.",
 			"rental_type": "za sztukę",

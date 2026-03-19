@@ -10,7 +10,7 @@ Disallow: /private/
 Disallow: /.git/
 
 # Wskaż mapę strony (Sitemap), gdy już ją wygenerujesz
-Sitemap: https://tepee.events/sitemap.xml
+Sitemap: https://axis-events/sitemap.xml
 
 # Dodatkowa optymalizacja dla bota obrazów
 User-agent: Googlebot-Image

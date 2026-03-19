@@ -119,7 +119,7 @@ export default function AboutUs() {
 				</section>
 
 				{/* Sekcja 3: Proces - Pełny tekst krok po kroku */}
-				<section className='mb-32'>
+				<section className='mb-10 md:mb-32'>
 					<h2 className='text-4xl font-black mb-16 tracking-tighter text-center'>
 						Jak wygląda współpraca z Axis Events?
 					</h2>
@@ -227,7 +227,7 @@ export default function AboutUs() {
 				</section>
 
 				{/* CTA - Final Section */}
-				<section className='text-center bg-black text-white p-16 rounded-[4rem] shadow-2xl relative overflow-hidden'>
+				<section className='text-center bg-black text-white p-8 md:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden'>
 					<h2 className='text-4xl md:text-5xl font-black mb-6 tracking-tighter'>Gotowy na niezapomniany event?</h2>
 					<p className='text-xl mb-10 opacity-80 max-w-2xl mx-auto'>
 						Skontaktuj się z nami, a przygotujemy darmową wycenę dopasowaną do Twoich potrzeb.
