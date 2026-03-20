@@ -151,7 +151,7 @@ export default function BdayEvents() {
 				</div>
 			</section>
 
-			{/* SZCZEGÓŁOWY OPIS SEO Z ANIMACJĄ KASKADOWĄ */}
+			{/* SZCZEGÓŁOWY OPIS SEO */}
 			<section className='py-32 bg-white'>
 				<div className='max-w-5xl mx-auto px-6'>
 					<div className='grid lg:grid-cols-2 gap-16 items-center'>

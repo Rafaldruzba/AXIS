@@ -1,30 +1,17 @@
-// src/img.jsx
 import { Cloudinary } from '@cloudinary/url-gen'
 
-// 1. Centralna konfiguracja (robisz to tylko RAZ)
 export const cld = new Cloudinary({
 	cloud: {
-		// Zostawiam Twój cloudName, jest poprawny
 		cloudName: 'dggteool1',
 	},
 })
-
-// 2. Główna funkcja pomocnicza, która tworzy bazowo zoptymalizowany obraz.
 export const getOptimizedImage = publicId => {
-	return cld
-		.image(publicId)
-		.format('auto')
-		.quality('auto')
+	return cld.image(publicId).format('auto').quality('auto')
 }
-// Funkcja zwracająca sam tekstowy URL (do background-image)
 export const getOptimizedImageUrl = publicId => {
 	return getOptimizedImage(publicId).toURL()
 }
-
-// Klucz (np. HERO_BG) to nazwa, której używasz w kodzie React.
-// Wartość (np. '6_j0x08t') to Public ID z Cloudinary.
 export const IMAGES = {
-	// Wpisz Public ID (tekst między /upload/ a rozszerzeniem .jpg)
 	BAR_HERO: '11_zatdwk',
 	BAR_SECOND: '7_rqngf8',
 	BAR_1: '6_j0x08t',
@@ -50,9 +37,10 @@ export const IMAGES = {
 	COWBOY_GIRL: 'cowboy_girl',
 	COUPLE_LIGHTS: 'lights_couple',
 	GIRLS_LIGHTS: 'lights_2_girls',
+	GIRL_LIGHTS: 'lights_inside_p47jwe',
 	CLUB_LIGHTS: 'lights_club',
 	BOTTLES_LIGHTS: 'bottles_lights',
 	BW_GIRL: 'b_and_w_girl',
 	POETRY_GIRL: 'poetry',
-
+	LED_LIGHTS: 'led_airship_hpslir',
 }

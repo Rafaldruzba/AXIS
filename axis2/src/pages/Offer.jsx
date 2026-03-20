@@ -10,10 +10,9 @@ export default function Offer() {
 		return saved ? JSON.parse(saved) : []
 	})
 
-	const [isOpen, setIsOpen] = useState(true) // Stan do minimalizacji
+	const [isOpen, setIsOpen] = useState(true)
 	const navigate = useNavigate()
 
-	// Zapisuj do LocalStorage przy każdej zmianie
 	useEffect(() => {
 		localStorage.setItem('axis_cart', JSON.stringify(selected))
 	}, [selected])
@@ -118,11 +117,10 @@ export default function Offer() {
 				</div>
 			</div>
 
-			{/* STICKY QUOTE PANEL - Zmieniony na pływający widget */}
+			{/* STICKY QUOTE PANEL */}
 			<div
 				className={`fixed bottom-4 ml-4 right-4 md:bottom-10 md:right-10 z-50 transition-all duration-500 ${selected.length === 0 ? 'translate-y-40 opacity-0' : 'translate-y-0 opacity-100'}`}>
 				{isOpen ? (
-					/* WIDOK OTWARTY */
 					<div className='bg-white w-full md:w-[380px] rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-gray-100 overflow-hidden'>
 						<div className='bg-gray-900 p-6 text-white flex justify-between items-center'>
 							<div>
@@ -167,7 +165,6 @@ export default function Offer() {
 						</div>
 					</div>
 				) : (
-					/* WIDOK ZMINIMALIZOWANY (PŁYWAJĄCY PRZYCISK) */
 					<button
 						onClick={() => setIsOpen(true)}
 						className='bg-gray-900 text-white w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl flex items-center justify-center relative hover:scale-110 transition-transform group'>

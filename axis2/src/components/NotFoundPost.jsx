@@ -6,7 +6,7 @@ export default function NotFoundPost({ post }) {
 		return (
 			<div className='pt-20 pb-20 text-center bg-[#fdfbf7] min-h-screen flex items-center justify-center px-6'>
 				<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className='max-w-xl w-full'>
-					{/* Ikona ducha lub znaku zapytania z animacją lewitowania */}
+					{/* Ikona ducha */}
 					<motion.div
 						animate={{ y: [0, -15, 0] }}
 						transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}

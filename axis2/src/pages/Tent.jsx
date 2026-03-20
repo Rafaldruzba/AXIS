@@ -114,9 +114,9 @@ export default function Tent() {
 
 	return (
 		<div className='bg-[#0a0a0a] text-white min-h-screen font-sans selection:bg-amber-500 selection:text-black'>
-			{/* HERO SECTION - Zoptymalizowany pod SEO (H1) */}
+			{/* HERO SECTION */}
 			<section className='relative h-[100vh] flex items-center justify-center overflow-hidden'>
-				{/* Background Image z lepszym przyciemnieniem i głębią */}
+				{/* Background Image */}
 				<motion.div
 					initial={{ scale: 1.15 }}
 					animate={{ scale: 1 }}
@@ -137,8 +137,6 @@ export default function Tent() {
 							Mobilny Klub & Eventy Premium 2026
 						</span>
 					</motion.div>
-
-					{/* Main H1 - Agregator SEO */}
 					<motion.h1
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -149,8 +147,6 @@ export default function Tent() {
 							Klub Imprezowy
 						</span>
 					</motion.h1>
-
-					{/* Opis nasycony słowami kluczowymi pod wyszukiwarki */}
 					<motion.p
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -160,8 +156,6 @@ export default function Tent() {
 						<strong>przenośny klub</strong> na <strong>wieczory kawalerskie</strong>, urodziny i eventy firmowe.
 						Rozstawiamy imprezę tam, gdzie inni nie mogą.
 					</motion.p>
-
-					{/* Sub-text dla SEO (Lokalizacje i zastosowania) */}
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -174,8 +168,6 @@ export default function Tent() {
 						<span>#EventSpace</span>
 					</motion.div>
 				</div>
-
-				{/* Scroll Indicator */}
 				<motion.div
 					animate={{ y: [0, 10, 0] }}
 					transition={{ repeat: Infinity, duration: 2 }}
@@ -187,7 +179,7 @@ export default function Tent() {
 			{/* PARAMETRY TECHNICZNE (Specyfikacja) */}
 			<section className='max-w-7xl mx-auto px-6 py-32'>
 				<div className='grid lg:grid-cols-12 gap-12'>
-					{/* Lewa kolumna: Nagłówek i certyfikaty */}
+					{/* Lewa kolumna: */}
 					<div className='lg:col-span-4 flex flex-col justify-center'>
 						<motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
 							<h2 className='text-5xl md:text-7xl font-black tracking-tighter uppercase leading-none mb-8'>
@@ -212,7 +204,7 @@ export default function Tent() {
 						</motion.div>
 					</div>
 
-					{/* Prawa kolumna: Bento Grid z parametrami */}
+					{/* Prawa kolumna */}
 					<div className='lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4'>
 						{specs.map((spec, i) => (
 							<motion.div
@@ -237,8 +229,6 @@ export default function Tent() {
 								</div>
 							</motion.div>
 						))}
-
-						{/* Długi boks na dole dla dodatkowych info (Zasilanie/Materiał) */}
 						<motion.div
 							initial={{ opacity: 0, scale: 0.95 }}
 							whileInView={{ opacity: 1, scale: 1 }}
@@ -261,7 +251,7 @@ export default function Tent() {
 				</div>
 			</section>
 
-			{/* SEO TEXT SECTION - Gęsta treść pod Google */}
+			{/* SEO TEXT SECTION */}
 			<section className='bg-[#050505] py-32 px-6'>
 				<div className='max-w-7xl mx-auto'>
 					<div className='mb-20'>
@@ -283,7 +273,6 @@ export default function Tent() {
 								key={i}
 								whileHover={{ y: -10 }}
 								className='group relative bg-neutral-900/20 border border-white/5 p-10 rounded-[3rem] overflow-hidden'>
-								{/* SEO Hidden Helper - dla robotów Google */}
 								<span className='sr-only'>{item.seo}</span>
 
 								<div className='flex justify-between items-start mb-8'>
@@ -298,7 +287,6 @@ export default function Tent() {
 								</h3>
 								<p className='text-gray-500 text-lg font-light leading-relaxed max-w-md italic'>"{item.desc}"</p>
 
-								{/* Efekt poświaty w rogu */}
 								<div className='absolute -bottom-10 -right-10 w-32 h-32 bg-amber-500/5 blur-[50px] group-hover:bg-amber-500/20 transition-all duration-500'></div>
 							</motion.div>
 						))}
@@ -341,8 +329,6 @@ export default function Tent() {
 						))}
 					</div>
 				</div>
-
-				{/* Wizualny smaczek: Cyfry / Statystyki */}
 				<div className='mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 border-y border-white/5'>
 					{[
 						{ val: '100%', label: 'Wodoodporność' },
@@ -417,7 +403,6 @@ export default function Tent() {
 
 			{/* CTA SECTION */}
 			<section className='pt-20 pb-20 px-6 relative overflow-hidden text-center'>
-				{/* Tło z efektem poświaty - dodaje głębi */}
 				<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 blur-[120px] rounded-full -z-10'></div>
 
 				<div className='relative z-10 max-w-5xl mx-auto'>
@@ -434,7 +419,6 @@ export default function Tent() {
 						</h2>
 
 						<div className='relative inline-block group mt-4'>
-							{/* Pulsujący efekt pod przyciskiem */}
 							<div className='absolute inset-0 bg-amber-500 blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 rounded-full'></div>
 
 							<button

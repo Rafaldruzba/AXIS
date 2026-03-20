@@ -52,7 +52,7 @@ export default function Footer() {
 									href={url}
 									target='_blank'
 									rel='noopener noreferrer'
-									aria-label={label} // TO NAPRAWIA BŁĄD Z SCREENSHOTA
+									aria-label={label}
 									className='p-2 rounded-lg bg-white/5 border border-white/10 text-zinc-400 hover:text-white hover:border-blue-500/50 transition-all'>
 									<Icon size={20} />
 								</a>
@@ -80,7 +80,7 @@ export default function Footer() {
 						</ul>
 					</div>
 
-					{/* Services/Categories - opcjonalnie */}
+					{/* Services/Categories */}
 					<div>
 						<p className='text-sm font-bold uppercase tracking-widest text-white mb-6'>Usługi</p>
 						<ul className='space-y-4 text-zinc-400'>
@@ -89,7 +89,7 @@ export default function Footer() {
 								{ to: '/strefa-barowa', label: 'Strefa Barowa' },
 								{ to: '/realizacje', label: 'Realizacje' },
 								{ to: '/oferta', label: 'Konfigurator' },
-								{ to: '/namiot-eventowy', label: 'Namiot Eventowy' }, // To chcemy wyróżnić
+								{ to: '/namiot-eventowy', label: 'Namiot Eventowy' },
 							].map((item, index) => {
 								// Sprawdzamy, czy to nasz namiot
 								const isTent = item.to === '/namiot-eventowy'
@@ -102,12 +102,11 @@ export default function Footer() {
                         transition-colors block w-fit cursor-pointer font-medium
                         ${
 													isTent
-														? 'text-amber-500 hover:text-amber-400' // Kolor dla namiotu
-														: 'hover:text-white' // Standardowy hover dla reszty
+														? 'text-amber-500 hover:text-amber-400'
+														: 'hover:text-white'
 												}
                     `}>
 											{item.label}
-											{/* Opcjonalnie: mała kropka przy wyróżnionym linku */}
 											{isTent && <span className='ml-2 inline-block w-1 h-1 bg-amber-500 rounded-full animate-pulse' />}
 										</Link>
 									</li>

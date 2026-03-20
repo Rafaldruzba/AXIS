@@ -6,12 +6,11 @@ import { Music2, RefreshCcw, Home } from 'lucide-react'
 const NotFound = () => {
 	return (
 		<div className='min-h-screen bg-gray-900 flex items-center justify-center px-6 overflow-hidden relative'>
-			{/* Dekoracyjne rozmyte światła w tle */}
+			{/* rozmyte światła w tle */}
 			<div className='absolute top-1/4 -left-20 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px]' />
 			<div className='absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]' />
 
 			<div className='text-center relative z-10'>
-				{/* Ikona z animacją "skakania" */}
 				<motion.div
 					animate={{
 						y: [0, -20, 0],
@@ -53,7 +52,6 @@ const NotFound = () => {
 					</button>
 				</div>
 
-				{/* Żartobliwy dopisek na dole */}
 				<p className='mt-16 text-gray-300 text-xs font-mono uppercase tracking-[0.3em]'>
 					Błąd 404 // Brak sygnału na mikserze
 				</p>

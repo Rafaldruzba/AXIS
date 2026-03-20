@@ -20,14 +20,13 @@ export default function Blog() {
 					{blogs.map(blog => (
 						<article key={blog.slug} className='group'>
 							<Link to={`/blog/${blog.slug}`} className='block'>
-								{/* Kontener na zdjęcie (jeśli masz je w JSON, jeśli nie - zostawiam placeholder) */}
+								{/* Kontener na zdjęcie */}
 								<div className='relative h-64 mb-6 overflow-hidden rounded-3xl bg-gray-200 shadow-md'>
 									<img
 										src={blog.image || '/api/placeholder/600/400'}
 										alt={blog.title}
 										className='object-cover w-full h-full transition duration-500 group-hover:scale-105'
 									/>
-									{/* Plakietka kategorii/podtytułu */}
 									<div className='absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-amber-600'>
 										{blog.subtitle}
 									</div>
@@ -62,8 +61,6 @@ export default function Blog() {
 						</article>
 					))}
 				</div>
-
-				{/* Sekcja newslettera / zachęty pod blogiem */}
 				<div className='mt-32 bg-gray-900 rounded-[3rem] p-12 text-center text-white'>
 					<h3 className='text-3xl font-bold mb-4'>Masz pytania dotyczące techniki?</h3>
 					<p className='text-gray-400 mb-8 max-w-xl mx-auto'>

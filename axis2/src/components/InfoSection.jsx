@@ -8,10 +8,10 @@ export default function InfoSection() {
 	}
 
 	return (
-		// Główne tło sekcji zmieniamy na czarne, żeby pasowało do reszty strony
+		// Główne tło sekcji
 		<section className='pt-32 bg-[#050505] text-white overflow-hidden'>
 			<div className='max-w-7xl mx-auto px-6 space-y-32 mb-32'>
-				{/* ===== INTRO - POWERFUL HEADER ===== */}
+				{/* ===== INTRO - HEADER ===== */}
 				<div className='relative'>
 					<div className='absolute -left-20 -top-20 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -z-10'></div>
 					<div className='text-center max-w-4xl mx-auto'>
@@ -97,7 +97,7 @@ export default function InfoSection() {
 				</div>
 			</div>
 
-			{/* ===== PRZEJŚCIE I FAQ - JASNA SEKCJA ===== */}
+			{/* ===== FAQ ===== */}
 			<div className='bg-white rounded-t-[4rem] text-gray-900 pt-32 pb-32'>
 				<div className='max-w-4xl mx-auto px-6'>
 					<div className='text-center mb-20'>

@@ -7,7 +7,7 @@ export default function AboutUs() {
 	return (
 		<div className='bg-[#fdfbf7] min-h-screen font-sans'>
 			<article className='pt-40 pb-24 px-6 max-w-6xl mx-auto text-gray-800'>
-				{/* HEADER - Pełny tekst H1 */}
+				{/* HEADER - H1 */}
 				<header className='text-center mb-24'>
 					<motion.span
 						initial={{ opacity: 0 }}
@@ -32,7 +32,7 @@ export default function AboutUs() {
 					</motion.p>
 				</header>
 
-				{/* Sekcja 1: O nas / Filozofia - Pełny tekst */}
+				{/* Sekcja 1: O nas / Filozofia */}
 				<section className='mb-32'>
 					<div className='grid lg:grid-cols-2 gap-20 items-center'>
 						<motion.div
@@ -76,7 +76,7 @@ export default function AboutUs() {
 					</div>
 				</section>
 
-				{/* Sekcja 2: Modułowość - Pełny tekst z kartami */}
+				{/* Sekcja 2: Modułowość */}
 				<section className='mb-32 bg-gray-900 rounded-[4rem] p-12 md:p-20 text-white relative overflow-hidden'>
 					<h2 className='text-4xl font-black mb-16 text-center tracking-tight relative z-10'>
 						Sprzęt dopasowany do Twoich potrzeb
@@ -163,7 +163,7 @@ export default function AboutUs() {
 					</div>
 				</section>
 
-				{/* Sekcja 4: Dlaczego my - Pełny tekst z ikonami */}
+				{/* Sekcja 4: Dlaczego my */}
 				<section className='mb-32 py-20 border-y border-gray-100'>
 					<h2 className='text-3xl font-black mb-16 tracking-tighter text-center uppercase'>
 						Co nas wyróżnia na tle konkurencji?

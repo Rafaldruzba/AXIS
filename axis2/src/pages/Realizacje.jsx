@@ -6,7 +6,7 @@ export default function Realizacje() {
 	return (
 		<div className='bg-[#fdfbf7] min-h-screen'>
 			<div className='pt-32 pb-24 px-6 max-w-7xl mx-auto'>
-				{/* Header z pazurem */}
+				{/* Header */}
 				<header className='text-center mb-24'>
 					<h1 className='text-5xl md:text-7xl font-black text-gray-900 mb-8 tracking-tighter uppercase'>
 						Nasze <span className='text-amber-500'>Realizacje</span>
@@ -28,7 +28,6 @@ export default function Realizacje() {
 							<div
 								key={project.slug}
 								className='group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col'>
-								{/* Zdjęcie z nakładką */}
 								<div className='relative h-80 overflow-hidden'>
 									<img
 										src={project.image}
@@ -98,7 +97,6 @@ export default function Realizacje() {
 							</button>
 						</Link>
 					</div>
-					{/* Ozdobny krąg w tle */}
 					<div className='absolute -top-20 -right-20 w-64 h-64 bg-amber-400 rounded-full opacity-50'></div>
 				</div>
 			</div>

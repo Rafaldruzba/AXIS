@@ -1,8 +1,9 @@
 import blogs from '../data/blogs.json'
 import { Link } from 'react-router-dom'
+import { AdvancedImage } from '@cloudinary/react'
+import { getOptimizedImage, IMAGES } from '../assets/img'
 
 export default function BlogSection() {
-	// Wybieramy tylko 3 ostatnie wpisy na stronę główną
 	const latestBlogs = blogs.slice(0, 3)
 
 	return (
@@ -30,8 +31,8 @@ export default function BlogSection() {
 							<Link to={`/blog/${blog.slug}`}>
 								{/* Miniaturka */}
 								<div className='relative h-64 mb-8 overflow-hidden rounded-[2rem] shadow-sm group-hover:shadow-xl transition-all duration-500'>
-									<img
-										src={blog.image || '/api/placeholder/600/400'}
+									<AdvancedImage
+										cldImg={getOptimizedImage(IMAGES[blog.image] || blog.image)}
 										alt={blog.title}
 										className='w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-110 transition duration-700'
 									/>
@@ -55,7 +56,7 @@ export default function BlogSection() {
 					))}
 				</div>
 
-				{/* Mobilny przycisk "Zobacz więcej" (widoczny tylko na małych ekranach) */}
+				{/* Mobilny przycisk "Zobacz więcej" */}
 				<div className='mt-12 md:hidden text-center'>
 					<Link to='/blog' className='inline-block bg-gray-900 text-white px-8 py-4 rounded-full font-bold'>
 						Zobacz wszystkie porady

@@ -13,9 +13,7 @@ registerLocale('pl', pl)
 
 const Contact = () => {
 	const location = useLocation()
-	// Pobieramy z lokalizacji lub z localStorage, jeśli użytkownik odświeżył stronę
 	const cart = location.state?.cart || JSON.parse(localStorage.getItem('axis_cart') || '[]')
-
 	const [status, setStatus] = useState('idle')
 	const [formData, setFormData] = useState({
 		name: '',
@@ -310,7 +308,7 @@ const Contact = () => {
 						referrerPolicy='no-referrer-when-downgrade'></iframe>
 				</motion.div>
 
-				{/* Przycisk powrotu z poprawionym kontrastem hover */}
+				{/* Przycisk powrotu */}
 				<div className='flex justify-center w-full px-6'>
 					<button
 						onClick={() => (window.location.href = '/')}

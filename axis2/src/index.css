@@ -9,8 +9,8 @@ body {
 	font-family: 'poppins', sans-serif;
 }
 body {
-	background-color: #fdfbf7; /* Delikatny kremowy kolor */
-	color: #1a1a1a; /* Bardzo ciemny szary, lepszy niż czysty czarny */
+	background-color: #fdfbf7;
+	color: #1a1a1a;
 }
 button {
 	cursor: pointer;

@@ -46,7 +46,7 @@ export default function SoundAndLighting() {
 				</div>
 			</section>
 
-			{/* NASZA FILOZOFIA ROBOTY */}
+			{/* NASZA ROBOTA */}
 			<section className='py-20 md:py-32 bg-white'>
 				<div className='max-w-7xl mx-auto px-6'>
 					<div className='flex flex-col md:flex-row justify-between items-center mb-20 gap-8 text-center md:text-left'>

@@ -41,14 +41,11 @@ export default function RealizacjaPost() {
 				</div>
 
 				<div className='grid md:grid-cols-3 gap-16'>
-					{/* LEWA KOLUMNA: Dynamiczna treść */}
+					{/* LEWA KOLUMNA */}
 					<div className='md:col-span-2 space-y-16'>
-						{/* Wstęp/Description z JSONa */}
 						<p className='text-2xl text-gray-700 leading-relaxed font-medium border-l-4 border-amber-500 pl-8'>
 							{project.description}
 						</p>
-
-						{/* Pętla po sekcjach z JSONa */}
 						{project.contentSections &&
 							project.contentSections.map((section, index) => (
 								<section key={index} className='space-y-6'>
@@ -57,7 +54,7 @@ export default function RealizacjaPost() {
 								</section>
 							))}
 
-						{/* Galeria zdjęć dodatkowych z pola "gallery" w JSON */}
+						{/* Galeria zdjęć */}
 						{project.gallery && (
 							<div className='grid grid-cols-2 gap-6 pt-10'>
 								{project.gallery.map((img, i) => (
@@ -73,7 +70,7 @@ export default function RealizacjaPost() {
 						)}
 					</div>
 
-					{/* PRAWA KOLUMNA: Sidebar (Sticky) */}
+					{/* PRAWA KOLUMNA */}
 					<aside className='h-fit sticky top-32'>
 						<div className='bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-100'>
 							<h3 className='text-xl font-bold mb-8 text-gray-900 uppercase tracking-widest text-sm'>

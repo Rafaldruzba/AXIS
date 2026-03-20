@@ -89,7 +89,6 @@ export default function Bar() {
 			<section className='pb-32 bg-white'>
 				<div className='max-w-7xl mx-auto px-6'>
 					<div className='grid lg:grid-cols-2 gap-20 items-center'>
-						{/* Tekst opisowy */}
 						<div className='order-2 lg:order-1'>
 							<h3 className='text-[10px] font-black uppercase tracking-[0.5em] text-amber-600 mb-6 block'>
 								Standard Axis Events

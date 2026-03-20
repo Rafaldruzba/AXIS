@@ -1,6 +1,10 @@
 import { useParams, Link } from 'react-router-dom'
 import blogs from '../data/blogs.json'
 import NotFoundPost from '../components/NotFoundPost'
+import { AdvancedImage } from '@cloudinary/react'
+import { fill } from '@cloudinary/url-gen/actions/resize'
+import { getOptimizedImage, IMAGES } from '../assets/img'
+import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity'
 
 export default function BlogPost() {
 	const { slug } = useParams()
@@ -9,6 +13,16 @@ export default function BlogPost() {
 	if (!post) {
 		return <NotFoundPost post={post} />
 	}
+	const imagePublicId = IMAGES[post.image] || post.image
+	const mainImage = getOptimizedImage(imagePublicId)
+		.resize(
+			fill()
+				.width(1200)
+				.height(400)
+				.gravity(autoGravity()),
+		)
+		.format('auto')
+		.quality('auto:best')
 
 	return (
 		<div className='bg-[#fdfbf7] min-h-screen'>
@@ -28,18 +42,22 @@ export default function BlogPost() {
 					</div>
 				</header>
 
-				<div className='mb-12 rounded-3xl overflow-hidden shadow-xl'>
-					<img src={post.image} alt={post.title} className='w-full h-auto' />
+				{/* Sekcja zdjęcia z AdvancedImage */}
+				<div className='mb-12 rounded-3xl overflow-hidden shadow-xl bg-gray-100'>
+					<AdvancedImage
+						cldImg={mainImage}
+						alt={post.title}
+						className='w-full object-cover'
+						style={{ maxHeight: '400px' }}
+					/>
 				</div>
 
-				{/* Renderowanie sekcji z JSONa */}
+				{/* Treść posta */}
 				<div className='space-y-12 text-gray-800 text-lg leading-relaxed'>
-					{/* Intro */}
 					<p
 						dangerouslySetInnerHTML={{ __html: post.description }}
 						className='text-xl font-medium text-gray-700 italic border-l-4 border-amber-500 pl-6'></p>
 
-					{/* Pętla po sekcjach */}
 					{post.sections &&
 						post.sections.map((section, index) => (
 							<div key={index} className='space-y-4'>

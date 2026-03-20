@@ -4,41 +4,23 @@ import { getOptimizedImageUrl, IMAGES } from '../assets/img'
 import heroBgGifUrl from '../assets/inside.gif'
 
 export default function Hero() {
-	const heroBgUrl = getOptimizedImageUrl(IMAGES.BAR_2)
 	return (
 		<section className='relative h-[100vh] md:h-screen w-full overflow-hidden bg-gray-900'>
-			{/* Tło z lepszym efektem – lekki zoom i przyciemnienie gradientem zamiast płaskiej czerni 
-			<div
-				className='absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 animate-slow-zoom'
-				style={{
-					// Używamy wygenerowanego URL, z obsługą braku zdjęcia
-					backgroundImage: heroBgUrl ? `url(${heroBgUrl})` : 'none',
-				}}>
-				<div className='absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-gray-900/90'></div>
-			</div>
-			*/}
 
 			<div className='absolute inset-0 overflow-hidden'>
-				{/* 1. Tag <img> zamiast div z background-image */}
 				{heroBgGifUrl && (
 					<img
 						src={heroBgGifUrl}
 						alt='Hero Background Animation'
-						// Te klasy Tailwind zapewniają ten sam efekt co:
-						// bg-cover (object-cover), bg-center (object-center)
 						className='absolute inset-0 w-full h-full object-cover object-center scale-105 animate-slow-zoom'
 					/>
 				)}
-
-				{/* 2. Gradient overlay pozostaje bez zmian, leży *na* GIFie */}
 				<div className='absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black-900/90'></div>
 			</div>
 
 			<div className='relative h-full max-w-7xl mx-auto px-6 flex flex-col justify-center items-start'>
-				{/* Górny badge - od razu mówi, że to klasa premium */}
 				<div className='mb-6 flex items-center gap-3 animate-fade-in-down'>
 					<span className='w-12 h-[1px] bg-amber-500'></span>
-					{/* Zmieniamy span na h2, ale zostawiamy te same klasy wielkości tekstu */}
 					<h2 className='text-amber-500 uppercase tracking-[0.4em] text-xs font-black'>
 						Technika • Atmosfera • Profesjonalizm
 					</h2>
@@ -89,8 +71,6 @@ export default function Hero() {
 					</p>
 				</div>
 			</div>
-
-			{/* Subtelny dół Hero - przejście do następnej sekcji */}
 			<div className='absolute bottom-0 left-0 w-full h-30 bg-gradient-to-t from-black to-transparent'></div>
 		</section>
 	)

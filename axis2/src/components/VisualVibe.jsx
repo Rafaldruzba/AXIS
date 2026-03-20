@@ -5,7 +5,6 @@ import { fill } from '@cloudinary/url-gen/actions/resize'
 import { getOptimizedImage, IMAGES } from '../assets/img'
 
 const VisualVibe = () => {
-	// Upewnij się, że te klucze (np. NAMIOT_INSIDE) są zdefiniowane w Twoim assets/img.js
 	const imagesRow1 = [IMAGES.NAMIOT_INSIDE, IMAGES.NAMIOT_FRONT, IMAGES.NAMIOT_RSIDE, IMAGES.NAMIOT_4]
 	const imagesRow2 = [IMAGES.NAMIOT_5, IMAGES.NAMIOT_6, IMAGES.NAMIOT_7, IMAGES.NAMIOT_8]
 
@@ -38,7 +37,6 @@ const VisualVibe = () => {
 							<AdvancedImage
 								cldImg={getOptimizedImage(imgId).resize(fill().width(600).height(450))}
 								alt='Event setup'
-								// Klasa grayscale-0 md:grayscale załatwia sprawę kolorów na telefonach
 								className='w-full h-full object-cover grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700'
 							/>
 						</div>

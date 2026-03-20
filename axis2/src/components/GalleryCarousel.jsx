@@ -4,11 +4,9 @@ import { fill } from '@cloudinary/url-gen/actions/resize'
 import { getOptimizedImage, IMAGES } from '../assets/img'
 import { Link } from 'react-router-dom'
 
-// Lista ID z Twojego słownika
 const images = [IMAGES.B_18_FRIENDS, IMAGES.B_18_BOYS, IMAGES.GIRLS_LIGHTS, IMAGES.B40_4, IMAGES.BOTTLES_LIGHTS]
 const images2 = [IMAGES.POETRY_GIRL, IMAGES.B40_2, IMAGES.B_18_BOY, IMAGES.RED_GIRL, IMAGES.COWBOY_GIRL]
 
-// Potrajamy listę dla efektu nieskończonej pętli
 const infiniteImages = [...images, ...images, ...images]
 const infiniteImages2 = [...images2, ...images2, ...images2]
 

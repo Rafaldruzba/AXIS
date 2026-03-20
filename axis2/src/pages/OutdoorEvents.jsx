@@ -35,7 +35,6 @@ export default function OutdoorEvents() {
 									alt='Event w plenerze Axis'
 									className='w-full h-full object-cover'
 								/>
-								{/* Overlay z napisem */}
 								<div className='absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-12'>
 									<p className='text-white font-black text-2xl tracking-tighter'>Obsłużymy każdą lokalizację.</p>
 								</div>
@@ -45,7 +44,7 @@ export default function OutdoorEvents() {
 				</div>
 			</section>
 
-			{/* POWER SECTION - Agregat i Niezależność */}
+			{/* POWER SECTION */}
 			<section className='py-32 bg-gray-900 rounded-[4rem] mx-4 my-10 relative overflow-hidden'>
 				<div className='max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center'>
 					<div className='order-2 lg:order-1'>
@@ -87,7 +86,7 @@ export default function OutdoorEvents() {
 				<div className='absolute right-0 bottom-0 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px]'></div>
 			</section>
 
-			{/* SEO & DESCRIPTION - ROZSZERZONA WERSJA */}
+			{/* SEO & DESCRIPTION */}
 			<section className='py-32 bg-[#fdfbf7]'>
 				<div className='max-w-6xl mx-auto px-6'>
 					<div className='grid lg:grid-cols-2 gap-16 items-start'>
@@ -132,12 +131,12 @@ export default function OutdoorEvents() {
 							].map((item, index) => (
 								<motion.div
 									key={index}
-									initial={{ opacity: 0, x: -20 }} // Start: niewidoczne i przesunięte w lewo
-									whileInView={{ opacity: 1, x: 0 }} // Koniec: widoczne i na swoim miejscu
-									viewport={{ once: true }} // Animacja odpali się tylko raz
+									initial={{ opacity: 0, x: -20 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									viewport={{ once: true }}
 									transition={{
 										duration: 0.5,
-										delay: index * 0.2, // Efekt "kaskady" - każda kolejna karta wchodzi ciut później
+										delay: index * 0.2,
 									}}
 									className='border-l-2 border-amber-500/30 pl-6'>
 									<h5 className='font-black text-gray-900 uppercase text-xs tracking-widest mb-3'>{item.title}</h5>
