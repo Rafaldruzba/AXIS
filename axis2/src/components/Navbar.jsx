@@ -6,7 +6,7 @@ export default function Navbar() {
 	const [dropdown, setDropdown] = useState(false)
 
 	return (
-		<nav className='fixed w-full bg-black/70 backdrop-blur-md text-white z-50'>
+		<nav className='fixed w-full bg-black/90 backdrop-blur-md text-white z-50'>
 			<div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
 				{/* LOGO */}
 				<Link to='/' className='text-2xl font-bold tracking-widest md:ml-10' onClick={() => setIsOpen(false)}>
@@ -76,8 +76,8 @@ export default function Navbar() {
 
 			{/* MOBILE MENU */}
 			{isOpen && (
-				<div className='md:hidden bg-black px-6 pb-6 pt-4 space-y-4'>
-					<div className='space-y-4 px-4'>
+				<div className='md:hidden  px-6 pb-6 pt-4 space-y-4'>
+					<div className='space-y-4 px-4 text-sm text-white/80'>
 						<Link to='/oferta' className='block' onClick={() => setIsOpen(false)}>
 							Konfigurator
 						</Link>
