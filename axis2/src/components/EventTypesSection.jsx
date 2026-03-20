@@ -34,7 +34,7 @@ export default function EventTypesSection() {
 						<Link
 							key={event.title}
 							to={event.link}
-							className='group relative h-[350px] md:h-[300px] rounded-[3rem] overflow-hidden bg-black transition-all duration-700 shadow-sm md:hover:shadow-2xl'>
+							className='group relative h-87.5 md:h-75 rounded-[3rem] overflow-hidden bg-black transition-all duration-700 shadow-sm md:hover:shadow-2xl'>
 							{/* 1. Obrazek tła */}
 							<AdvancedImage
 								cldImg={getOptimizedImage(event.image).resize(fill().width(800).height(600))}
@@ -47,7 +47,7 @@ export default function EventTypesSection() {
 							<div className='absolute inset-0 bg-black opacity-0 md:group-hover:opacity-50 transition-opacity duration-500'></div>
 
 							{/* 3. STAŁY GRADIENT: Ten się nie zmienia, gwarantuje czytelność tekstu od dołu */}
-							<div className='absolute inset-0 bg-gradient-to-t from-gray-950 via-black/40 to-transparent opacity-90'></div>
+							<div className='absolute inset-0 bg-linear-to-t from-gray-950 via-black/40 to-transparent opacity-90'></div>
 
 							{/* Treść (Text & Button) */}
 							<div className='absolute inset-0 p-8 md:p-10 flex flex-col justify-end'>
@@ -60,17 +60,20 @@ export default function EventTypesSection() {
 										{event.title}
 									</h4>
 
-									<p className='text-gray-300 text-sm leading-relaxed mb-5 md:mb-6 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100'>
-										{event.description}
-									</p>
+									{/* FIX: Stała wysokość kontenera poniżej tytułu (np. 140px lub 160px), aby tytuł zawsze był w tym samym miejscu */}
+									<div className='h-35 flex flex-col justify-start'>
+										<p className='text-gray-300 text-sm leading-relaxed mb-5 md:mb-6 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100'>
+											{event.description}
+										</p>
 
-									<div className='flex items-center gap-3 text-white font-bold text-sm uppercase tracking-widest'>
-										<span className='w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center group-hover:w-full transition-all duration-500 overflow-hidden'>
-											<span className='group-hover:inline hidden ml-2 whitespace-nowrap text-gray-900'>
-												Sprawdź ofertę
+										<div className='flex items-center gap-3 text-white font-bold text-sm uppercase tracking-widest mt-auto'>
+											<span className='w-full md:w-0 h-10 rounded-full bg-amber-500 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:w-full md:group-hover:opacity-100 transition-all duration-500 overflow-hidden'>
+												<span className='ml-2 whitespace-nowrap text-gray-900 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 delay-200'>
+													Sprawdź ofertę
+												</span>
+												<span className='ml-3 text-gray-900'>→</span>
 											</span>
-											<span className='group-hover:ml-3 text-gray-900'>→</span>
-										</span>
+										</div>
 									</div>
 								</div>
 							</div>

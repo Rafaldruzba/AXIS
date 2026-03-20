@@ -45,7 +45,7 @@ export default function Hero() {
 				</div>
 
 				<div className='max-w-4xl'>
-					<h1 className='text-4xl md:text-8xl font-black text-white mb-8 tracking-tight leading-[0.9] animate-fade-in-up'>
+					<h1 className='text-4xl md:text-6xl 3xl:text-8xl font-black text-white mb-8 tracking-tight leading-[0.9] animate-fade-in-up'>
 						Tworzymy <br />
 						<span className='text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600'>
 							Wydarzenia
@@ -54,7 +54,7 @@ export default function Hero() {
 						które zostają w pamięci.
 					</h1>
 
-					<p className='text-gray-300 text-md md:text-xl max-w-xl mb-12 leading-relaxed animate-fade-in-up delay-100'>
+					<p className='text-gray-300 text-md md:text-lg 3xl:text-xl max-w-xl mb-12 leading-relaxed animate-fade-in-up delay-100'>
 						Axis Events to nie tylko sprzęt – to Twoja pewność udanego wydarzenia. Łączymy sprzęt premium z
 						profesjonalnym wsparciem.
 						<span className='hidden md:inline-block'>
@@ -67,13 +67,13 @@ export default function Hero() {
 					<div className='flex flex-col sm:flex-row gap-6 animate-fade-in-up delay-200'>
 						<Link
 							to='/oferta'
-							className='flex items-center justify-center bg-amber-500 text-gray-900 px-10 py-5 md:py-5 rounded-full font-black uppercase text-sm tracking-widest hover:bg-white hover:scale-105 transition-all duration-300 shadow-2xl shadow-amber-500/20 min-w-[220px] mx-auto sm:mx-0'>
+							className='flex items-center justify-center bg-amber-500 text-gray-900 px-10 py-3  rounded-full font-black uppercase text-sm tracking-widest hover:bg-white hover:scale-105 transition-all duration-300 shadow-2xl shadow-amber-500/20 min-w-[220px] mx-auto sm:mx-0 w-full sm:w-auto '>
 							Zobacz ofertę
 						</Link>
 
 						<Link
 							to='/kontakt'
-							className='group flex items-center justify-center gap-4 text-white px-8 py-3 md:py-5 rounded-full font-black uppercase text-sm tracking-widest border border-white/20 hover:bg-white/10 transition-all text-center md:min-w-[220px]'>
+							className='group flex items-center justify-center gap-4 text-white px-8 py-2 sm:py-3 rounded-full font-black uppercase text-sm tracking-widest border border-white/20 hover:bg-white/10 transition-all text-center md:min-w-[220px]'>
 							<span>Skontaktuj się</span>
 							<span className='w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-gray-900 transition-colors'>
 								→
