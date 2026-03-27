@@ -1,4 +1,8 @@
+import { AdvancedImage } from '@cloudinary/react'
 import { useState } from 'react'
+import { getOptimizedImage, IMAGES } from '../assets/img'
+import { fill } from '@cloudinary/url-gen/actions/resize'
+import { compass } from '@cloudinary/url-gen/qualifiers/gravity'
 
 export default function InfoSection() {
 	const [open, setOpen] = useState(null)
@@ -30,8 +34,10 @@ export default function InfoSection() {
 				<div className='grid lg:grid-cols-12 gap-12 items-center'>
 					<div className='lg:col-span-7 relative group'>
 						<div className='aspect-video overflow-hidden rounded-[3rem] shadow-2xl border border-white/5'>
-							<img
-								src='https://images.unsplash.com/photo-1506157786151-b8491531f063'
+							<AdvancedImage
+								cldImg={getOptimizedImage(IMAGES.SETUP_MAX).resize(
+									fill().width(1200).height(675).gravity(compass('center')),
+								)}
 								alt='Nagłośnienie'
 								className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100'
 							/>
@@ -87,10 +93,12 @@ export default function InfoSection() {
 
 					<div className='lg:col-span-7 lg:order-2 order-1 relative group'>
 						<div className='aspect-video overflow-hidden rounded-[3rem] shadow-2xl border border-white/5 rotate-1 group-hover:rotate-0 transition-all duration-500'>
-							<img
-								src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745'
-								alt='Oświetlenie'
-								className='w-full h-full object-cover opacity-80 group-hover:opacity-100'
+							<AdvancedImage
+								cldImg={getOptimizedImage(IMAGES.LEDS_LASER).resize(
+									fill().width(1200).height(775).gravity(compass('north')),
+								)}
+								alt='Nagłośnienie'
+								className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100'
 							/>
 						</div>
 					</div>

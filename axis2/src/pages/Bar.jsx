@@ -6,6 +6,7 @@ import { AdvancedImage } from '@cloudinary/react'
 import { fill } from '@cloudinary/url-gen/actions/resize'
 
 export default function Bar() {
+
 	return (
 		<div className='bg-[#fdfbf7] min-h-screen'>
 			{/* HERO BAR SECTION */}
@@ -138,12 +139,7 @@ export default function Bar() {
 						<div className='order-1 lg:order-2 relative'>
 							<div className='aspect-square rounded-[3rem] overflow-hidden shadow-inner bg-gray-100'>
 								<AdvancedImage
-									cldImg={getOptimizedImage(IMAGES.BAR_SECOND)
-										.resize(
-											fill()
-												.width(600)
-												.height(600),
-										)}
+									cldImg={getOptimizedImage(IMAGES.BAR_SECOND).resize(fill().width(2000).height(2000))}
 									alt='Szczegóły baru'
 									className='w-full h-full object-cover mix-blend-multiply opacity-90'
 								/>

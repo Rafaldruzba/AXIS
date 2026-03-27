@@ -4,12 +4,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import { ChevronDown, ShoppingBag, X } from 'lucide-react'
 
 export default function Offer() {
-	// Inicjalizacja z LocalStorage
 	const [selected, setSelected] = useState(() => {
 		const saved = localStorage.getItem('axis_cart')
 		return saved ? JSON.parse(saved) : []
 	})
-
 	const [isOpen, setIsOpen] = useState(true)
 	const navigate = useNavigate()
 
@@ -17,38 +15,68 @@ export default function Offer() {
 		localStorage.setItem('axis_cart', JSON.stringify(selected))
 	}, [selected])
 
+	// Discount logic — recalculates whenever cart changes
+	const hasBar = selected.some(item => item.category === 'BAR')
+	const hasAudio = selected.some(item => item.category === 'AUDIO')
+	const discount = hasBar && hasAudio ? 20 : hasBar || hasAudio ? 10 : 0
+
+	useEffect(() => {
+		setSelected(prev => {
+			const tentIndex = prev.findIndex(item => item.category === 'NAMIOT')
+			if (tentIndex === -1) return prev
+
+			const tent = prev[tentIndex]
+			const base = tent.basePrice ?? Number(tent.price)
+
+			if (isNaN(base)) return prev
+
+			const newPrice = Math.round(base * (1 - discount / 100))
+			const savedAmount = base - newPrice
+
+			if (tent.price === newPrice && tent.appliedDiscount === discount) return prev
+
+			const updated = [...prev]
+			updated[tentIndex] = { ...tent, basePrice: base, price: newPrice, appliedDiscount: discount, savedAmount }
+			return updated
+		})
+	}, [discount, selected.length])
+
 	const totalPrice = selected.reduce((sum, item) => {
 		const price = typeof item.price === 'string' ? parseInt(item.price.replace(/\s/g, '')) : item.price || 0
 		return sum + price
 	}, 0)
 
-	const handleGoToContact = () => {
-		navigate('/kontakt', { state: { cart: selected } })
-	}
+	const handleGoToContact = () => navigate('/kontakt', { state: { cart: selected } })
 
-	const addToQuote = item => {
-		// Poprawiona logika: sprawdzamy czy element o tym ID już jest
+	const toggleItem = item => {
 		const isAlreadyIn = selected.find(i => i.id === item.id)
-		if (!isAlreadyIn) {
+		if (isAlreadyIn) {
+			setSelected(prev => prev.filter(i => i.id !== item.id))
+		} else {
 			setSelected(prev => [...prev, item])
-			setIsOpen(true) // Otwórz koszyk po dodaniu
+			setIsOpen(true)
 		}
 	}
 
-	const removeFromQuote = id => {
-		// Usuwamy po ID, nie po indeksie - to bezpieczniejsze
-		setSelected(prev => prev.filter(item => item.id !== id))
-	}
+	const removeFromQuote = id => setSelected(prev => prev.filter(item => item.id !== id))
 
 	const renderCard = item => {
 		const isInCart = selected.some(i => i.id === item.id)
+		const cartVersion = selected.find(i => i.id === item.id)
 
 		return (
 			<div
 				key={item.id}
 				className='group bg-white rounded-[2.5rem] shadow-sm p-10 transition-all duration-500 hover:shadow-2xl border border-gray-100 flex flex-col justify-between relative overflow-hidden'>
 				<div className='absolute top-0 right-0 bg-amber-500 text-gray-900 font-black px-6 py-2 rounded-bl-[1.5rem] text-sm shadow-sm'>
-					{item.price || 'Wycena'}
+					{isInCart && cartVersion?.appliedDiscount > 0 ? (
+						<div className='flex flex-col items-end leading-tight'>
+							<span className='line-through text-gray-700 text-[10px] font-bold'>{cartVersion.basePrice} zł</span>
+							<span>{cartVersion.price} zł</span>
+						</div>
+					) : (
+						item.price || 'Wycena'
+					)}
 				</div>
 
 				<div>
@@ -58,7 +86,6 @@ export default function Offer() {
 					<h3 className='text-2xl font-black text-gray-900'>{item.name}</h3>
 					<p className='text-gray-400 mb-4 leading-relaxed text-sm'>{item.subtitle}</p>
 					<p className='text-gray-600 mb-8 leading-relaxed text-sm'>{item.description}</p>
-
 					<ul className='text-gray-500 mb-8 leading-relaxed text-sm list-disc list-inside space-y-1'>
 						{item.includes?.map((el, index) => (
 							<li key={index}>{el}</li>
@@ -67,14 +94,13 @@ export default function Offer() {
 				</div>
 
 				<button
-					onClick={() => addToQuote(item)}
-					disabled={isInCart}
+					onClick={() => toggleItem(item)}
 					className={`w-full py-4 rounded-full font-black uppercase text-xs tracking-widest border-2 transition-all duration-300 ${
 						isInCart
-							? 'border-emerald-500 text-emerald-500 bg-emerald-50 cursor-default'
-							: 'border-gray-900 group-hover:bg-gray-900 group-hover:text-white'
+							? 'border-red-400 text-red-500 bg-red-50 hover:bg-red-100 cursor-pointer'
+							: 'border-gray-900 group-hover:bg-gray-900 group-hover:text-white cursor-pointer'
 					}`}>
-					{isInCart ? 'Dodano do listy ✓' : 'Dodaj do konfiguracji'}
+					{isInCart ? 'Usuń z listy ✕' : 'Dodaj do konfiguracji'}
 				</button>
 			</div>
 		)
@@ -83,17 +109,19 @@ export default function Offer() {
 	return (
 		<div className='pt-40 pb-40 bg-[#fdfbf7] min-h-screen relative'>
 			<div className='max-w-7xl mx-auto px-6'>
-				{/* HERO SECTION */}
 				<div className='text-left mb-32 relative'>
 					<div className='absolute -left-10 top-0 w-32 h-32 bg-amber-200 blur-[80px] -z-10 opacity-50'></div>
 					<h1 className='text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-none'>
 						Skonfiguruj <br />
 						<span className='text-amber-500 text-outline'>Twój Event</span>
 					</h1>
-					<p className='text-gray-500 text-xl max-w-2xl font-medium leading-relaxed mb-10'>
+					<p className='text-gray-500 text-xl max-w-2xl font-medium leading-relaxed'>
 						Wybierz komponenty, których potrzebujesz. Przygotujemy dla Ciebie spersonalizowaną ofertę techniczną w 24h.
 					</p>
-					<div className='flex gap-4'>
+					<span className='text-gray-400 text-sm font-medium leading-relaxed'>
+						Dodaj AUDIO lub BAR aby uzyskać od 10% do 20% zniżki na namiot!
+					</span>
+					<div className='flex gap-4 mt-10'>
 						<Link
 							to='/kontakt'
 							className='bg-gray-900 text-white px-8 py-4 rounded-full font-bold hover:bg-amber-500 transition-all shadow-xl'>
@@ -102,7 +130,6 @@ export default function Offer() {
 					</div>
 				</div>
 
-				{/* SEKCJE OFERTY */}
 				<div className='space-y-32'>
 					<Section
 						title='Nagłośnienie i Oświetlenie'
@@ -139,7 +166,14 @@ export default function Offer() {
 									className='flex justify-between items-center group bg-[#fdfbf7] p-3 rounded-2xl border border-gray-50'>
 									<div className='flex flex-col'>
 										<span className='font-bold text-xs text-gray-800'>{item.name}</span>
-										<span className='text-[10px] text-amber-600 font-bold'>{item.price || 'Wycena ind.'}</span>
+										<span className='text-[10px] text-amber-600 font-bold'>
+											{item.price} zł
+											{item.appliedDiscount > 0 && (
+												<span className='ml-1 text-emerald-600 font-black'>
+													(zaoszczędzono {item.savedAmount} zł / −{item.appliedDiscount}%)
+												</span>
+											)}
+										</span>
 									</div>
 									<button
 										onClick={() => removeFromQuote(item.id)}
@@ -154,7 +188,7 @@ export default function Offer() {
 							<div className='flex justify-between items-center mb-6 px-2'>
 								<span className='text-xs font-black uppercase text-gray-400'>Suma:</span>
 								<span className='text-lg font-black text-gray-900'>
-									{totalPrice > 0 ? `${totalPrice} zł` : 'Wycena'}
+									{totalPrice > 0 ? `${totalPrice} zł` : 'Wycena indywidualna'}
 								</span>
 							</div>
 							<button
@@ -179,7 +213,6 @@ export default function Offer() {
 	)
 }
 
-/* SECTION COMPONENT */
 function Section({ title, icon, items, renderCard }) {
 	return (
 		<div className='relative'>

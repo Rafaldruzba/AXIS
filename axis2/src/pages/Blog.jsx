@@ -1,5 +1,8 @@
+import { AdvancedImage } from '@cloudinary/react'
 import blogs from '../data/blogs.json'
 import { Link } from 'react-router-dom'
+import { getOptimizedImage } from '../assets/img'
+import { fill } from '@cloudinary/url-gen/actions/resize'
 
 export default function Blog() {
 	return (
@@ -22,8 +25,10 @@ export default function Blog() {
 							<Link to={`/blog/${blog.slug}`} className='block'>
 								{/* Kontener na zdjęcie */}
 								<div className='relative h-64 mb-6 overflow-hidden rounded-3xl bg-gray-200 shadow-md'>
-									<img
-										src={blog.image || '/api/placeholder/600/400'}
+									<AdvancedImage
+										cldImg={getOptimizedImage(blog.image || 'default_blog_placeholder').resize(
+											fill().width(800).height(500),
+										)}
 										alt={blog.title}
 										className='object-cover w-full h-full transition duration-500 group-hover:scale-105'
 									/>

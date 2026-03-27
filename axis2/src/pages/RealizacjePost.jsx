@@ -1,5 +1,8 @@
 import { useParams, Link } from 'react-router-dom'
 import projects from '../data/projects.json'
+import { AdvancedImage } from '@cloudinary/react'
+import { getOptimizedImage } from '../assets/img'
+import { fill } from '@cloudinary/url-gen/actions/resize'
 
 export default function RealizacjaPost() {
 	const { slug } = useParams()
@@ -37,7 +40,11 @@ export default function RealizacjaPost() {
 
 				{/* Hero Image */}
 				<div className='rounded-[3rem] overflow-hidden shadow-2xl mb-20 h-[500px] border border-gray-100'>
-					<img src={project.image} alt={project.title} className='w-full h-full object-cover' />
+					<AdvancedImage
+						cldImg={getOptimizedImage(project.image).resize(fill().width(1920).height(1080))}
+						alt={project.title}
+						className='w-full h-full object-cover'
+					/>
 				</div>
 
 				<div className='grid md:grid-cols-3 gap-16'>
@@ -57,12 +64,15 @@ export default function RealizacjaPost() {
 						{/* Galeria zdjęć */}
 						{project.gallery && (
 							<div className='grid grid-cols-2 gap-6 pt-10'>
-								{project.gallery.map((img, i) => (
+								{project.gallery.map((imgId, i) => (
 									<div key={i} className='rounded-3xl overflow-hidden h-64 shadow-md border border-gray-100'>
-										<img
-											src={img}
-											alt={`Detal ${i}`}
-											className='w-full h-full object-cover hover:scale-105 transition duration-500'
+										<AdvancedImage
+											cldImg={getOptimizedImage(imgId).resize(
+												fill().width(800).height(600),
+											)}
+											alt={`${project.title} - zdjęcie ${i + 1}`}
+											className='w-full h-full object-cover hover:scale-105 transition duration-500 cursor-pointer'
+											loading='lazy'
 										/>
 									</div>
 								))}

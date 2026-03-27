@@ -26,9 +26,11 @@ import {
 	Minus,
 	Plus,
 } from 'lucide-react'
-
 import { Link } from 'react-router-dom'
 import VisualVibe from '../components/VisualVibe'
+import { getOptimizedImage, getOptimizedImageUrl, IMAGES } from '../assets/img'
+import { AdvancedImage } from '@cloudinary/react'
+import { fill } from '@cloudinary/url-gen/actions/resize'
 
 export default function Tent() {
 	const [activeIndex, setActiveIndex] = useState(null)
@@ -85,11 +87,11 @@ export default function Tent() {
 	const faqs = [
 		{
 			q: 'Jakie są wymagania techniczne do rozstawienia mobilnego klubu?',
-			a: 'Potrzebujemy jedynie płaskiego terenu o wymiarach min. 11x11m oraz dostępu do gniazda siłowego 400V. Namiot możemy rozstawić na trawie (kotwienie śledziami) lub betonie/kostce (obciążniki piaskowe/betonowe).',
+			a: 'Potrzebujemy jedynie płaskiego terenu o wymiarach min. 11x11m oraz dostępu do gniazda siłowego 400V. Namiot możemy rozstawić na trawie (kotwienie śledziami) lub betonie/kostce (obciążniki piaskowe).',
 		},
 		{
 			q: 'Czy dmuchany namiot jest bezpieczny przy silnym wietrze?',
-			a: 'Absolutnie. Konstrukcja wykonana jest z wzmocnionego PVC Premium i posiada system wielopunktowych odciągów. Gwarantujemy pełną stabilność przy wietrze do 12 m/s (ok. 45 km/h). Przy ekstremalnych warunkach pogodowych monitorujemy sytuację na bieżąco.',
+			a: 'Absolutnie. Konstrukcja wykonana jest z wzmocnionego poszycia Premium i posiada system wielopunktowych odciągów. Gwarantujemy pełną stabilność przy wietrze do 12 m/s (ok. 45 km/h). Przy ekstremalnych warunkach pogodowych monitorujemy sytuację na bieżąco.',
 		},
 		{
 			q: 'Co z hałasem dmuchawy? Czy będzie słychać muzykę?',
@@ -112,6 +114,8 @@ export default function Tent() {
 		{ title: 'Vibe Control', desc: 'Możliwość wynajęcia z osobnym DJ-em lub naszym barmanem.', icon: <Sparkles /> },
 	]
 
+	const imageUrl = getOptimizedImageUrl(IMAGES.NAMIOT_HERO)
+
 	return (
 		<div className='bg-[#0a0a0a] text-white min-h-screen font-sans selection:bg-amber-500 selection:text-black'>
 			{/* HERO SECTION */}
@@ -121,7 +125,8 @@ export default function Tent() {
 					initial={{ scale: 1.15 }}
 					animate={{ scale: 1 }}
 					transition={{ duration: 2, ease: 'easeOut' }}
-					className="absolute inset-0 bg-[url('https://cdn.discordapp.com/attachments/783276489834496051/1480618010019627078/image.png?ex=69b0547a&is=69af02fa&hm=1dd34a293c92d94393394f93cd3d2358de492d90034b3002442bc8944e6317c3&')] bg-cover bg-center brightness-[0.4] contrast-[1.1]"
+					className='absolute inset-0 bg-cover bg-center brightness-[0.6] contrast-[1.1]'
+					style={{ backgroundImage: `url('${imageUrl}')` }}
 				/>
 
 				{/* Overlay gradientowy dla lepszej czytelności tekstu */}
@@ -239,11 +244,11 @@ export default function Tent() {
 									<p className='text-[10px] font-black uppercase tracking-[0.4em] text-amber-500 mb-2'>
 										Systemy i Zasilanie
 									</p>
-									<p className='text-white font-bold'>Stałe 230V + Poszycie PVC Premium UV-Resistant</p>
+									<p className='text-white font-bold'>Stałe 400V + Poszycie Premium UV-Resistant</p>
 								</div>
 								<div className='h-px md:h-12 w-full md:w-px bg-white/10'></div>
 								<div className='text-center md:text-right text-gray-400 text-sm max-w-xs'>
-									Dmuchawa silent-mode pozwala na swobodną komunikację wewnątrz klubu.
+									Dmuchawa 1100w pozwala na swobodną komunikację wewnątrz klubu.
 								</div>
 							</div>
 						</motion.div>
@@ -345,7 +350,7 @@ export default function Tent() {
 			</section>
 
 			{/* FAQ SECTION - Bardzo ważne dla SEO */}
-			<section className='max-w-4xl mx-auto px-6'>
+			<section className='max-w-4xl mx-auto px-6 mb-20'>
 				<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className='text-center mb-20'>
 					<h2 className='text-5xl md:text-7xl font-black tracking-tighter uppercase mb-4'>
 						Masz <span className='text-amber-500 font-black italic'>Pytania?</span>
@@ -402,8 +407,21 @@ export default function Tent() {
 			</section>
 
 			{/* CTA SECTION */}
-			<section className='pt-20 pb-20 px-6 relative overflow-hidden text-center'>
-				<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 blur-[120px] rounded-full -z-10'></div>
+			<section className='pt-20 pb-20 px-6 relative overflow-hidden text-center z-0'>
+				{/* Background image from Cloudinary */}
+				<div className='absolute inset-0 -z-20'>
+					<AdvancedImage
+						cldImg={getOptimizedImage(IMAGES.BARMAN_SMILE).resize(fill().width(1920).height(1080))}
+						alt='CTA background'
+						className='w-full h-full object-cover'
+						style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+					/>
+				</div>
+
+				{/* Główny FADE z kolorem #0a0a0a */}
+				<div className='absolute inset-0 -z-20 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/60 to-[#0a0a0a]'></div>
+
+				<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[10px] h-[10px] bg-amber-500/10 blur-[120px] rounded-full -z-10'></div>
 
 				<div className='relative z-10 max-w-5xl mx-auto'>
 					<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

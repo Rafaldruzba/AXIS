@@ -2,16 +2,18 @@
 	"sound_light_packages": [
 		{
 			"id": 1,
-			"name": "Pakiet Basic",
+			"category": "AUDIO",
+			"name": "AUDIO Pakiet Basic",
 			"subtitle": "Małe imprezki do 20 osób",
 			"description": "Zestaw nagłośnienia + podstawowe oświetlenie LED.",
-			"includes": ["1x kolumna aktywna", "1x subwoofer", "Mikser audio", "2x Airship"],
+			"includes": ["2x kolumna aktywna", "Mikser audio", "2x Airship + strob", "Wytwornica dymu z limitem (0.5L)"],
 			"rental_type": "noc / weekend",
-			"price": "700 zł"
+			"price": "700"
 		},
 		{
 			"id": 2,
-			"name": "Pakiet Standard",
+			"category": "AUDIO",
+			"name": "AUDIO Pakiet Standard",
 			"subtitle": "Imprezy do 35 osób",
 			"description": "Mocniejsze nagłośnienie 2.1 + ruchome oświetlenie sceniczne.",
 			"includes": [
@@ -19,15 +21,17 @@
 				"1x subwoofer",
 				"Mikser audio",
 				"projektor laserowy",
-				"2x Airship + stroboskop + ruchoma głowica",
+				"2x Airship + stroboskop",
+				"2x ruchoma głowica gobo",
 				"Wytwornica dymu z limitem (1L)"
 			],
 			"rental_type": "noc / weekend",
-			"price": "1600 zł"
+			"price": "1500"
 		},
 		{
 			"id": 3,
-			"name": "Pakiet Premium",
+			"category": "AUDIO",
+			"name": "AUDIO Pakiet Premium",
 			"subtitle": "50 osób, pełna moc",
 			"description": "Profesjonalny system 2.2 + pełna oprawa świetlna.",
 			"includes": [
@@ -35,116 +39,122 @@
 				"2x subwoofer",
 				"Mikser audio",
 				"projektor laserowy",
-				"2x Airship + stroboskop + ruchoma głowica",
+				"2x Airship + stroboskop",
+				"2x ruchoma głowica gobo",
 				"Opaski fluorescencyjne 200szt.",
 				"Wytwornica dymu bez limitu (5L)!"
 			],
 			"rental_type": "noc / weekend",
-			"price": "2200 zł"
+			"price": "2000"
 		}
 	],
 
 	"tents": [
 		{
 			"id": 4,
+			"category": "NAMIOT",
 			"name": "Namiot Eventowy",
 			"description": "Profesjonalny namiot imprezowy. 9x6m",
 			"rental_type": "noc",
-			"price": "1500 zł"
+			"price": "1200"
 		},
 		{
 			"id": 5,
-			"name": "Namiot Eventowy",
+			"category": "NAMIOT",
+			"name": "Namiot Eventowy Weekend",
 			"description": "Wynajem na cały weekend. 9x6m",
 			"rental_type": "weekend",
 			"price": "Indywidualna wycena"
 		},
 		{
 			"id": 6,
+			"category": "NAMIOT",
 			"name": "Namiot ogrodowy",
-			"description": "Idealny na grila czy małe przyjęcie. 6x3m, oświetlenie (ciepłe lampki)",
+			"description": "Eleganckie zadaszenie 6x3m z klimatycznym oświetleniem. Idealny jako strefa wypoczynku, bufet lub miejsce na drinki.",
 			"rental_type": "noc",
-			"price": "400 zł"
+			"price": "300"
 		}
 	],
 
 	"bar_packages": [
 		{
 			"id": 7,
+			"category": "BAR",
 			"name": "Zestaw Barowy Basic",
 			"description": "Mobilny bar + podstawowe wyposażenie.",
 			"includes": ["Mobilny bar", "Oświetlenie LED", "Blat roboczy"],
-			"price": "2500 zł"
+			"price": "Indywidualna wycena"
 		},
 		{
 			"id": 8,
+			"category": "BAR",
 			"name": "Zestaw Barowy Standard",
 			"description": "Większy bar + chłodziarka.",
 			"includes": ["Bar", "Chłodziarka", "Oświetlenie LED"],
-			"price": ""
+			"price": "Indywidualna wycena"
 		},
 		{
 			"id": 9,
+			"category": "BAR",
 			"name": "Zestaw Barowy Premium",
 			"description": "Profesjonalna strefa barowa.",
 			"includes": ["Bar premium", "Podświetlenie RGB", "Regały", "Lodówki"],
-			"price": ""
+			"price": "Indywidualna wycena"
 		}
 	],
 
 	"fotography_packages": [
 		{
 			"id": 16,
+			"category": "FOTO",
 			"name": "Fotograf eventowy",
 			"subtitle": "Reportaż z Twojego wydarzenia",
 			"description": "Profesjonalny kamerzysta z doświadczeniem w fotografii eventowej",
-			"rental_type": "",
-			"price": "wycena ind."
+			"rental_type": "noc",
+			"price": "Indywidualna wycena"
 		}
 	],
 
 	"addons": [
 		{
 			"id": 10,
+			"category": "ADDON",
 			"name": "Agregat prądotwórczy",
 			"description": "Zasilanie eventów plenerowych.",
 			"rental_type": "noc / weekend",
-			"price": "do uzgodnienia"
-		},
-		{
-			"id": 11,
-			"name": "Namiot VIP Entrance",
-			"description": "Ekskluzywne wejście VIP. Przedsionek 6x3m z podwieszanym oświetleniem.",
-			"rental_type": "noc / weekend",
-			"price": "300 zł"
+			"price": "Indywidualna wycena"
 		},
 		{
 			"id": 12,
-			"name": "Świecące bransoletki LED",
-			"description": "Idealne na koncerty i eventy nocne. 200 sztuk.",
+			"category": "ADDON",
+			"name": "Świecące bransoletki fluorescencyjne",
+			"description": "Dodatkowy klimat i eventy nocne. 200 sztuk.",
 			"rental_type": "za sztukę",
-			"price": "300zł"
+			"price": "100"
 		},
 		{
 			"id": 13,
+			"category": "ADDON",
 			"name": "Koktajlówki",
 			"description": "Wysokie stoliki eventowe. Cena za 2 sztuki.",
 			"rental_type": "2 sztuki",
-			"price": "100 zł"
+			"price": "150"
 		},
 		{
 			"id": 14,
+			"category": "ADDON",
 			"name": "Stoły",
-			"description": "Stoły eventowe. 6-osobowe. Cena za 1 sztukę.",
+			"description": "Stoły eventowe.",
 			"rental_type": "za sztukę",
-			"price": "50 zł"
+			"price": "Indywidualna wycena"
 		},
 		{
 			"id": 15,
+			"category": "ADDON",
 			"name": "Krzesła",
-			"description": "Krzesła eventowe. Cena za 6 sztuk.",
+			"description": "Krzesła do twojego ogrodu.",
 			"rental_type": "za sztukę",
-			"price": "60 zł"
+			"price": "Indywidualna wycena"
 		}
 	]
 }

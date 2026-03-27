@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import { Zap, Mountain, Wind, ShieldCheck, Sun } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { AdvancedImage } from '@cloudinary/react'
+import { getOptimizedImage, IMAGES } from '../assets/img'
+import { fill } from '@cloudinary/url-gen/actions/resize'
+import { compass } from '@cloudinary/url-gen/qualifiers/gravity'
 
 export default function OutdoorEvents() {
 	return (
@@ -30,9 +34,11 @@ export default function OutdoorEvents() {
 
 						<div className='relative'>
 							<div className='aspect-square rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white relative'>
-								<img
-									src='https://images.unsplash.com/photo-1459749411177-042180ce673c?auto=format&fit=crop&q=80'
-									alt='Event w plenerze Axis'
+								<AdvancedImage
+									cldImg={getOptimizedImage(IMAGES.PLENER).resize(
+										fill().width(1000).height(1000).gravity(compass('center')),
+									)}
+									alt='Event firmowy Axis'
 									className='w-full h-full object-cover'
 								/>
 								<div className='absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-12'>

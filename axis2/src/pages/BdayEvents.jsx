@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { PartyPopper, Cake, GlassWater, Disc } from 'lucide-react'
+import { AdvancedImage } from '@cloudinary/react'
+import { getOptimizedImage, IMAGES } from '../assets/img'
+import { fill } from '@cloudinary/url-gen/actions/resize'
 
 export default function BdayEvents() {
 	return (
@@ -188,9 +191,9 @@ export default function BdayEvents() {
 						</div>
 						<div className='relative'>
 							<div className='rounded-[4rem] overflow-hidden rotate-3 shadow-2xl'>
-								<img
-									src='https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80'
-									alt='Impreza urodzinowa'
+								<AdvancedImage
+									cldImg={getOptimizedImage(IMAGES.B40).resize(fill().width(1000).aspectRatio('4:5'))}
+									alt='Luksusowy Bar Mobilny'
 									className='w-full h-full object-cover'
 								/>
 							</div>

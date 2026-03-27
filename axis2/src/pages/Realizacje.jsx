@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import projects from '../data/projects.json'
 
+import { AdvancedImage } from '@cloudinary/react'
+import { getOptimizedImage, IMAGES } from '../assets/img'
+import { fill } from '@cloudinary/url-gen/actions/resize'
+
 export default function Realizacje() {
 	return (
 		<div className='bg-[#fdfbf7] min-h-screen'>
@@ -13,8 +17,8 @@ export default function Realizacje() {
 					</h1>
 					<div className='w-20 h-2 bg-gray-900 mx-auto mb-8'></div>
 					<p className='text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed'>
-						Nie obiecujemy jakości – my ją dostarczamy. Zobacz, jak sprzęt Axis Events zmienia przestrzeń w
-						profesjonalną arenę wydarzeń.
+						Nie obiecujemy jakości – my ją dostarczamy. Zobacz, jak sprzęt Axis zmienia przestrzeń w profesjonalną arenę
+						wydarzeń.
 					</p>
 				</header>
 
@@ -29,8 +33,8 @@ export default function Realizacje() {
 								key={project.slug}
 								className='group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col'>
 								<div className='relative h-80 overflow-hidden'>
-									<img
-										src={project.image}
+									<AdvancedImage
+										cldImg={getOptimizedImage(project.image).resize(fill().width(1920).height(1080))}
 										alt={project.title}
 										className='w-full h-full object-cover transition duration-700 group-hover:scale-110'
 									/>

@@ -4,11 +4,16 @@ import { fill } from '@cloudinary/url-gen/actions/resize'
 import { getOptimizedImage, IMAGES } from '../assets/img'
 import { Link } from 'react-router-dom'
 
-const images = [IMAGES.B_18_FRIENDS, IMAGES.B_18_BOYS, IMAGES.GIRLS_LIGHTS, IMAGES.B40_4, IMAGES.BOTTLES_LIGHTS]
-const images2 = [IMAGES.POETRY_GIRL, IMAGES.B40_2, IMAGES.B_18_BOY, IMAGES.RED_GIRL, IMAGES.COWBOY_GIRL]
+const images = [IMAGES.REALIZATION_1, IMAGES.B_18_BOY, IMAGES.BARMAN_DRINK_2, IMAGES.LIGHTS_PARTY, IMAGES.BAR_LIGHTS]
+const images2 = [IMAGES.POETRY_GIRL, IMAGES.B40_3, IMAGES.BAR_RED_THINGS, IMAGES.RED_GIRL, IMAGES.COWBOY_GIRL]
 
-const infiniteImages = [...images, ...images, ...images]
-const infiniteImages2 = [...images2, ...images2, ...images2]
+const infiniteImages = [...images, ...images]
+const infiniteImages2 = [...images2, ...images2]
+
+// card width + gap on desktop: 500px + 40px = 540px
+const CARD_WIDTH = 540
+const ROW1_LOOP = images.length * CARD_WIDTH // 2700px — one full set
+const ROW2_LOOP = images2.length * CARD_WIDTH // 2700px
 
 const GalleryCarousel = () => {
 	return (
@@ -19,19 +24,17 @@ const GalleryCarousel = () => {
 			</div>
 
 			<div className='relative flex flex-col gap-6 md:gap-10 -rotate-1 scale-105'>
+				{/* RZĄD 1 - jedzie w lewo */}
 				<div className='flex overflow-hidden'>
 					<motion.div
-						className='flex gap-6 md:gap-10 pr-6 md:pr-10'
-						animate={{ x: ['0%', '-50%'] }}
+						className='flex gap-6 md:gap-10'
+						animate={{ x: [0, -ROW1_LOOP] }}
 						transition={{
-							x: {
-								repeat: Infinity,
-								repeatType: 'loop',
-								duration: 40,
-								ease: 'linear',
-							},
-						}}
-						whileHover={{ transition: { duration: 100 } }}>
+							repeat: Infinity,
+							repeatType: 'loop',
+							duration: 40,
+							ease: 'linear',
+						}}>
 						{infiniteImages.map((imgId, index) => (
 							<div
 								key={`row1-${index}`}
@@ -39,27 +42,25 @@ const GalleryCarousel = () => {
 								<AdvancedImage
 									cldImg={getOptimizedImage(imgId).resize(fill().width(600).height(400))}
 									alt={`Axis Realizacja ${index}`}
-									className='w-full h-full object-cover grayscale-0 md:grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700'
+									className='w-full h-full object-cover md:grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700'
 								/>
 								<div className='absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none' />
 							</div>
 						))}
 					</motion.div>
 				</div>
-				{/* RZĄD 2 - Jedzie w prawo */}
+
+				{/* RZĄD 2 - jedzie w prawo */}
 				<div className='flex overflow-hidden'>
 					<motion.div
-						className='flex gap-6 md:gap-10 pr-6 md:pr-10'
-						animate={{ x: ['-50%', '0%'] }}
+						className='flex gap-6 md:gap-10'
+						animate={{ x: [-ROW2_LOOP, 0] }}
 						transition={{
-							x: {
-								repeat: Infinity,
-								repeatType: 'loop',
-								duration: 50,
-								ease: 'linear',
-							},
-						}}
-						whileHover={{ transition: { duration: 100 } }}>
+							repeat: Infinity,
+							repeatType: 'loop',
+							duration: 50,
+							ease: 'linear',
+						}}>
 						{infiniteImages2.map((imgId, index) => (
 							<div
 								key={`row2-${index}`}
@@ -67,7 +68,7 @@ const GalleryCarousel = () => {
 								<AdvancedImage
 									cldImg={getOptimizedImage(imgId).resize(fill().width(600).height(400))}
 									alt={`Axis Event ${index}`}
-									className='w-full h-full object-cover grayscale-0 md:grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700'
+									className='w-full h-full object-cover md:grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700'
 								/>
 								<div className='absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none' />
 							</div>
@@ -79,8 +80,8 @@ const GalleryCarousel = () => {
 			<div className='max-w-7xl mx-auto mt-10 px-6 relative z-30 text-center'>
 				<div className='flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8'>
 					<Link
-						to='/oferta' // Tu wpisz link do formularza/kontaktu
-						className='group flex items-center gap-3 bg-amber-500 text-black px-8 py-4 rounded-full text-lg md:text-lg font-bold shadow-lg hover:bg-black hover:text-white transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto justify-center'>
+						to='/oferta'
+						className='group flex items-center gap-3 bg-amber-500 text-black px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:bg-black hover:text-white transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto justify-center'>
 						<span className='text-xl'>📸</span>
 						Dodaj fotografa do swojej imprezy
 						<span className='group-hover:translate-x-1 transition-transform'>→</span>

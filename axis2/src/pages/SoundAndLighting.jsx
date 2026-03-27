@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom'
 import { Music, Zap, Radio, Truck, Settings, Mic2 } from 'lucide-react'
+import { AdvancedImage } from '@cloudinary/react'
+import { getOptimizedImage, IMAGES } from '../assets/img'
+import { fill } from '@cloudinary/url-gen/actions/resize'
+import { compass } from '@cloudinary/url-gen/qualifiers/gravity'
 
 export default function SoundAndLighting() {
 	return (
@@ -32,12 +36,15 @@ export default function SoundAndLighting() {
 
 						<div className='relative'>
 							<div className='aspect-video rounded-[3rem] overflow-hidden shadow-2xl border-[8px] border-white rotate-2'>
-								<img
-									src='https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=80'
+								<AdvancedImage
+									cldImg={getOptimizedImage(IMAGES.LIGHTS_PARTY).resize(
+										fill().width(1200).height(675).gravity(compass('south_west')),
+									)}
 									alt='Realizacja koncertowa Axis'
 									className='w-full h-full object-cover'
 								/>
 							</div>
+
 							<div className='absolute -top-10 -right-2 md:-right-5 bg-amber-500 p-6 rounded-3xl shadow-xl rotate-12'>
 								<Zap className='text-gray-900 w-10 h-10' />
 							</div>
@@ -166,7 +173,7 @@ export default function SoundAndLighting() {
 								<SpecRow label='Efekty LED' value='2 × Airship – szerokie wiązki i ruch na parkiecie' />
 								<SpecRow label='Laser' value='Projektor laserowy budujący mocniejszy klimat imprezy' />
 								<SpecRow label='Dym' value='Wytwornica dymu 1200 W dla lepszej widoczności efektów' />
-								<SpecRow label='Ruchome światło' value='1 głowica do dynamicznego akcentowania przestrzeni' />
+								<SpecRow label='Ruchome światło' value='2 głowice do dynamicznego akcentowania przestrzeni' />
 								<SpecRow label='Montaż' value='Całość osadzona na 2 T-barach' />
 							</div>
 						</div>

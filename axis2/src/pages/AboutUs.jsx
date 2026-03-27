@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { CheckCircle2, ArrowRight, ShieldCheck, Zap, Award, Clock } from 'lucide-react'
+import { AdvancedImage } from '@cloudinary/react'
+import { getOptimizedImage, IMAGES } from '../assets/img'
+import { fill } from '@cloudinary/url-gen/actions/resize'
+import { compass } from '@cloudinary/url-gen/qualifiers/gravity'
 
 export default function AboutUs() {
 	return (
@@ -64,12 +68,12 @@ export default function AboutUs() {
 							whileInView={{ opacity: 1, scale: 1 }}
 							viewport={{ once: true }}
 							className='relative'>
-							<div className='bg-amber-500 rounded-[4rem] absolute inset-0 rotate-3'></div>
+							<div className='bg-purple-800 rounded-[4rem] absolute inset-0 rotate-3'></div>
 							<div className='bg-white rounded-[4rem] relative overflow-hidden shadow-2xl h-[450px] border-4 border-white'>
-								<img
-									src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80'
-									alt='Elegancki mobilny bar Axis Events podczas przyjęcia weselnego w plenerze'
-									className='object-cover w-full h-full'
+								<AdvancedImage
+									cldImg={getOptimizedImage(IMAGES.BARMAN_SHAKE).resize(fill().width(2000))}
+									alt='Barman, członek zespołu'
+									className='w-full h-full object-cover'
 								/>
 							</div>
 						</motion.div>
@@ -196,31 +200,33 @@ export default function AboutUs() {
 				<section className='mb-32'>
 					<div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
 						<div className='h-48 bg-gray-200 rounded-3xl overflow-hidden'>
-							<img
-								src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80'
-								alt='Montaż oświetlenia'
-								className='object-cover w-full h-full hover:scale-110 transition-transform duration-500'
+							<AdvancedImage
+								cldImg={getOptimizedImage(IMAGES.PINK_DRINK).resize(
+									fill().width(1000).height(800).gravity(compass('south')),
+								)}
+								alt='Luksusowy Bar Mobilny'
+								className='w-full h-full object-cover'
 							/>
 						</div>
 						<div className='h-48 bg-gray-200 rounded-3xl overflow-hidden'>
-							<img
-								src='https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80'
-								alt='Namiot eventowy'
-								className='object-cover w-full h-full hover:scale-110 transition-transform duration-500'
+							<AdvancedImage
+								cldImg={getOptimizedImage(IMAGES.BAR_FRONT).resize(fill().width(1000))}
+								alt='Luksusowy Bar Mobilny'
+								className='w-full h-full object-cover'
 							/>
 						</div>
 						<div className='h-48 bg-gray-200 rounded-3xl overflow-hidden'>
-							<img
-								src='https://images.unsplash.com/photo-1459749411177-042180ce673c?auto=format&fit=crop&q=80'
-								alt='Bar mobilny detal'
-								className='object-cover w-full h-full hover:scale-110 transition-transform duration-500'
+							<AdvancedImage
+								cldImg={getOptimizedImage(IMAGES.SETUP_4).resize(fill().width(1000))}
+								alt='Luksusowy Bar Mobilny'
+								className='w-full h-full object-cover'
 							/>
 						</div>
 						<div className='h-48 bg-gray-200 rounded-3xl overflow-hidden'>
-							<img
-								src='https://images.unsplash.com/photo-1514525253361-b83f85f553c0?auto=format&fit=crop&q=80'
-								alt='Nagłośnienie event'
-								className='object-cover w-full h-full hover:scale-110 transition-transform duration-500'
+							<AdvancedImage
+								cldImg={getOptimizedImage(IMAGES.LED_LIGHTS).resize(fill().width(1000))}
+								alt='Luksusowy Bar Mobilny'
+								className='w-full h-full object-cover'
 							/>
 						</div>
 					</div>

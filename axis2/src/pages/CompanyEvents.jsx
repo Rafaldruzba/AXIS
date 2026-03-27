@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Users, Briefcase, GlassWater, Layout } from 'lucide-react'
+import { AdvancedImage } from '@cloudinary/react'
+import { fill } from '@cloudinary/url-gen/actions/resize'
+import { getOptimizedImage, IMAGES } from '../assets/img'
 
 export default function CompanyEvents() {
 	return (
@@ -28,8 +31,8 @@ export default function CompanyEvents() {
 						</div>
 						<div className='relative'>
 							<div className='aspect-square rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white bg-gray-100'>
-								<img
-									src='https://images.unsplash.com/photo-1528605248644-14dd0d812396?auto=format&fit=crop&q=80'
+								<AdvancedImage
+									cldImg={getOptimizedImage(IMAGES.MIXER_LAPTOP).resize(fill().width(1000).height(1000))}
 									alt='Event firmowy Axis'
 									className='w-full h-full object-cover'
 								/>

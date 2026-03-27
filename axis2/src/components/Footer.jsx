@@ -100,11 +100,7 @@ export default function Footer() {
 											to={item.to}
 											className={`
                         transition-colors block w-fit cursor-pointer font-medium
-                        ${
-													isTent
-														? 'text-amber-500 hover:text-amber-400'
-														: 'hover:text-white'
-												}
+                        ${isTent ? 'text-amber-500 hover:text-amber-400' : 'hover:text-white'}
                     `}>
 											{item.label}
 											{isTent && <span className='ml-2 inline-block w-1 h-1 bg-amber-500 rounded-full animate-pulse' />}
@@ -157,7 +153,7 @@ export default function Footer() {
 					<p className='text-zinc-500 text-sm'>
 						© {currentYear} <span className='text-zinc-300 font-medium'>AXIS EVENTS</span>. Projekt i realizacja:{' '}
 						<span className='text-zinc-300'>
-							<a href='https://emarika.pl'>
+							<a href='https://emarika.pl' target='_blank'>
 								<span className='text-red-500'>e</span>Marika
 							</a>
 						</span>
