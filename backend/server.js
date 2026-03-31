@@ -1,5 +1,4 @@
 import express from 'express'
-import fetch from 'node-fetch'
 import cors from 'cors'
 
 const app = express()
@@ -23,20 +22,14 @@ app.post('/api/send', async (req, res) => {
 			},
 		)
 
-		const text = await response.text()
-
-		res.status(response.status).send(text)
+		const data = await response.text()
+		res.status(response.status).send(data)
 	} catch (err) {
 		console.error(err)
 		res.status(500).json({ error: 'Proxy error' })
 	}
 })
 
-app.get('/', (req, res) => {
-	res.send('API działa 🚀')
-})
-
-const PORT = process.env.PORT || 3000
-app.listen(PORT, () => {
-	console.log('Server running on port', PORT)
+app.listen(process.env.PORT || 3000, () => {
+	console.log('Server działa 🚀')
 })
