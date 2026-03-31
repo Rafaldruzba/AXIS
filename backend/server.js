@@ -3,17 +3,21 @@ import cors from 'cors'
 
 const app = express()
 
-app.use(
-	cors({
-		origin: ['https://axis-events.pl', 'http://localhost:5173'],
-	}),
-)
+const corsOptions = {
+	origin: ['https://axis-events.pl', 'http://localhost:5173'],
+	methods: ['GET', 'POST', 'OPTIONS'],
+	allowedHeaders: ['Content-Type', 'Authorization'],
+}
+
+app.use(cors(corsOptions))
+app.options('*', cors(corsOptions)) // ← to jest kluczowe
 
 app.use(express.json())
 
 app.post('/api/send', async (req, res) => {
 	try {
 		const response = await fetch(
+			//testURL https://n8n-production-8616.up.railway.app/webhook-test/129f8d6c-4d99-49f0-8d7c-1d6ddccfe58b
 			'https://n8n-production-8616.up.railway.app/webhook/129f8d6c-4d99-49f0-8d7c-1d6ddccfe58b',
 			{
 				method: 'POST',
