@@ -42,8 +42,8 @@ const Contact = () => {
 		e.preventDefault()
 		setStatus('loading')
 
-		const webhookUrl = 'https://n8n-production-8616.up.railway.app/webhook/129f8d6c-4d99-49f0-8d7c-1d6ddccfe58b'
-				  //testURL https://n8n-production-8616.up.railway.app/webhook-test/129f8d6c-4d99-49f0-8d7c-1d6ddccfe58b
+		const webhookUrl = 'https://twoj-backend.up.railway.app/api/send'
+		//testURL https://n8n-production-8616.up.railway.app/webhook-test/129f8d6c-4d99-49f0-8d7c-1d6ddccfe58b
 		const payload = {
 			source: cart.length > 0 ? 'konfigurator' : 'kontakt_ogolny',
 			data: {
