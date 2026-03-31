@@ -40,6 +40,7 @@ const GalleryCarousel = () => {
 								key={`row1-${index}`}
 								className='w-[300px] h-[200px] md:w-[500px] md:h-[350px] shrink-0 rounded-[2.5rem] overflow-hidden shadow-2xl group relative border-4 border-black md:border-white bg-gray-200'>
 								<AdvancedImage
+									loading='lazy'
 									cldImg={getOptimizedImage(imgId).resize(fill().width(600).height(400))}
 									alt={`Axis Realizacja ${index}`}
 									className='w-full h-full object-cover md:grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700'
@@ -66,6 +67,7 @@ const GalleryCarousel = () => {
 								key={`row2-${index}`}
 								className='w-[300px] h-[200px] md:w-[500px] md:h-[350px] shrink-0 rounded-[2.5rem] overflow-hidden shadow-2xl group relative border-4 border-black md:border-white bg-gray-200'>
 								<AdvancedImage
+									loading='lazy'
 									cldImg={getOptimizedImage(imgId).resize(fill().width(600).height(400))}
 									alt={`Axis Event ${index}`}
 									className='w-full h-full object-cover md:grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700'

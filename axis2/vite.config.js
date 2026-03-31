@@ -17,6 +17,7 @@ export default defineConfig({
 				'/wesele',
 				'/kontakt',
 				'/realizacje',
+				'realizacje/Neon-Spring',
 				'/strefa-barowa',
 				'/eventy-firmowe',
 				'/namiot-eventowy',
@@ -26,4 +27,7 @@ export default defineConfig({
 			], // dopisz resztę swoich podstron
 		}),
 	],
+	build: {
+		cssCodeSplit: true,
+	},
 })

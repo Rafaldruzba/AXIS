@@ -1,20 +1,17 @@
 import { Link } from 'react-router-dom'
-import { getOptimizedImageUrl, IMAGES } from '../assets/img'
-
-import heroBgGifUrl from '../assets/inside.gif'
 
 export default function Hero() {
 	return (
 		<section className='relative h-[100vh] md:h-screen w-full overflow-hidden bg-gray-900'>
-
 			<div className='absolute inset-0 overflow-hidden'>
-				{heroBgGifUrl && (
-					<img
-						src={heroBgGifUrl}
-						alt='Hero Background Animation'
-						className='absolute inset-0 w-full h-full object-cover object-center scale-105 animate-slow-zoom'
-					/>
-				)}
+				<video
+					autoPlay
+					loop
+					muted
+					playsInline
+					className='absolute inset-0 w-full h-full object-cover object-center scale-105 animate-slow-zoom'>
+					<source src='/hero.mp4' type='video/mp4' />
+				</video>
 				<div className='absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black-900/90'></div>
 			</div>
 

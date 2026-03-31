@@ -42,8 +42,8 @@ const Contact = () => {
 		e.preventDefault()
 		setStatus('loading')
 
-		const webhookUrl = 'https://n8n-production-8616.up.railway.app/webhook/58b7327f-b8ec-4bc9-9686-e4bbe003bfbe'
-
+		const webhookUrl = 'https://n8n-production-8616.up.railway.app/webhook/129f8d6c-4d99-49f0-8d7c-1d6ddccfe58b'
+				  //testURL https://n8n-production-8616.up.railway.app/webhook-test/129f8d6c-4d99-49f0-8d7c-1d6ddccfe58b
 		const payload = {
 			source: cart.length > 0 ? 'konfigurator' : 'kontakt_ogolny',
 			data: {
@@ -67,15 +67,17 @@ const Contact = () => {
 
 			const result = await response.json()
 
-			// LOGIKA N8N: 'wolne' | 'zajete' | 'individual'
-			if (result.status === 'wolne' || result.status === 'individual') {
-				setStatus(result.status)
-				// Czyścimy koszyk tylko gdy termin jest wolny/przyjęty
+			// Logika n8n: 'wolne' | 'zajete'
+			if (result.status === 'wolne') {
+				setStatus('wolne')
+				// Czyścimy formularz i koszyk tylko przy sukcesie
 				localStorage.removeItem('axis_cart')
 				setFormData({ name: '', date: null, email: '', phone: '', message: '' })
 			} else if (result.status === 'zajete') {
 				setStatus('zajete')
+				// NIE czyścimy koszyka ani daty - pozwalamy klientowi spróbować inny dzień
 			} else if (response.ok) {
+				// Zabezpieczenie, gdyby n8n wysłało pusty sukces bez statusu
 				setStatus('sent')
 				localStorage.removeItem('axis_cart')
 			} else {

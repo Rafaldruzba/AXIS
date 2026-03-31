@@ -56,25 +56,43 @@ export default function Navbar() {
 							<Link to='/oferta' className='block px-6 py-2 hover:bg-gray-100' onClick={() => setDropdown(false)}>
 								Konfigurator
 							</Link>
-							<Link to='/namiot-eventowy' className='block px-6 py-2 hover:bg-gray-100' onClick={() => setDropdown(false)}>
+							<Link
+								to='/namiot-eventowy'
+								className='block px-6 py-2 hover:bg-gray-100'
+								onClick={() => setDropdown(false)}>
 								Namiot eventowy
 							</Link>
-							<Link to='/strefa-barowa' className='block px-6 py-2 hover:bg-gray-100' onClick={() => setDropdown(false)}>
+							<Link
+								to='/strefa-barowa'
+								className='block px-6 py-2 hover:bg-gray-100'
+								onClick={() => setDropdown(false)}>
 								Strefa barowa
 							</Link>
-							<Link to='/naglosnienie-i-oswietlenie' className='block px-6 py-2 hover:bg-gray-100' onClick={() => setDropdown(false)}>
+							<Link
+								to='/naglosnienie-i-oswietlenie'
+								className='block px-6 py-2 hover:bg-gray-100'
+								onClick={() => setDropdown(false)}>
 								Nagłośnienie i oświetlenie
 							</Link>
 							<Link to='/wesele' className='block px-6 py-2 hover:bg-gray-100' onClick={() => setDropdown(false)}>
 								Wesela
 							</Link>
-							<Link to='/eventy-firmowe' className='block px-6 py-2 hover:bg-gray-100' onClick={() => setDropdown(false)}>
+							<Link
+								to='/eventy-firmowe'
+								className='block px-6 py-2 hover:bg-gray-100'
+								onClick={() => setDropdown(false)}>
 								Eventy firmowe
 							</Link>
-							<Link to='/eventy-plenerowe' className='block px-6 py-2 hover:bg-gray-100' onClick={() => setDropdown(false)}>
+							<Link
+								to='/eventy-plenerowe'
+								className='block px-6 py-2 hover:bg-gray-100'
+								onClick={() => setDropdown(false)}>
 								Eventy plenerowe
 							</Link>
-							<Link to='/imprezy-urodzinowe' className='block px-6 py-2 hover:bg-gray-100' onClick={() => setDropdown(false)}>
+							<Link
+								to='/imprezy-urodzinowe'
+								className='block px-6 py-2 hover:bg-gray-100'
+								onClick={() => setDropdown(false)}>
 								Imprezy urodzinowe
 							</Link>
 						</div>
@@ -132,7 +150,7 @@ export default function Navbar() {
 						<Link to='/wesele' className='block' onClick={() => setIsOpen(false)}>
 							Wesela
 						</Link>
-						<Link to='/imprezy-firmowe' className='block' onClick={() => setIsOpen(false)}>
+						<Link to='/eventy-firmowe' className='block' onClick={() => setIsOpen(false)}>
 							Eventy firmowe
 						</Link>
 						<Link to='/eventy-plenerowe' className='block' onClick={() => setIsOpen(false)}>

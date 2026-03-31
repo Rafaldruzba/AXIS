@@ -32,6 +32,7 @@ export default function BlogSection() {
 								{/* Miniaturka */}
 								<div className='relative h-64 mb-8 overflow-hidden rounded-[2rem] shadow-sm group-hover:shadow-xl transition-all duration-500'>
 									<AdvancedImage
+										loading='lazy'
 										cldImg={getOptimizedImage(IMAGES[blog.image] || blog.image)}
 										alt={blog.title}
 										className='w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-110 transition duration-700'

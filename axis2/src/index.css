@@ -26,87 +26,27 @@ button {
 	background: #2563eb;
 	border-radius: 10px;
 }
-
-.poppins-thin {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 100;
-	font-style: normal;
-}
-
-.poppins-extralight {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 200;
-	font-style: normal;
-}
-
-.poppins-light {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 300;
-	font-style: normal;
-}
-
-.poppins-regular {
-	font-family: 'Poppins', sans-serif;
+@font-face {
+	font-family: 'Poppins';
 	font-weight: 400;
-	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/Poppins-Regular.woff2') format('woff2');
 }
-
-.poppins-medium {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	font-style: normal;
-}
-
-.poppins-semibold {
-	font-family: 'Poppins', sans-serif;
+@font-face {
+	font-family: 'Poppins';
 	font-weight: 600;
-	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/Poppins-SemiBold.woff2') format('woff2');
 }
-
-.poppins-bold {
-	font-family: 'Poppins', sans-serif;
+@font-face {
+	font-family: 'Poppins';
 	font-weight: 700;
-	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/Poppins-Bold.woff2') format('woff2');
 }
-
-.poppins-extrabold {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 800;
-	font-style: normal;
-}
-
-.poppins-black {
-	font-family: 'Poppins', sans-serif;
+@font-face {
+	font-family: 'Poppins';
 	font-weight: 900;
-	font-style: normal;
-}
-
-.poppins-thin-italic {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 100;
-	font-style: italic;
-}
-
-.poppins-extralight-italic {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 200;
-	font-style: italic;
-}
-
-.poppins-light-italic {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 300;
-	font-style: italic;
-}
-
-.poppins-regular-italic {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 400;
-	font-style: italic;
-}
-
-.poppins-medium-italic {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	font-style: italic;
+	font-display: swap;
+	src: url('/fonts/Poppins-Black.woff2') format('woff2');
 }

@@ -35,6 +35,7 @@ export default function InfoSection() {
 					<div className='lg:col-span-7 relative group'>
 						<div className='aspect-video overflow-hidden rounded-[3rem] shadow-2xl border border-white/5'>
 							<AdvancedImage
+								loading='lazy'
 								cldImg={getOptimizedImage(IMAGES.SETUP_MAX).resize(
 									fill().width(1200).height(675).gravity(compass('center')),
 								)}
@@ -94,6 +95,7 @@ export default function InfoSection() {
 					<div className='lg:col-span-7 lg:order-2 order-1 relative group'>
 						<div className='aspect-video overflow-hidden rounded-[3rem] shadow-2xl border border-white/5 rotate-1 group-hover:rotate-0 transition-all duration-500'>
 							<AdvancedImage
+								loading='lazy'
 								cldImg={getOptimizedImage(IMAGES.LEDS_LASER).resize(
 									fill().width(1200).height(775).gravity(compass('north')),
 								)}

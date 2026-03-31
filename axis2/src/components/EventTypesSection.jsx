@@ -33,6 +33,7 @@ export default function EventTypesSection() {
 							className='group relative h-87.5 md:h-75 rounded-[3rem] overflow-hidden bg-black transition-all duration-700 shadow-sm md:hover:shadow-2xl'>
 							{/* 1. Obrazek tła */}
 							<AdvancedImage
+								loading='lazy'
 								cldImg={getOptimizedImage(event.image).resize(fill().width(800).height(600))}
 								alt={event.title}
 								className='absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition duration-1000 ease-in-out'
