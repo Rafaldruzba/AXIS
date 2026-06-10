@@ -82,24 +82,32 @@
 			"category": "BAR",
 			"name": "Zestaw Barowy Basic",
 			"description": "Mobilny bar + podstawowe wyposażenie.",
-			"includes": ["Mobilny bar", "Oświetlenie LED", "Blat roboczy"],
+			"includes": ["Mobilny bar", "Podświetlenie LED", "podstawowa oferta drinków"],
 			"price": "Indywidualna wycena"
 		},
 		{
 			"id": 8,
 			"category": "BAR",
 			"name": "Zestaw Barowy Standard",
-			"description": "Większy bar + chłodziarka.",
-			"includes": ["Bar", "Chłodziarka", "Oświetlenie LED"],
+			"description": "Mobilny bar + podstawowe wyposażenie.",
+			"includes": ["Mobilny bar", "Podświetlenie LED", "Rozszerzona karta drinków"],
 			"price": "Indywidualna wycena"
 		},
 		{
 			"id": 9,
 			"category": "BAR",
 			"name": "Zestaw Barowy Premium",
-			"description": "Profesjonalna strefa barowa.",
-			"includes": ["Bar premium", "Podświetlenie RGB", "Regały", "Lodówki"],
+			"description": "Powiększony mobilny bar + pełne wyposażenie.",
+			"includes": ["Mobilny bar", "Podświetlenie LED", "Autorska karta drinków Axis Events"],
 			"price": "Indywidualna wycena"
+		},
+		{
+			"id": 10,
+			"category": "BAR",
+			"name": "roll-bar Nalewak",
+			"description": "Roll-bar z dwoma dyszami nalewającymi. Do wyboru:",
+			"includes": ["Beczka x1", "Beczka x2", "sok do piwa + kubki + słomki"],
+			"price": "400zł + wybrane beczki"
 		}
 	],
 
@@ -138,7 +146,7 @@
 			"name": "Koktajlówki",
 			"description": "Wysokie stoliki eventowe. Cena za 2 sztuki.",
 			"rental_type": "2 sztuki",
-			"price": "150"
+			"price": "100"
 		},
 		{
 			"id": 14,

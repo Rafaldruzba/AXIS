@@ -41,8 +41,8 @@ const Contact = () => {
 	const handleSubmit = async e => {
 		e.preventDefault()
 		setStatus('loading')
-
-		const webhookUrl = 'https://axis.up.railway.app/api/send'
+		// const webhookUrl = 'https://axis-production-af3f.up.railway.app/api/send'
+		const webhookUrl = 'http://localhost:3000/api/send'
 		const payload = {
 			source: cart.length > 0 ? 'konfigurator' : 'kontakt_ogolny',
 			data: {

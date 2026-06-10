@@ -5,6 +5,30 @@ import { getOptimizedImage } from '../assets/img'
 import { fill } from '@cloudinary/url-gen/actions/resize'
 
 export default function Blog() {
+	const sortedBlogs = [...blogs].sort((a, b) => {
+		// Funkcja pomocnicza do konwersji Twojego formatu daty na obiekt Date
+		const parseDate = dateStr => {
+			const months = {
+				Stycznia: 0,
+				Lutego: 1,
+				Marca: 2,
+				Kwietnia: 3,
+				Maja: 4,
+				Czerwca: 5,
+				Lipca: 6,
+				Sierpnia: 7,
+				Września: 8,
+				Października: 9,
+				Listopada: 10,
+				Grudnia: 11,
+			}
+			const [day, monthName, year] = dateStr.split(' ')
+			return new Date(year, months[monthName], day)
+		}
+
+		return parseDate(b.date) - parseDate(a.date) // b - a dla kolejności malejącej (najnowsze pierwsze)
+	})
+
 	return (
 		<div className='bg-[#fdfbf7] min-h-screen'>
 			<section className='pt-32 pb-20 px-6 max-w-7xl mx-auto'>
@@ -13,14 +37,14 @@ export default function Blog() {
 					<h1 className='text-5xl md:text-6xl font-black mb-6 text-gray-900'>Inspiracje i Wiedza Eventowa</h1>
 					<div className='w-24 h-1 bg-amber-500 mx-auto mb-8 rounded-full'></div>
 					<p className='text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>
-						Dowiedz się, jak zaplanować idealne nagłośnienie, wybrać mobilny bar na wesele i stworzyć klimat, o którym
-						Twoi goście będą opowiadać miesiącami.
+						Dowiedz się, jak zaplanować idealną imprezę plenerową, wybrać mobilny bar na wesele i stworzyć klimat, o
+						którym Twoi goście będą opowiadać miesiącami.
 					</p>
 				</header>
 
 				{/* Grid artykułów */}
 				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-12'>
-					{blogs.map(blog => (
+					{sortedBlogs.map(blog => (
 						<article key={blog.slug} className='group'>
 							<Link to={`/blog/${blog.slug}`} className='block'>
 								{/* Kontener na zdjęcie */}

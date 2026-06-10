@@ -1,9 +1,9 @@
 [
 	{
 		"title": "Neon Spring: Pierwszy Open-Air Sezonu - 40 osób",
-		"slug": "Neon-Spring",
+		"slug": "neon-spring",
 		"type": "Impreza klubowa w ogrodzie",
-		"date": "Marzec 2025",
+		"date": "Kwiecień 2026",
 		"image": "party3_beppjx",
 		"description": "Klubowy start sezonu plenerowego. Stworzyliśmy kompletną strefę imprezową w ogrodzie, łącząc dmuchany namiot z pełną oprawą barową, oświetleniem LED i mocnym nagłośnieniem.",
 		"gallery": [
@@ -21,6 +21,79 @@
 			{
 				"heading": "Pełna Konfiguracja Sprzętu",
 				"text": "Zadbaliśmy o każdy detal techniczny. Zainstalowaliśmy profesjonalny system nagłośnienia, który zapewnił krystalicznie czysty dźwięk i mocny bas na parkiecie. Oprawę wizualną dopełniło dynamiczne oświetlenie LED, laser Blue oraz wytwornica dymu Haze, która uwydatniła wiązki światła. Goście mogli również korzystać z w pełni wyposażonego mobilnego baru z dedykowaną obsługą."
+			}
+		]
+	},
+	{
+		"title": "Wielkie Wesele w Stylu Glamour - Obsługa Barmańska na 180 osób",
+		"slug": "wesele-29-maj",
+		"type": "Kompleksowa Obsługa Barmańska Wesela",
+		"date": "Maj 2026",
+		"image": "bar3_yztfic",
+		"description": "Elegancka i niezwykle dynamiczna realizacja weselna dla 180 gości. Zapewniliśmy najwyższy standard obsługi barmańskiej, serwując klasyczne koktajle oraz autorskie kompozycje, które zachwyciły zaproszonych bliskich.",
+		"gallery": ["bar4_lcockc", "bar3_yztfic", "bar2_az282r", "bar1_eaku2l"],
+		"tags": ["Bar Premium", "Obsługa 180 osób", "Autorska Karta Drinków", "Szybki Serwis", "Menu Mocktaili"],
+		"contentSections": [
+			{
+				"heading": "Elegancja i Maksymalna Wydajność",
+				"text": "Obsługa wesela na 180 osób to ogromne wyzwanie logistyczne i organizacyjne. Kluczem do sukcesu było przygotowanie spektakularnego baru, który idealnie wkomponował się w elegancki wystrój sali weselnej. Dzięki doskonałemu rozplanowaniu stanowisk pracy nasi doświadczeni barmani zapewnili płynną obsługę bez jakichkolwiek kolejek, dbając o świetny nastrój gości przez całą noc."
+			},
+			{
+				"heading": "Menu Dopasowane do Gości",
+				"text": "Karta drinków została stworzona we współpracy z Parą Młodą, łącząc światowe trendy z polską gościnnością. Królowały odświeżające klasyki, takie jak Aperol Spritz i Whiskey Sour, a hitem wieczoru okazało się widowiskowe Pornstar Martini podawane z shotem musującego wina. Nie zapomnieliśmy również o rozbudowanej strefie koktajli bezalkoholowych (Mocktails), które cieszyły się ogromnym uznaniem wśród kierowców oraz najmłodszych uczestników przyjęcia."
+			}
+		]
+	},
+	{
+		"title": "Sielskie Wesele Pod Chmurką – Barmańskie Serce Podlasia na 300 osób",
+		"slug": "wesele-pod-chmurka",
+		"type": "Obsługa Barmańska Wesela Plenerowego",
+		"date": "Czerwiec 2026",
+		"image": "bar2_gvvw57",
+		"description": "Niezapomniane, wielkie wesele w prawdziwie podlaskim, sielskim klimacie. Pod gołym niebem, w otoczeniu natury, obsłużyliśmy aż 300 gości, łącząc tradycyjną gościnność z nowoczesnym kunsztem miksologii.",
+		"gallery": ["bar5_oxpg1c", "bar2_gvvw57", "bar1_yh88sg", "bar3_ot7avp", "bar4_kkmei8"],
+		"tags": [
+			"Wesele Plenerowe",
+			"Obsługa 300 osób",
+			"Styl Rustykalny / Wiejski",
+			"Podlaskie Smaki",
+			"Regionalne Infuzje"
+		],
+		"contentSections": [
+			{
+				"heading": "Podlaska Gościnność na 300 Gości",
+				"text": "Realizacja wesela plenerowego na 300 osób w sercu Podlasia wymagała od nas perfekcyjnej logistyki i zdwojonych sił. Nasz bar zaaranżowaliśmy w klimacie rustykalnym – naturalne drewno, dekoracje z polnych kwiatów idealnie wpisały się w otoczenie pod gołym niebem. Mimo tak ogromnej liczby biesiadników, dzięki otwarciu stanowiska barmańskiego, każdy z gości otrzymał swój ulubiony koktajl błyskawicznie, bez marnowania czasu w kolejkach."
+			},
+			{
+				"heading": "Tradycja w Nowoczesnym Wydaniu",
+				"text": "Menu skomponowaliśmy tak, aby nawiązywało do wiejskiego, swobodnego charakteru imprezy, nie rezygnując z barmańskiego premium standardu. Obok kultowych klasyków, ogromnym hitem okazały się nasze autorskie koktajle bazujące na podlaskich klasykach – rzemieślniczych alkoholach, domowych syropach z owoców leśnych oraz świeżych ziołach. Wieczorny chłód pleneru rozgrzewaliśmy widowiskowymi drinkami, które idealnie współgrały z biesiadną atmosferą i tańcami pod gwiazdami."
+			}
+		]
+	},
+	{
+		"title": "Grill z Klimatem – Majówkowy Event pod Namiotem",
+		"slug": "grill-majowka",
+		"type": "Obsługa Imprezy pod Namiotem - majówka!",
+		"date": "Maj 2026",
+		"image": "amela1_nn5ki4",
+		"description": "Sezon plenerowy rozpoczęty z przytupem! Majówkowy grill pod wielkim namiotem, gdzie połączyliśmy luźny, ogrodowy klimat z pysznym jedzeniem i świetną muzyką.",
+		"gallery": ["amela1_nn5ki4", "amela4_reiprz", "amela3_dtyuj1", "amela2_af14yb"],
+		"tags": [
+			"Majówka",
+			"Impreza pod Namiotem",
+			"Grill / BBQ",
+			"Mobilny Bar",
+			"Klimat Plenerowy",
+			"2x Kolumny + subwoofer"
+		],
+		"contentSections": [
+			{
+				"heading": "Majówkowy Vibe i Pełna Gotowość",
+				"text": "Rozpoczęcie długiego weekendu majowego pod gołym niebem to zawsze świetny pomysł, ale pogoda lubi płatać figle. Nasz przestronny namiot imprezowy idealnie zabezpieczył strefę biesiadną, tworząc przytulną i komfortową przestrzeń dla wszystkich uczestników. Zapach grillowanych klasyków, zimne piwo z kija  stworzyły idealny, luźny klimat, w którym goście mogli w pełni zresetować się na łonie natury."
+			},
+			{
+				"heading": "Potężne Brzmienie pod Namiotem",
+				"text": "Żaden majówkowy grill nie może obejść się bez porządnej muzyki, dlatego zadbaliśmy o profesjonalny system nagłośnienia o czystym brzmieniu i głębokim basie. Nasze głośniki idealnie wypełniły dźwiękiem całą przestrzeń pod namiotem oraz strefę ogrodową, dbając o odpowiedni podkład muzyczny od popołudniowego chillu przy grillu aż po nocne szaleństwo w ogrodzie. Dynamiczne, selektywne nagłośnienie w połączeniu z klimatycznym oświetleniem sprawiło, że goście bawili się na pełnych obrotach do późnych godzin nocnych."
 			}
 		]
 	}

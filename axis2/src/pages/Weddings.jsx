@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Wine, Tent, Stars, Coffee } from 'lucide-react'
+import { AdvancedImage } from '@cloudinary/react'
+import { getOptimizedImage, getOptimizedImageUrl, IMAGES } from '../assets/img'
+import { fill } from '@cloudinary/url-gen/actions/resize'
 
 export default function Weddings() {
 	return (
@@ -19,6 +22,27 @@ export default function Weddings() {
 							Nie zajmujemy się oprawą całej sali, ale tworzymy to, co goście wspominają najlepiej – luksusowe strefy
 							barowe i plenerowe przestrzenie chillout.
 						</p>
+					</div>
+
+					<div className='border-t border-gray-200 pt-16 mb-20'>
+						<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+							{/* Pierwsze zdjęcie */}
+							<div className='group relative h-[350px] md:h-[480px] overflow-hidden rounded-[2.5rem] bg-gray-100 shadow-md hover:shadow-xl transition-all duration-500 border border-black/5'>
+								<AdvancedImage
+									cldImg={getOptimizedImage(IMAGES.WESELE_S).resize(fill().width(1000).height(960))}
+									alt='Barman, członek zespołu'
+									className='w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105'
+								/>
+							</div>
+							{/* Drugie zdjęcie */}
+							<div className='group relative h-[350px] md:h-[480px] overflow-hidden rounded-[2.5rem] bg-gray-100 shadow-md hover:shadow-xl transition-all duration-500 border border-black/5'>
+								<AdvancedImage
+									cldImg={getOptimizedImage(IMAGES.WESELE_S2).resize(fill().width(1000).height(960))}
+									alt='Barman, członek zespołu'
+									className='w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105'
+								/>
+							</div>
+						</div>
 					</div>
 
 					<div className='grid md:grid-cols-2 gap-8'>

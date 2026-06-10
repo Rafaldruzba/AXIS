@@ -67,4 +67,7 @@ export const IMAGES = {
 	GIF_PARTY: 'party_gif_wb7r20',
 	MIXER_LAPTOP: 'AXISEVENTS_PhotoStories_-_KlaudiaCyran-27_ur3bhj',
 	PLENER: 'dron-namiot_ftewos',
+	WESELE_S: 'bar1_eaku2l',
+	WESELE_S2: 'bar2_az282r',
+	PLENER_BLOG: 'd0cbae19-ac9a-48f3-a1ad-702bf9fe5f58',
 }

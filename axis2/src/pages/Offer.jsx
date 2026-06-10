@@ -138,7 +138,12 @@ export default function Offer() {
 						renderCard={renderCard}
 					/>
 					<Section title='Namioty Eventowe' icon='⛺' items={offers.tents} renderCard={renderCard} />
-					<Section title='Zestawy Barowe' icon='🍸' items={offers.bar_packages} renderCard={renderCard} />
+					<Section
+						title='Zestawy Barowe&nbsp;&nbsp;-&nbsp;&nbsp;Weselne'
+						icon='🍸'
+						items={offers.bar_packages}
+						renderCard={renderCard}
+					/>
 					<Section title='Fotograf' icon='📸' items={offers.fotography_packages} renderCard={renderCard} />
 					<Section title='Dodatki' icon='✨' items={offers.addons} renderCard={renderCard} />
 				</div>

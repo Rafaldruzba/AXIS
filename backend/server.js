@@ -14,11 +14,16 @@ app.options('*', cors(corsOptions)) // ← to jest kluczowe
 
 app.use(express.json())
 
+//DEAFAULT ENDPOINT
+app.get('/api', (req, res) => {
+	res.send({ message: 'Serwer działa poprawnie!' })
+})
+
 app.post('/api/send', async (req, res) => {
 	try {
 		const response = await fetch(
 			//testURL https://n8n-production-8616.up.railway.app/webhook-test/129f8d6c-4d99-49f0-8d7c-1d6ddccfe58b
-			'https://n8n-production-8616.up.railway.app/webhook/129f8d6c-4d99-49f0-8d7c-1d6ddccfe58b',
+			'https://n8n-production-8616.up.railway.app/webhook-test/129f8d6c-4d99-49f0-8d7c-1d6ddccfe58b',
 			{
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
