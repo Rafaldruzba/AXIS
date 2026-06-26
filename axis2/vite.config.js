@@ -31,6 +31,7 @@ export default defineConfig({
 				'/blog/ile-pradu-potrzebuje-impreza-plenerowa',
 				'/blog/klubowy-klimat-po-40-i-50-trend',
 				'/blog/nalewak-do-piwa-na-imprezie',
+				'/blog/event-firmowy-w-plenerze-czy-sala',
 			], // dopisz resztę swoich podstron
 		}),
 	],

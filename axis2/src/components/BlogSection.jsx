@@ -4,7 +4,31 @@ import { AdvancedImage } from '@cloudinary/react'
 import { getOptimizedImage, IMAGES } from '../assets/img'
 
 export default function BlogSection() {
-	const latestBlogs = blogs.slice(0, 3)
+	const sortedBlogs = [...blogs].sort((a, b) => {
+		// Funkcja pomocnicza do konwersji Twojego formatu daty na obiekt Date
+		const parseDate = dateStr => {
+			const months = {
+				Stycznia: 0,
+				Lutego: 1,
+				Marca: 2,
+				Kwietnia: 3,
+				Maja: 4,
+				Czerwca: 5,
+				Lipca: 6,
+				Sierpnia: 7,
+				Września: 8,
+				Października: 9,
+				Listopada: 10,
+				Grudnia: 11,
+			}
+			const [day, monthName, year] = dateStr.split(' ')
+			return new Date(year, months[monthName], day)
+		}
+
+		return parseDate(b.date) - parseDate(a.date) // b - a dla kolejności malejącej (najnowsze pierwsze)
+	})
+
+	const latestBlogs = sortedBlogs.slice(0, 3)
 
 	return (
 		<section className='py-24 bg-[#fdfbf7]'>
